@@ -1,0 +1,52 @@
+<?php
+    $v = date("YmdHis");
+    include "check.php";
+    include "product_modify.php";
+?>
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>쇼핑몰 관리자</title>
+<script src="../../js/jquery.js"></script>
+<script src="http://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script src="./ckeditor/ckeditor.js?v=<?=$v?>"></script>
+<link rel="stylesheet" type="text/css" href="admin.css?v=<?=$v?>">
+<link rel="stylesheet" type="text/css" href="main.css?v=<?=$v?>">
+<link rel="stylesheet" type="text/css" href="product.css?v=<?=$v?>">
+<script>
+    const arrays = '<?php echo $prints2 ?>';
+    // console.log(arrays);
+    if(arrays=='"not found"'){
+        alert("올바른 접근이 아닙니다.");
+        history.go(-1);
+    }
+    else if(arrays=='"error"'){
+        alert("전송 데이터가 올바르지 않습니다.");
+        history.go(-1);
+    }
+</script>
+</head>
+<body>
+<header class="header">
+    <?php include "admin_top.html"; ?>
+</header>
+<section class="section" id="pd">
+    <?php include "product_view.html"; ?>
+</section>
+<footer class="footer">
+    <?php include "admin_bottom.html"; ?>
+</footer>
+</body>
+<!-- <script src="./product_input.js?v=<?=$v?>"></script> -->
+<script src="./banner.js?v=<?=$v?>"></script>
+<script src="./product_view.js?v=<?=$v?>"></script>
+<script src="./product.js?v=<?=$v?>"></script>
+<script>
+    CKEDITOR.replace("product_contents1",{ height:300 });
+    CKEDITOR.instances.product_contents1.setData(JSON.parse(arrays)[0]["product_contents1"]);
+    // console.log(arrays);
+</script>
+</html>

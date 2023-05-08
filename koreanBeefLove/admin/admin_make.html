@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<form name="lfrm" id="lfrm" action="admin_make.php" method="POST">
+    <input type="hidden" name="level" value="S">
+    <input type="text" name="m_admin_id" placeholder="관리자 아이디"><br>
+    <input type="password" name="m_admin_pw" placeholder="관리자 패스워드"><br>
+    <input type="text" name="m_admin_nm" placeholder="관리자 이름"><br>
+    <input type="button" value="관리자 등록" id="">
+</form>
+<form name="rfrm" id="rfrm" action="admin_repass.php" method="POST">
+    <input type="hidden" name="repass" value="password">
+    <input type="text" name="aid" placeholder="관리자 아이디"><br>
+    <input type="password" name="apw" placeholder="관리자 패스워드"><br>
+    <input type="button" value="패스워드 수정" id="">
+</form>
+
+<style>
+    input{ margin-bottom: 10px; width: 150px; height: 30px; }
+    form{ width: 200px; height: auto; padding: 20px 0 10px 0; text-align: center; border: 1px solid black; }
+</style>

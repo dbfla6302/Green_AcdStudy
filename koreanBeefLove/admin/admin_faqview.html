@@ -1,0 +1,50 @@
+<?php
+    $v = date("YmdHis");
+    include "check.php";
+    include "faq_viewdata.php";
+?>
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>쇼핑몰 관리자</title>
+<script src="../../js/jquery.js"></script>
+<script src="./ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" type="text/css" href="admin.css?v=<?=$v?>">
+<link rel="stylesheet" type="text/css" href="main.css?v=<?=$v?>">
+<link rel="stylesheet" type="text/css" href="faq.css?v=<?=$v?>">
+</head>
+<script>
+    //파라미터 값
+    let pt = window.location.search;
+    var fnos = pt.split("?fidx=");
+    // faq 상세보기
+    const faqdata = '<?php echo $faq_view ?>';
+    let fdt = JSON.parse(faqdata);
+</script>
+<body>
+<header class="header">
+    <?php include "admin_top.html"; ?>
+</header>
+<section class="section">
+    <?php include "faq_view.html"; ?>
+</section>
+<footer class="footer">
+    <?php include "admin_bottom.html"; ?>
+</footer>
+</body>
+<script src="./banner.js?v=<?=$v?>"></script>
+<script type="module">
+    import { faqinck,faq_modify,faq_del } from "./faq_write.js?v=<?=$v?>";
+</script>
+<script>
+    frm.fcate.value = fdt[0]["category"];
+    frm.fqtext.value = fdt[0]["fqtext"];    
+    frm.fatext.value = fdt[0]["fatext"]; 
+    frm.fidx.value = fdt[0]["fidx"]; 
+    CKEDITOR.instances.fatext.setData(fdt[0]["fatext"]);
+</script>
+<script src="./product.js?v=<?=$v?>"></script>
+</html>

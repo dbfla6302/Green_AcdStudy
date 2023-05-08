@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<article class="adm_main">
+    <span>신규 배너등록</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<!-- 배너 등록 -->
+<article class="newbanner">
+    <form name="bfrm" id="bfrm">
+        <input type="hidden" name="banner_url" v-model="banner_url">
+        <table class="newbn_table">
+            <tbody>
+                <tr>
+                    <td>배너명</td>
+                    <td><input type="text" :name="banner_name"></td>
+                </tr>
+                <tr>
+                    <td>링크주소</td>
+                    <td><input type="text" :name="banner_link"></td>
+                </tr>
+                <tr>
+                    <td>배너이미지</td>
+                    <td><input type="file" :name="banner_img"> <span>* 업로드 배너 용량은 3MB 이하 입니다.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="newbn_btn">
+            <input type="button" value="배너등록" @click="banner_post">
+            <input type="button" value="목록" @click="banner_list">
+        </div>
+    </form>
+</article>

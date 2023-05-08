@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+img{ cursor: pointer; }
+.adm_banner{
+    // 상단 텍스트
+    &>.bn_title{
+        width: 100%;
+        background-color: #ccc;
+        &>div{         
+            @include object(1200px,40px,block);
+            margin: 0 auto; 
+            line-height: 40px;
+            font-weight: bold;
+        }
+    }
+    // 메인 배너 효과 설정
+    &>.bn_effect{
+        @include object(1200px,80px,block);
+        margin: 0 auto;
+        &>div{
+            @include object(inherit,inherit,inline-block);
+            line-height: 80px;
+
+            &>label{
+                margin-left: 10px;
+            }
+            &>span{
+                @include object("",40px,inline-block);
+                text-indent: 5px;
+                line-height: 40px;
+                &:last-of-type {
+                    & #banner_effect{
+                        @include object(80px,30px,block);
+                        color: white;
+                        margin-left: 5px;
+                        background-color: salmon;
+                        border: 1px solid salmon;
+                        border-radius: 5px;
+                        &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+                    }
+                }
+            }
+        }
+    }
+
+// 배너 등록 table
+
+    &>.bn_table{
+        @include object(1200px,auto,"");
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10px;
+        border-spacing: 0; 
+        border-collapse: collapse; 
+
+        & thead{
+            & th{
+                background-color: #ddd;
+                border: 1px solid #ccc;
+                height: 35px;
+            }
+        }
+        //배너 list 출력
+        &>.bn_list{
+            & td:nth-of-type(1){ width: 50px; }
+            & td:nth-of-type(2){ 
+                width: 330px; 
+                & img{ width: 80%; object-fit: contain; height: 100px; }
+            }
+            & td:nth-of-type(3){ 
+                width: 330px; 
+                text-align: left;
+                text-indent: 10px;
+                & input{  width: 300px; height: 40px; } 
+            }
+            & td:nth-of-type(4){ width: 200px; }
+            & td:nth-of-type(5){ 
+                width: 90px; 
+                & .bnlist_sel{ width: 50px; }
+            }
+            & td:nth-of-type(6){ width: 100px; }
+            & td:nth-of-type(7){ 
+                width: 100px; 
+                color: gray;
+                padding-left: 25px;
+                & a { 
+                    @include object(55px,30px,flex);
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    background-color:cadetblue;
+                    border-radius: 2px;
+                    font-size: 13px;
+                    cursor: pointer; 
+                    &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+                }
+            }
+        }
+        & tr{
+            height: 35px;
+            & td{      
+                background-color: rgb(250, 250, 250);
+                border: 1px solid #ccc;
+            }
+        }
+    }
+    &>div{
+        @include object(1200px,60px,flex);
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        margin: 0 auto;
+        &>.bn_btn{
+            @include object(100px,35px,"");
+            background-color: salmon;
+            border: 1px solid salmon;
+            border-radius: 5px;
+            color: white;
+            margin-left: 5px;
+            &:hover{ 
+                box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+        }
+    }
+
+}
+
+// 배너 등록 파트
+.newbanner{
+    position: relative;
+    top: 20px;
+    & form{
+        &>.newbn_table{
+            @include object(1200px,auto,"");
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-spacing: 0; 
+            border-collapse: collapse; 
+            & tbody{
+                & tr{
+                    height: 40px;
+                    & td:first-of-type{
+                        width: 200px;
+                        background-color: #ddd;
+                        border: 1px solid #ccc;
+                        padding-left: 10px;
+                    }
+                    & td:last-of-type{      
+                        background-color: rgb(250, 250, 250);
+                        border: 1px solid #ccc;
+                        padding-left: 10px;
+                    }
+                    &:nth-of-type(1)> td:last-of-type > input{ @include object(400px,30px,""); }
+                    &:nth-of-type(2)> td:last-of-type > input{ @include object(800px,30px,""); }
+                    &:nth-of-type(3)> td:last-of-type > span {
+                        color:cadetblue;
+                        font-weight: 500;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        &> .newbn_btn{
+            @include object(1200px,auto,"");
+            margin: 0 auto;
+            text-align: center;
+            & input{
+                @include object(100px,35px,"");
+                background-color: salmon;
+                border: 1px solid salmon;
+                border-radius: 5px;
+                color: white;
+                &:first-of-type{ margin-right: 5px; }
+                &:hover{ 
+                    background-color: lightsalmon;
+                    border: 1px solid lightsalmon;
+                    box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);  
+                }
+            }
+        }
+    }
+}
+.product_page{
+    @include object(1200px,30px,"");
+    margin: 0 auto;
+    margin-top: 15px;
+    & > ul { 
+        @include object(100%,inherit,flex);
+        flex-flow: wrap row;
+        justify-content: center;
+        & > li {
+            @include object(30px,30px,"");
+            background-color: lightsalmon;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    }
+}
+input[type="text"]{ text-indent: 5px; }

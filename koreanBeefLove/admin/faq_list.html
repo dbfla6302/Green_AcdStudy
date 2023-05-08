@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+{{lists}}
+<article class="adm_main">
+    <span>FAQ 관리</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<article class="adm_faq">
+    <aside class="faq_title">
+        <div>FAQ 리스트</div>
+    </aside>
+    <form id="frm" name="frm" method="GET" action="admin_faq.html" enctype="application/x-www-form-urlencoded" @submit.prevent="faqsearch">
+        <aside class="faq_sbox">
+            <input type="text" name="pnm" class="faq_search" v-model="word" placeholder="FAQ 제목을 검색하시면 됩니다.">
+            <input type="submit" value="검색" class="search_btn">
+            <input type="button" value="전체목록" class="search_btn" @click="all_list">
+        </aside>
+    </form>
+
+    <div class="tab_category" id="tab_category" @click="category($event);">
+        <span>배송문의</span>
+        <span>반품/교환/환불</span>
+        <span>주문/결제</span>
+        <span>회원서비스</span>
+        <span>안전거래</span>
+    </div>
+    <!-- FAQ 등록 -->
+    <table class="faq_table">
+        <thead>
+            <tr>
+                <th>카테고리</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>입력날짜</th>
+                <th>수정</th>
+            </tr>
+        </thead>
+        <!-- FAQ 리스트 -->
+        <tbody class="faq_list" v-if="part==1" v-for="(f,n) in flist">
+            <tr>
+                <td>{{f.category}}</td>
+                <td @click="faq_btn(n)"><em>Q. </em>{{f.fqtext}}</td>
+                <td>{{f.fwriter}}</td>
+                <td>{{f.findate.substr(0,10)}}</td>
+                <td><span @click="faq_view(f.fidx)">수정</span></td>
+            </tr>
+            <tr>
+                <td>↳</td>
+                <td v-html="f.fatext"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <!-- FAQ 없음 -->
+        <tbody class="bn_tableNone" id="bn_tableNone" v-else-if="part==2">
+            <tr>
+                <td colspan="15" class="empthy_result">등록된 배너가 없습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="faq_page">
+        <ul>
+            <li v-for="p in pageing" @click="gopage(p)">{{p}}</li>
+        </ul>
+    </div>
+    <div>
+        <!-- <input type="button" value="수정" class="faq_btn" id="faq_modify" @click="faq_modify();"> -->
+        <input type="button" value="FAQ 등록" class="faq_btn" id="faq_btn" @click="faq_insert();">
+    </div>
+</article>

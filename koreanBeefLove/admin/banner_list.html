@@ -1,0 +1,73 @@
+<meta charset="UTF-8">
+
+<article class="adm_main">
+    <span>배너 관리</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<article class="adm_banner">
+{{jsons}}
+    <aside class="bn_title">
+        <div>메인 배너 리스트</div>
+    </aside>
+    <!-- 메인 배너 효과 설정 -->
+    <aside class="bn_effect">
+        <div>
+            <span>메인배너 효과 :</span>
+            <label><input type="radio" name="effect" id="ef_R" value="R">롤링배너</label>
+            <label><input type="radio" name="effect" id="ef_F" value="F">페이드 배너</label>
+            <span><input type="button" value="효과적용" id="banner_effect"></span>
+        </div>
+    </aside>
+
+    <!-- 배너 등록 -->
+    <table class="bn_table">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이미지</th>
+                <th>링크 주소</th>
+                <th>배너명</th>
+                <th>배너 순서</th>
+                <th>등록일자</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <!-- 배너 리스트 -->
+        <tbody class="bn_list">
+            <tr v-for="bn in blist">
+                <td>{{bn.number}}</td>
+                <td><img :src="bn.img" @click="popup_img(bn.img);"></td>
+                <td><input type="text"v-bind:value="bn.link"  name="linkurls[]"></td>
+                <td>{{bn.bnm}}</td>
+                <td>
+                    <select class="bnlist_sel">
+                        <option v-for="bn in blist" v-model="bn.num">{{ bn.num }}</option>
+                    </select>
+                </td>
+                <td>{{bn.date}}</td>
+                <td><a @click="del_banner(bn.bidx)" class="sub_admin">삭제</a></td>
+            </tr>
+
+        </tbody>
+        <!-- 가입 회원 없음 -->
+        <tbody class="bn_tableNone " id="bn_tableNone">
+            <tr>
+                <td colspan="15" class="empthy_result">등록된 배너가 없습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="product_page">
+        <ul>
+            <li v-for="p in pageing" @click="gopage(p)">{{p}}</li>
+        </ul>
+    </div>
+    <div>
+        <input type="button" value="배너수정" class="bn_btn" id="bn_modify" onclick="banner_modify();">
+        <input type="button" value="배너등록" class="bn_btn" id="bn_btn" onclick="banner_input();">
+    </div>
+</article>

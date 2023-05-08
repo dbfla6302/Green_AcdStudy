@@ -1,0 +1,25 @@
+.copyright{
+    /* width: 1200px;  */
+    width: 100%; height: 100px;
+    margin: 0 auto;
+    /* background-color: #aaa; */
+    font-size: 13px; padding-top: 5px;
+}
+.copy_info { 
+    width: inherit; height: 30px; 
+    text-align: center; line-height: 30px; 
+}
+.copy_info > li { display: inline-block; font-size: 12px; margin-right: 3px; }
+.copy_bottom {
+    width: inherit; height: 30px; 
+    text-align: center; line-height: 30px; 
+    display: inline-block;
+}
+.cn_ck { 
+    width: 70px; height: 20px; 
+    border-radius: 5px; font-size: 11px;
+    background-color: #aaa;  
+    border: 0; margin-right: 3px;
+    cursor: pointer;
+}
+.cn_ck:hover { background-color: gainsboro; }
