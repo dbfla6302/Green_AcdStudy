@@ -1,0 +1,43 @@
+.new_pets{
+    padding-top: 40px; width: 1200px; height: auto;
+    margin: 0 auto; text-align: center;
+}
+.new_menu{
+    width: 250px; height: 35px; border: 1px solid black; line-height: 35px;
+    display: block; margin: 0 auto; font-size: 18px; text-align: center; font-weight: bold;
+    margin-bottom: 40px;
+}
+.new_menulis{
+    width: auto; height: 40px; display: flex; justify-content: center; margin-bottom: 40px;
+}
+.new_menulis>li{
+    width: 150px; height: 40px; line-height: 40px; text-align: center; cursor: pointer;
+    float: left; margin-left: 20px; border: 1px solid #ccc; border-radius: 15px;
+}
+.new_menulis>li:hover{
+    background-color: #ccc; font-weight: bold;
+}
+.new_menulis>li:first-child{margin-left: 0;}
+.new_photos{
+    width: 1200px; margin: 0 auto; height: 500px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+}
+.new_span{
+    width: 230px; height: 230px; border: 1px solid #ccc; margin-bottom: 5px;
+    float: left; background-size: cover; cursor: pointer;
+}
+.new_span>img{width: 230px; height: 230px; object-fit: cover;}
+.new_span>ul{
+    display: none;
+    width: 230px; height: 230px; background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; text-align: left; color: white; position: relative;
+}
+.new_span>ul>li:first-child{ font-size: 12px; }
+.new_span>ul>li:nth-child(2){ font-size: 14px;}
+.new_icons{
+    width: 20px; height: 60px;
+    position: absolute; right: 10px; bottom: 10px;
+}
+.new_icons>li, .new_icons>li>img{
+    width: 20px; height: 20px;  text-align: right;
+}

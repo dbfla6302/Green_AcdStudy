@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.index_menu{width: 1200px; height: auto; margin: 0 auto; font-weight: bold;}
+.index_menu_ul{width: inherit; height: 70px; margin-left: 10%;}
+.index_menu_ul > li{width: 115px; height: 70px; text-align: center; line-height: 70px; float: left; margin-right: 50px; cursor: pointer; position: relative;}
+.somenu{display: none; position: absolute; width: auto; height: auto; }
+.somenu > li{ background-color: #ccc; width: 115px; height: 70px; }
+.index_menu_ul > li:nth-child(1) > img{
+        display: none;
+}
+.index_menu_ul > li:nth-child(2) > img{
+    display: none;
+}
+.index_menu_ul > li:nth-child(5) > img{
+    display: none;
+}
+.index_menu_ul > li > img{
+    position: absolute; right: 0; bottom: 25px;
+}

@@ -1,0 +1,42 @@
+.event_div { width: 1200px; height: auto; margin: 0 auto; }
+.event_banner {
+    width: inherit; height: auto;
+}
+.quick_background {
+    height: 800px; background-color: rgb(240,241,245);
+}
+.event_quick { 
+    display: block;
+    width: 1200px; height: auto;
+    margin: 0 auto;
+    padding-top:40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+.quick_ol { 
+    width: inherit;
+    height: 498px;
+    margin-top: 20px;
+}
+.quick_ol > li { float: left;}
+.quick_ol > li:nth-of-type(1),.quick_ol > li:nth-of-type(3){ 
+    width: 282px;
+    height: inherit;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left; }
+.quick_ol > li:nth-of-type(2){
+    width: 595px;
+    height: inherit;
+}
+.sub_quick { 
+    width: inherit; 
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;  
+    align-content:space-around;
+}
+.sub_quick > li:nth-of-type(1),.sub_quick > li:nth-of-type(2){
+    margin-bottom: 15px;
+}

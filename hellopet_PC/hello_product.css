@@ -1,0 +1,65 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+ul,ol,dl { list-style: none; margin: 0; padding: 0; }
+.pd_section { width: 1200px; height: 580px; margin: 0 auto; }
+
+.pd_box { 
+    position: relative; 
+    width: 100%; height: inherit; 
+    background-color: rgb(240,241,245); 
+    text-align: center; padding-top: 40px; 
+}
+.pd_box > p { 
+    width: 250px; height: 35px; margin: 0 auto;
+    line-height: 35px; border-bottom: 2px solid black; 
+    font-size: 18px; text-align: center; font-weight: bold;
+    margin-bottom: 5px;
+}
+.pd_box > div { font-size: 13px; margin-bottom: 40px;}
+
+/* left & right */
+.pd_left > img , .pd_right > img { width: 30px; height: 30px; cursor: pointer; }
+.pd_left { display: inline-block; position: absolute; left: 5px; top: 50%;  }
+.pd_right { display: inline-block; position: absolute; right: 5px; top: 50%; z-index: 10; }
+
+/* 상품box */
+.pd_sbox { 
+    margin: 0 auto; display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    width: 1000px; height: 390px; 
+}
+.pd_view { width: 950px; height: 335px; position: relative; overflow: hidden; } /**/
+.dtc { width: 2150px; height: 335px; position: absolute; display: flex; }
+.pd_ovbox { width: 100%; height: 335px; display: flex; flex-flow: nowrap row; margin: 0 auto;}
+.pd_ovbox > li > ul { margin-right: 20px; }
+/* 상품출력 */
+.pd_imgb { width: 220px; height: 310px;  }
+.pd_imgb > li { 
+    width: inherit; font-size: 12px; 
+    display: flex; justify-content: center; 
+    align-items: center; flex-wrap: wrap;
+    /* border: 1px solid red; */
+
+}
+.pd_imgb > li:nth-child(1) > img { width: 220px; height: 220px; background-color: pink; }
+.pd_imgb > li:nth-child(2) { height: 20px; }    /* 여백*/
+.pd_imgb > li:nth-child(3) { height: 50px; border-bottom: 1.5px solid black; }
+.pd_imgb > li:nth-child(4) { height: 20px;  }
+.pd_imgb > li:last-child { height: 20px; color: gray; font-weight: normal; }
+/* 할인 */
+.pd_imgb>li:nth-child(1){
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.pd_sale { 
+    width: 50px; height: 50px; display: inline-block;
+    position: absolute; font-size: 14px;
+    color: white; background-color: black;
+    border-radius: 100%; text-align: center;
+    line-height: 50px; font-weight: bold;
+    margin: 10px;
+}
+font { font-weight: bold; color: black; }

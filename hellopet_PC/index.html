@@ -1,0 +1,45 @@
+<?php
+    $d = date("YmdHis");
+?>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./index.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./hello_banner.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./hello_event.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./hello_footer.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./hello_menu.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./hello_newpet.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./hello_product.css?v=<?php echo $d ?>">
+    <link rel="stylesheet" type="text/css" href="./font.css?v=<?php echo $d ?>">
+    <script src="./jquery.js"></script>
+    <script src="./jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui.css">
+    <script src="./hello_banner.js?v=<?php echo $d ?>"></script>
+    <script src="./hello_event.js?v=<?php echo $d ?>"></script>
+    <script src="./hello_footer.js?v=<?php echo $d ?>"></script>
+    <script src="./hello_newpet.js?v=<?php echo $d ?>"></script>
+    <script src="./hello_menu.js?v=<?php echo $d ?>"></script>
+    <script src="./hello_product.js?v=<?php echo $d ?>"></script>
+    <script src="./index.js?v=<?php echo $d ?>"></script>
+    
+    <title>HelloPet은 애완동물 종합쇼핑몰 입니다.</title>
+</head>
+<body class="hello_body">           
+    <div class="index_floor" id="floorbanner">
+        <span>
+            <label id="floor_top"></label>
+            <label id="floor_bottom"></label>
+        </span>
+    </div>
+    <header><?php include "hello_banner.html" ?></header>                     
+    <nav><?php include "hello_menu.html" ?></nav>
+    <main>
+        <section><?php include "hello_newpet.html" ?></section>
+        <section class="index_product"><?php include "hello_product.html" ?></section>
+        <section><?php include "hello_event.html" ?></section>
+    </main>
+    <footer><?php include "hello_footer.html" ?></footer>
+</body>

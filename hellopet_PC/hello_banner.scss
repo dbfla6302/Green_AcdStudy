@@ -1,0 +1,107 @@
+@mixin objectsize($w,$h,$position) {
+    width: $w;
+    height: $h;
+    position: $position;
+}
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+*{box-sizing: border-box; font-size: 12px}
+
+.bn_tb{
+    @include objectsize(100%,600px,relative);
+    max-width: 2560px;
+
+    /*top*/
+    &>.bn_top{
+        @include objectsize(100%,auto,absolute);
+        max-width: 2560px;
+        z-index: 5; margin: 0 auto;
+        padding: 20px 20px 0 20px;
+        &>.bn_top_left{
+            @include object(330px,20px,flex);
+            &>.bn_top_icon{
+                @include object(65px,20px,inline-block);
+                background-color: white;
+                text-align: center;
+                line-height: 20px;
+                border-radius: 10px;
+                margin-left: 165px;
+                cursor: pointer;
+            }
+            &>.bn_top_icons{
+                @include object(auto,20px,inline-block);
+                margin-left: 5px;
+                &>span{
+                    display: inline-block;
+                    cursor: pointer;
+                    &>img{
+                        width: 20px; height: 20px; object-fit: cover;
+                    }
+                }
+            }
+        }
+        &>.bn_top_menu{
+            @include object(auto,20px,inline);
+            margin-right: 165px;
+            position: absolute;
+            right: 10px; top: 20px;
+            &>li{
+                @include object(70px,inherit,block);
+                border-left: 1px solid black; cursor: pointer;
+                float: left; font-size: 12px; text-align: center; 
+                line-height: 20px;
+                &:first-of-type{border-left: none;}
+            }
+        }
+        &>.bn_logo{
+            width: 100%; max-width: 2560px; height: 55px; margin: 0 auto; text-align: center; 
+            &>img{
+                width: 275px; height: 55px; cursor: pointer;
+            }
+        }
+    }
+
+    /*banner*/
+    &>.bn_banner{
+        @include objectsize(100%,600px,absolute);
+        max-width: 2560px;
+        /*button*/
+        &>.bn_btn{
+            @include objectsize(100%,inherit,absolute);
+            max-width: inherit;
+            display: flex; 
+            align-items: center;
+            &>.bn_l, &>.bn_r{
+                @include objectsize(65px,65px,absolute);
+                object-fit:cover; cursor: pointer;
+                z-index: 20; cursor: pointer;
+            }
+            &>.bn_l{left: 10px;}
+            &>.bn_r{right: 10px;}
+        }
+        &>.bn_imgs{
+            height: 613px; max-width: 2560px; margin: 0 auto; position: relative;
+            &>.bn_1, &>.bn_2, &>.bn_0{
+                @include objectsize(100%,600px,absolute);
+                display: none;
+                max-width: inherit; 
+            }
+            &>.bn_0{ display: block;}
+        }
+        /*disc*/
+        &>.bn_disc{
+            @include objectsize(100%,20px,absolute);
+            text-align: center;
+            z-index: 35; bottom: 20px;
+            &>li{
+                @include object(15px,15px,inline-block);
+                margin-left: 10px; cursor: pointer;
+                background-color: #ccc; border-radius: 100%;
+                &:first-child{background-color: black; margin-left: 0;}
+            }
+        }
+    }
+}
