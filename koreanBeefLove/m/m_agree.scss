@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+@mixin objectsize($w,$h,$display,$position) {
+        width: $w;
+        height: $h;
+        display: $display;
+        position: $position;
+}
+
+body{
+    @include base;
+    @include objectsize("",auto,block,relative);
+    min-width: 340px;
+    max-width: 480px;
+}
+
+form {
+    text-align: center;
+    &>.member_box{
+        @include object(100%,auto,block);
+        border: 1px solid gray;
+
+        // 
+        &>.member{
+            @include object(90%,auto,block);
+            margin: 0 auto;
+            // border: 1px solid red;
+            &>p{ text-align: left; }
+            &>.mb_text{
+                @include object(100%,100px,block);
+                border: 1px solid dimgray;
+                margin: 0 auto;
+
+            }
+            // 스왑버튼
+            &>.mb_agree{
+                @include object(100%,50px,block);
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+        
+                & > span{
+                    @include object(80px,30px,block);
+                    background-color: dimgray;
+                    border-radius: 15px;
+                    position: relative;
+                    
+                    & > label{
+                        @include object(30px,30px,block);
+                        position: absolute;
+                        background-color: white;
+                        border-radius:50%;
+                        // right:45px;
+                        right: 4px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &>.agree_btn{
+                @include object(30%,50px,block);
+                margin: 0 auto;
+                background-color: salmon;
+                border: 0;
+                color: white;
+                margin-bottom: 20px;
+                cursor: pointer;
+                // &:hover{
+                //     background-color: lightsalmon;
+                // }
+            }
+        }
+    }
+}

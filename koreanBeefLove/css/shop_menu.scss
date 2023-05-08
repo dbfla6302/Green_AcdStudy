@@ -1,0 +1,67 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+
+.menu{
+    @include object(100%,50px,block);
+    background-color: black;
+    &>.menu_box{
+        @include object(1174px,inherit,block);
+        position: relative;
+        font-size: 15px;
+        margin: 0 auto;
+        &>.m_box{
+            color: white;
+            float: left;
+            &>li{
+                width: 150px;
+                float: left;
+                line-height: 50px;
+                text-align: center;
+                cursor: pointer;
+                &:hover{
+                    color: gold;
+                }
+                &>ol{
+                    position: absolute;
+                    z-index: 10;
+                    background-color: white;
+                    color: black;
+                    border: 1px solid #ddd;
+                    display: none;
+                    &>li{
+                        cursor: pointer;
+                        width: 150px;
+                        line-height: 40px;
+                        font-size: 14px;
+                        &:hover{
+                            color: crimson;
+                            font-weight: 500;
+                            border-bottom: 2px solid gold;
+                            box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+                        }
+                    }
+                }
+            }
+        }
+        &>div{
+            @include object(160px,inherit,block);
+            background-color: #c12028;
+            color: white;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            right: 0;
+        }
+    }
+}

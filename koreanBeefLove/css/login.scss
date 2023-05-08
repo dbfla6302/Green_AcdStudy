@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@mixin object($w,$h) {
+    width:$w;
+    height:$h;
+    display: block;
+    box-sizing: border-box;
+}
+@mixin font($size,$fam,$wei) {
+    font-size: $size;     
+    font-family: $fam;
+    font-weight: $wei;
+}
+.login_box {
+    @include object(1200px,auto);
+    @include font(14px,"'Noto Sans KR', sans-serif",400);
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    &>.login_title {
+        @include object(100%,30px);
+        @include font(18px,"'Noto Sans KR', sans-serif",700);
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 22px;
+    }
+    &>.nomember{ 
+        color: dimgrey; 
+        font-weight: bold;
+    }
+    
+    & > span { 
+        @include object(550px,45px);
+        margin: 0 auto;
+        line-height: 45px;
+        clear: both; 
+        color: gray; 
+        font-size: 12px;
+ 
+    }
+    &>.login_btn2 {
+        @include object(550px,90px);
+        position: relative;
+        margin: 0 auto;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        // border: 1px solid red;
+
+        &>ul{
+            @include object(inherit,inherit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &>li{
+            @include object(175px,40px);
+                &>input{
+                    @include object(175px,40px);
+                    border: 1px solid gainsboro;
+                    background-color: gainsboro;
+                    font-family: 'Noto Sans KR', sans-serif;   
+                    cursor: pointer;
+                    &:hover { 
+                        background-color:rgb(90, 90, 90); 
+                        color: white;
+                        box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.45); 
+                    }
+                }
+                &:nth-of-type(1){
+                    &>input:hover { 
+                        background-color: #c12028;
+                        color: white;
+                        box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.45); 
+                    }
+                }
+            }
+        }
+    }
+
+    &>form{
+        .login_btn1 {
+            @include object(550px,140px);
+            margin: 0 auto;
+    
+            .label_box { color: gray; font-size: 12px; }
+            & > span { 
+                float: left; 
+                margin-left: 48px; 
+                &>ol>li{
+                    height: 50px;
+                    &>.span_box1 {
+                        @include object(300px,40px);
+                        text-indent:5px;
+                        border: 1px solid #aaa;
+                        box-sizing: border-box;
+                        font-family: 'Noto Sans KR', sans-serif;
+                    }
+                }
+                &>.span_box2 {
+                    @include object(200px,90px);
+                    border: 1px solid dimgrey;
+                    background-color: dimgrey;
+                    color: white;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #c12028;
+                        border: 1px solid #c12028;
+                        box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); 
+                    }
+                }
+            }
+            & > span:nth-of-type(1) { margin-left: 0; }
+
+        }
+
+        .btn3 {
+            @include object(550px,140px);
+            margin: 0 auto;
+    
+            & > span { float: left; margin-left: 48px; }
+            & > span:nth-of-type(1) { margin-left: 0; }
+            & > span:nth-of-type(3) { 
+                clear: both; 
+                margin-top: 5px;
+                margin-left: 0; 
+                color: gray; 
+                font-size: 12px;
+            }
+        }
+
+    }
+}

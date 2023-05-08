@@ -1,0 +1,60 @@
+.menu {
+  width: 100%;
+  height: 50px;
+  display: block;
+  background-color: black;
+}
+.menu > .menu_box {
+  width: 1174px;
+  height: inherit;
+  display: block;
+  position: relative;
+  font-size: 15px;
+  margin: 0 auto;
+}
+.menu > .menu_box > .m_box {
+  color: white;
+  float: left;
+}
+.menu > .menu_box > .m_box > li {
+  width: 150px;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.menu > .menu_box > .m_box > li:hover {
+  color: gold;
+}
+.menu > .menu_box > .m_box > li > ol {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  display: none;
+}
+.menu > .menu_box > .m_box > li > ol > li {
+  cursor: pointer;
+  width: 150px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.menu > .menu_box > .m_box > li > ol > li:hover {
+  color: crimson;
+  font-weight: 500;
+  border-bottom: 2px solid gold;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+.menu > .menu_box > div {
+  width: 160px;
+  height: inherit;
+  display: block;
+  background-color: #c12028;
+  color: white;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  right: 0;
+}/*# sourceMappingURL=shop_menu.css.map */

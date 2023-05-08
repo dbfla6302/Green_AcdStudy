@@ -1,0 +1,119 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+
+.welcome{
+    @include object(100%,auto,block);
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+    &>p{
+        @include object(800px,80px,block);
+        line-height: 80px;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 0 auto;
+    }
+    &>aside{
+        @include object(800px,auto,block);
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        &>div{
+            &:nth-of-type(1){
+                @include object(inherit,auto,block);
+                font-size: 13px;
+                text-align: center;
+                &>ul{
+                    @include object(600px,inherit,block);
+                    margin: 0 auto;
+                    border-bottom: 1px solid #ccc;
+                    &>li{
+                        &:nth-of-type(1){
+                            height: 150px;
+                            font-size: 18px;
+                            line-height: 180px;
+                            color: crimson;
+                        }
+                        &:nth-of-type(2){
+                            font-size: 20px;
+                            height: 50px;
+                            &>b{ 
+                                font-size: 22px;
+                                color: crimson; }
+                        }
+                        &:nth-of-type(3){
+                            height: 25px;
+                            line-height: 30px;
+                        }
+                        &:nth-of-type(4){
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                @include object(inherit,250px,flex);
+                justify-content: center;
+                align-items: center;
+                &>ul{
+                    @include object(600px,auto,block);
+                    margin: 0 auto;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    &>li{
+                        &:nth-of-type(1){
+                            font-size: 15px;
+                            &>b{ color: crimson; }
+                        }
+                        &:nth-of-type(2){
+                            height: 50px;
+                            font-size: 13px;
+                            color: dimgrey;
+                        }
+                        &:nth-of-type(3){
+                            height: 40px;
+                            display: flex;
+                            align-items: flex-end;
+                            &>input{
+                                @include object(250px,25px,flex);
+                                font-size: 13px;
+                                background-color: rgb(245, 245, 245);
+                                border: 1px solid #bbb;
+                                cursor: pointer;
+                                &:hover{ box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.25); }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3){
+                @include object(inherit,80px,flex);
+                justify-content: center;
+                &>input{
+                    @include object(100px,40px,block);
+                    border-radius: 5px;
+                    border: 0;
+                    background-color: dimgrey;
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: white;
+                    cursor: pointer;
+                    &:hover{ 
+                        background-color: salmon;
+                        box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); 
+                    }
+                }
+            }
+        }
+    }
+}

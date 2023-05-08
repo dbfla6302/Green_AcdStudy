@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+
+.copyright{
+    @include object(100%,auto,block);
+    margin: 0 auto;
+    font-size: 13px; 
+    padding-top: 5px;
+    &>.part1{
+        @include object(100%,40px,block);
+        margin: 0 auto;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(70, 70, 70);
+        line-height: 40px;
+        margin-bottom: 20px;
+        border-top: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+        &>span{
+            &:after{
+                content: "　|";
+                margin-right: 7px;
+            }
+            &:last-of-type::after{content: "";}
+        }
+    }
+    &>.part2{
+        @include object(1174px,auto,block);
+        margin: 0 auto;
+        text-align: center;
+        &>.shop_footer{
+
+            &>.copy_info { 
+                @include object(inherit,25px,"");
+                text-align: center; line-height: 25px; 
+                & > li { 
+                    display: inline-block; 
+                    color: dimgrey;
+                    font-size: 12px;
+                    margin-right: 3px; 
+                    &>.cn_ck { 
+                        @include object(70px,20px,"");
+                        border-radius: 5px; font-size: 11px;
+                        background-color: #aaa;  
+                        border: 0; margin-right: 3px;
+                        cursor: pointer;
+                        &:hover { background-color: gainsboro; }
+                    }
+                }
+            }
+            &>.copy_bottom {
+                @include object(inherit,30px,inline-block);
+                text-align: center; line-height: 30px; 
+                color: dimgrey;
+            }
+            &>.sp{ font-size: 13px; font-weight: bold; color: crimson; }
+        }
+    }
+}

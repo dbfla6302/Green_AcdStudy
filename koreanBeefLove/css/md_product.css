@@ -1,0 +1,85 @@
+.mdpick {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.mdpick .part1 {
+  width: 1174px;
+  height: 76px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+.mdpick .part2 {
+  width: 1174px;
+  height: 400px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+.mdpick .part2 > span {
+  position: absolute;
+  top: 35%;
+}
+.mdpick .part2 > span:nth-of-type(1) {
+  left: -1%;
+}
+.mdpick .part2 > span:nth-of-type(2) {
+  right: -1%;
+}
+.mdpick .part2 > .mdpick_view {
+  width: 1155px;
+  height: inherit;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mdpick .part2 > .mdpick_view > label {
+  width: auto;
+  height: inherit;
+  display: flex;
+  position: absolute;
+}
+.mdpick .part2 > .mdpick_view > label > ul {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  margin-right: 20px;
+}
+.mdpick .part2 > .mdpick_view > label > ul li {
+  width: 215px;
+  height: auto;
+  display: block;
+}
+.mdpick .part2 > .mdpick_view > label > ul li > img {
+  width: 215px;
+  height: 215px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.mdpick .part2 > .mdpick_view > label > ul li > span {
+  width: 215px;
+  height: 20px;
+  display: block;
+  text-align: center;
+}
+.mdpick .part2 > .mdpick_view > label > ul li > span:nth-of-type(1) {
+  height: 35px;
+  line-height: 35px;
+  font-weight: 500;
+}
+.mdpick .part2 > .mdpick_view > label > ul li > span:nth-of-type(2) {
+  color: gray;
+  font-size: 13px;
+}
+.mdpick .part2 > .mdpick_view > label > ul li > span:nth-of-type(3) {
+  color: crimson;
+  font-size: 14px;
+  font-weight: 500;
+}/*# sourceMappingURL=md_product.css.map */

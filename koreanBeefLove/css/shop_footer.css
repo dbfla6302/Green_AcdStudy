@@ -1,0 +1,76 @@
+@charset "UTF-8";
+.copyright {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  font-size: 13px;
+  padding-top: 5px;
+}
+.copyright > .part1 {
+  width: 100%;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(70, 70, 70);
+  line-height: 40px;
+  margin-bottom: 20px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+.copyright > .part1 > span:after {
+  content: "　|";
+  margin-right: 7px;
+}
+.copyright > .part1 > span:last-of-type::after {
+  content: "";
+}
+.copyright > .part2 {
+  width: 1174px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.copyright > .part2 > .shop_footer > .copy_info {
+  width: inherit;
+  height: 25px;
+  display: "";
+  text-align: center;
+  line-height: 25px;
+}
+.copyright > .part2 > .shop_footer > .copy_info > li {
+  display: inline-block;
+  color: dimgrey;
+  font-size: 12px;
+  margin-right: 3px;
+}
+.copyright > .part2 > .shop_footer > .copy_info > li > .cn_ck {
+  width: 70px;
+  height: 20px;
+  display: "";
+  border-radius: 5px;
+  font-size: 11px;
+  background-color: #aaa;
+  border: 0;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.copyright > .part2 > .shop_footer > .copy_info > li > .cn_ck:hover {
+  background-color: gainsboro;
+}
+.copyright > .part2 > .shop_footer > .copy_bottom {
+  width: inherit;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  color: dimgrey;
+}
+.copyright > .part2 > .shop_footer > .sp {
+  font-size: 13px;
+  font-weight: bold;
+  color: crimson;
+}/*# sourceMappingURL=shop_footer.css.map */

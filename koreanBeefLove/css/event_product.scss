@@ -1,0 +1,49 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+img{ cursor: pointer; }
+
+.event_product{
+    @include object(100%,510px,block);
+    background-color: #eee;
+
+    &>.event_box{
+        @include object(1174px,inherit,flex);
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        &>div{
+            @include object(auto,auto,block);
+            &:first-of-type{ @include object(308px,415px,block); }
+            &:last-of-type{
+                @include object(305px,415px,flex);
+                flex-flow: wrap row;
+                align-content: space-between;
+                &> span{ @include object(305px,202px,block);  }
+            }
+        }
+        // 롤링배너
+        &>.epd_bnbox{
+            @include object(534px,415px,block);
+            position: relative;
+            overflow: hidden;
+            &>.epd_banner{
+                @include object(1068px,inherit,flex);
+                position: relative;
+                &>li{ 
+                    @include object(534px,415px,block); 
+                    &>img{ position: absolute; }
+                }
+            }
+        }
+    }
+}

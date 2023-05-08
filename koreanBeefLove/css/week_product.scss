@@ -1,0 +1,140 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+
+.week_product{
+    @include object(100%,auto,block);
+    position: relative;
+    margin-bottom: 50px;
+    // border: 1px solid red;
+
+    .part1{
+        @include object(1174px,76px,block);
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    &>.part2{
+        @include object(1174px,auto,block);
+        position: relative;
+        margin: 0 auto;
+        &>.wproduct_view{
+            @include object(1174px,1550px,flex); 
+            flex-flow: wrap row;
+            justify-content: space-between;
+            align-content: space-between;
+            &>.wproduct{
+                @include object(340px,485px,inline-block);
+                position: relative;
+
+                &:hover{ 
+                    border: 1px solid #ccc; 
+                    border-radius: 0 0 5px 5px;
+                    box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+                }
+
+                & > li {
+                    position: relative;
+                    &:nth-child(1){
+                        @include object(inherit,340px,block);
+                        position: relative; 
+                        &>span{
+                            @include object(100%,inherit,block);
+                            position: relative;
+                            &>img{
+                                @include object(100%,inherit,block);
+                                object-fit: cover;
+                            }
+                        }
+                        // 장바구니 & 찜하기
+                        &> label{
+                            @include object(340px,60px,none);
+                            align-items: center;
+                            position: absolute;
+                            z-index: 3;
+                            bottom: 0;
+                            background-color: rgba(0,0,0,0.7);
+                            &>span{ 
+                                @include object(170px,60px,flex);
+                                flex-flow: wrap column;
+                                justify-items: center;
+                                align-items: center;
+                                color: white;
+                                cursor: pointer;
+                                
+                                &:nth-of-type(2){ 
+                                    float: right; 
+                                    border-left: 1px solid rgba(255, 255, 255, 0.3); 
+                                    box-sizing: border-box; 
+                                }
+                                &>img{ 
+                                    @include object(25px, auto, block);
+                                    object-fit: cover;
+                                }
+                                &:hover{ background-color: rgba(255, 77, 77, 0.7); }
+                            }
+                        }
+                        &:hover >label { display: flex; }
+                    }
+                    &:nth-child(2){
+                        @include object(100%,125px,flex);
+                        position: absolute;
+                        flex-flow: wrap column;
+                        margin-top: 5px;
+                        &>span{
+                            width: 100%;
+                            box-sizing: border-box;
+                            text-align: center;
+                            &:nth-of-type(1){
+                                height: 25px; 
+                                line-height: 25px;
+                                font-weight: 400;
+                            }
+                            &:nth-of-type(2){ 
+                                height: 45px; 
+                                line-height: 35px;
+                                font-size: 14px;
+                                color: gray;
+                            }
+                            &:nth-of-type(3){ 
+                                height: 20px;  
+                                font-size: 13px;
+                                text-align: right;
+                                padding-right: 5px;
+                                line-height: 20px;
+                                color: dimgrey;
+                            }
+                            &:nth-of-type(4){ 
+                                height: 35px; 
+                                line-height: 35px;
+                                text-align: right;
+                                padding-right: 5px;
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: crimson;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// event_banner
+.event_banner{ 
+    &>img{ 
+        @include object(100%,auto,block);
+        object-fit: cover; 
+    }
+}

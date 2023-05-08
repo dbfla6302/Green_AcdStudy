@@ -1,0 +1,539 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  text-indent: 5px;
+  font-size: 13px;
+  font-weight: "";
+  color: rgb(65, 65, 65);
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+input[type=button]:hover {
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.45);
+}
+
+input, select {
+  box-sizing: border-box;
+}
+
+.pd_buy {
+  width: 1170px;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0 auto;
+}
+.pd_buy > .buy_title {
+  width: inherit;
+  height: 80px;
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: "";
+  text-align: center;
+  line-height: 100px;
+  margin-bottom: 0;
+}
+.pd_buy > aside {
+  margin-bottom: 100px;
+}
+.pd_buy > aside > div {
+  width: inherit;
+  height: 60px;
+  display: block;
+  font-size: "";
+  font-weight: bold;
+  color: rgb(80, 80, 80);
+  padding-left: 10px;
+  line-height: 70px;
+}
+.pd_buy > aside > div:nth-of-type(2) {
+  font-size: 15px;
+  line-height: 80px;
+}
+.pd_buy > aside > div:nth-of-type(2) > span {
+  position: absolute;
+  height: 60px;
+  line-height: 70px;
+}
+.pd_buy > .buy_order {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.pd_buy > .buy_order > table {
+  width: inherit;
+  height: auto;
+  display: block;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.pd_buy > .buy_order > table > thead {
+  width: inherit;
+  height: 40px;
+  display: block;
+  font-size: "";
+  font-weight: normal;
+  color: dimgrey;
+  border-top: 2px solid #aaa;
+  background-color: rgb(240, 240, 240);
+}
+.pd_buy > .buy_order > table > tbody {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(85, 85, 85);
+}
+.pd_buy > .buy_order > table > tbody td:nth-of-type(3) {
+  font-size: "";
+  font-weight: bold;
+  color: dimgrey;
+}
+.pd_buy > .buy_order > table > tbody td:nth-of-type(5) {
+  font-size: "";
+  font-weight: bold;
+  color: dimgrey;
+}
+.pd_buy > .buy_order > table tr {
+  height: 40px;
+}
+.pd_buy > .buy_order > table tr td {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) {
+  width: 390px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul {
+  width: 390px;
+  height: 100px;
+  display: block;
+  line-height: 100px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li {
+  float: left;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li:nth-of-type(1) {
+  width: 100px;
+  height: 100px;
+  display: block;
+  line-height: 100px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li:nth-of-type(1) > img {
+  width: 90%;
+  margin-top: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li:nth-of-type(2) {
+  width: 240px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li:nth-of-type(2) > div {
+  width: 100%;
+  height: 50px;
+  display: block;
+  text-align: left;
+  text-indent: 20px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li:nth-of-type(2) > div:nth-of-type(1) {
+  font-size: 15px;
+  font-weight: bold;
+  color: "";
+  line-height: 70px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(1) > ul > li:nth-of-type(2) > div:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color: dimgrey;
+  line-height: 20px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(2) {
+  width: 70px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(3) {
+  width: 200px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(4) {
+  width: 170px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(5) {
+  width: 170px;
+}
+.pd_buy > .buy_order > table tr td:nth-of-type(6) {
+  width: 170px;
+}
+.pd_buy > .buy_order > ol {
+  width: 100%;
+  height: 100px;
+  display: block;
+  border: 1px solid #ccc;
+}
+.pd_buy > .buy_order > ol > li {
+  height: 40px;
+  text-align: right;
+  padding-right: 10px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) {
+  height: 60px;
+  line-height: 60px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul > li {
+  margin-left: 25px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul > li:nth-of-type(even) {
+  font-weight: bold;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul > li:nth-of-type(odd) {
+  color: dimgrey;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul > li:nth-of-type(4) > span {
+  font-size: 18px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul > li > span {
+  margin-left: 20px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(1) > ul > li > img {
+  position: relative;
+  top: 5px;
+}
+.pd_buy > .buy_order > ol > li:nth-of-type(2) {
+  font-size: 14px;
+  color: salmon;
+}
+
+.buy_info {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.buy_info table {
+  width: inherit;
+  height: auto;
+  display: block;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.buy_info table tr {
+  width: 100%;
+  height: 40px;
+  display: "";
+  font-size: 15px;
+  font-weight: "";
+  color: dimgrey;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+}
+.buy_info table tr:nth-of-type(1) {
+  border-top: 1px solid #ccc;
+}
+.buy_info table tr:nth-of-type(2) > td > input {
+  margin-right: 10px;
+}
+.buy_info table tr:nth-of-type(2) > td > input:nth-of-type(1) {
+  width: 120px;
+}
+.buy_info table tr > td {
+  padding-left: 10px;
+}
+.buy_info table tr > td > input[type=text] {
+  width: 300px;
+  height: 30px;
+  display: "";
+  position: relative;
+  top: -2px;
+  border: 1px solid #ccc;
+}
+.buy_info table tr > td > select {
+  width: 150px;
+  height: 30px;
+  display: "";
+  position: relative;
+  top: -2px;
+  margin-left: 8px;
+  color: dimgrey;
+  border: 1px solid #ccc;
+}
+.buy_info table tr > td:nth-of-type(1) {
+  width: 250px;
+  height: inherit;
+  display: block;
+  background-color: rgb(240, 240, 240);
+}
+.buy_info table tr > td:nth-of-type(2) {
+  width: 920px;
+  height: inherit;
+  display: "";
+}
+
+.delivery {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.delivery table {
+  width: inherit;
+  height: auto;
+  display: block;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.delivery table tr {
+  width: 100%;
+  height: 40px;
+  display: "";
+  font-size: 15px;
+  font-weight: "";
+  color: dimgrey;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+}
+.delivery table tr:nth-of-type(1) {
+  border-top: 1px solid #ccc;
+}
+.delivery table tr:nth-of-type(1) > td > label {
+  margin-right: 10px;
+}
+.delivery table tr:nth-of-type(1) > td > input[type=button] {
+  width: 100px;
+  height: 30px;
+  display: "";
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.delivery table tr.receiver_post {
+  height: 100px;
+}
+.delivery table tr.receiver_post > td > ul {
+  width: 100%;
+  height: 100px;
+  display: "";
+}
+.delivery table tr.receiver_post > td > ul > li:nth-of-type(1) > input[type=text] {
+  width: 150px;
+  height: 30px;
+  display: "";
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+.delivery table tr.receiver_post > td > ul > li:nth-of-type(1) > input[type=button] {
+  width: 120px;
+  height: 30px;
+  display: "";
+  font-weight: 600;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+  top: 2px;
+}
+.delivery table tr.receiver_post > td > ul > li:nth-of-type(2) > input {
+  width: 350px;
+  height: 30px;
+  display: "";
+  border: 1px solid #ccc;
+}
+.delivery table tr.receiver_post > td > ul > li:nth-of-type(2) > input:nth-of-type(2) {
+  margin-left: 10px;
+}
+.delivery table tr.receiver_post > td > ul > li:nth-of-type(3) {
+  line-height: 20px;
+}
+.delivery table tr.receiver_post > td > ul > li:nth-of-type(3) > label {
+  font-size: 13px;
+  color: royalblue;
+}
+.delivery table tr:nth-of-type(6) > td > input {
+  width: 800px;
+}
+.delivery table tr > td {
+  padding-left: 10px;
+}
+.delivery table tr > td > .telinpt {
+  width: 250px;
+}
+.delivery table tr > td > label {
+  font-size: 14px;
+  font-weight: "";
+  color: dimgrey;
+}
+.delivery table tr > td > label > font {
+  font-size: 13px;
+  font-weight: "";
+  color: #aaa;
+}
+.delivery table tr > td > input[type=text] {
+  position: relative;
+  top: -2px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+.delivery table tr > td:nth-of-type(1) {
+  width: 250px;
+  height: inherit;
+  display: block;
+  background-color: rgb(240, 240, 240);
+}
+.delivery table tr > td:nth-of-type(2) {
+  width: 920px;
+  height: inherit;
+  display: "";
+}
+
+.buy_pay {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.buy_pay > span:nth-of-type(1) {
+  width: inherit;
+  height: 40px;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: dimgrey;
+  border-top: 2px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  background-color: rgb(240, 240, 240);
+  line-height: 40px;
+  padding-left: 5px;
+}
+.buy_pay > span:nth-of-type(1) > label {
+  margin-right: 10px;
+}
+.buy_pay > span:nth-of-type(2) {
+  width: inherit;
+  height: 100px;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: dimgrey;
+  border: 1px solid #ccc;
+  line-height: 100px;
+  text-align: right;
+  padding-right: 30px;
+  margin-top: 15px;
+}
+.buy_pay > span:nth-of-type(2) > b {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ec101b;
+  margin-left: 20px;
+}
+.buy_pay > ul {
+  display: none;
+}
+.buy_pay > ul > li {
+  padding-left: 5px;
+}
+.buy_pay > ul > li:nth-of-type(1) {
+  width: inherit;
+  height: 60px;
+  display: block;
+  font-size: 14px;
+  font-weight: "";
+  color: dimgrey;
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.buy_pay > ul > li:nth-of-type(1) > div {
+  margin-top: 5px;
+}
+.buy_pay > ul > li:nth-of-type(2) {
+  width: inherit;
+  height: 50px;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: dimgrey;
+  border-bottom: 1px solid #ccc;
+  line-height: 50px;
+}
+.buy_pay > ul > li:nth-of-type(2) > span {
+  width: 400px;
+  height: inherit;
+  display: inline-block;
+}
+.buy_pay > ul > li:nth-of-type(2) > span > input, .buy_pay > ul > li:nth-of-type(2) > span > select {
+  width: 150px;
+  height: 25px;
+  display: inline-block;
+  border: 1px solid #bbb;
+  margin-left: 10px;
+}
+.buy_pay > ul > li:nth-of-type(2) > span > select {
+  width: 200px;
+  color: dimgrey;
+}
+.buy_pay > ul > li:nth-of-type(3) {
+  width: inherit;
+  height: 40px;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(80, 80, 80);
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(240, 240, 240);
+}
+.buy_pay > ul > li:nth-of-type(3) > label {
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: normal;
+  color: dimgrey;
+}
+
+.buy_paybtn {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.buy_paybtn > ul {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.buy_paybtn > ul > li {
+  width: inherit;
+  height: 50px;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: dimgrey;
+}
+.buy_paybtn > ul > li > label > b {
+  color: red;
+}
+.buy_paybtn > ul > li > input[type=button] {
+  width: 200px;
+  height: 50px;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  background-color: #c24047;
+  border: 1px solid #c24047;
+}
+.buy_paybtn > ul > li > input[type=button]:hover {
+  background-color: #c12028;
+  border: 1px solid #c12028;
+  box-shadow: 0 3px 5px 0 rgba(90, 90, 90, 0.55);
+}
+
+.important {
+  font-size: "";
+  font-weight: bold;
+  color: rgb(110, 110, 110);
+}/*# sourceMappingURL=buy.css.map */

@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+@mixin font($size,$weight,$color) {
+    font-size: $size; 
+    font-weight: $weight;
+    color: $color;
+}
+*{ box-sizing: border-box; }
+
+.pd_view{
+    @include object(1174px,auto,block);
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-right: 30px;
+    // border: 1px solid red;
+    & form{
+        display: flex;
+        justify-content: space-between;
+        &>.pd_img{
+            @include object(500px,auto,block);
+
+            &>label{
+                @include object(inherit,auto,flex);
+                justify-content: space-between;
+                align-items: center;
+                // &:nth-of-type(2){
+                //     @include object(500px,100px,flex);
+                // }
+                // &>ul{
+                //     @include object(250px,50px,flex);
+                //     justify-content: space-between;
+                //     align-items: center;
+                //     &>li{
+                //         @include object(70px,70px,block);
+                //         border: 1px solid red
+                //     }
+                // }
+            }
+        }   
+        &>.pd_info{
+            @include object(500px,500px,block);
+            &>ul{   //상품상세
+                @include object(inherit,247px,block);
+                border-top: 1px solid #ccc;
+                margin-bottom: 20px;
+                // border: 1px solid red;
+                &>li{ 
+                    @include object(inherit,35px,flex);
+                    @include font(14px,600,rgb(85, 85, 85));
+                    line-height: 40px;
+                    &>span{
+                        // border: 1px solid red;
+                        &:nth-of-type(1){
+                            @include object(20%,35px,block);
+                        }
+                        &:nth-of-type(2){
+                            @include object(25%,35px,block);
+                            @include font("",400,gray);
+                            &> select{
+                                @include object(100px,25px,block);
+                                margin-top: 10px;
+                                border: 1px solid #bbb;
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        &>span:last-of-type{
+                            display: flex;
+                            align-items: center;
+                            &>div{
+                                @include object(25px,25px,"");
+                                display: flex;
+                                flex-flow: nowrap row;
+                                align-items: center;
+                                justify-content: center;
+                                &:nth-of-type(1),&:nth-of-type(4){
+                                    border: 1px solid #ddd;
+                                    border-radius: 3px;
+                                    margin-right: 10px;
+                                    background-color: #ddd;
+                                    cursor: pointer;
+                                }
+                                &>input{
+                                    @include object(30px,25px,inline-block);
+                                    border: 1px solid #bbb;
+                                    text-indent: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &>label{
+                &:nth-of-type(1){   //상품제목, 설명
+                    @include object(inherit,100px,block);
+                    position: relative;
+                    &>span{
+                        @include object(inherit,auto,block);
+                        &:nth-of-type(1){
+                            @include font(27px,700,"");
+                            height: 50px;
+                        }
+                        &:nth-of-type(2){
+                            @include font(15px,400,gray);
+                        }
+                    }
+                }
+                &:nth-of-type(2){   //총 결제금액
+                    @include object(inherit,60px,block);
+                    @include font("",500,rgb(85, 85, 85));
+                    text-align: right;
+                    line-height: 70px;
+                    &>span{
+                        @include font(25px,800,tomato);
+                        margin-left: 20px;
+                    }
+                }
+                &:last-of-type{     //구매,장바구니,위시리스트 버튼
+                    @include object(inherit,70px,flex);
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    &>span{
+                        @include object(150px,50px,block);
+                        text-align: center;
+                        line-height: 50px;
+                        border: 1px solid #ccc;
+                        background-color: #ccc;
+                        cursor: pointer;
+                        &:first-of-type{
+                            width: 170px;
+                            background-color: #c24047;
+                            border: 1px solid #c24047;
+                            color: white;
+                            &:hover{ 
+                                background-color: #c12028;
+                                border: 1px solid #c12028;
+                                box-shadow: 0 3px 5px 0 rgba(90, 90, 90, 0.55); 
+                            }
+                        }
+                        &:hover{ box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.45); font-weight: bold; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.pd_menu{
+    @include object(100%,auto,flex);
+    position: relative;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    & > li{
+        @include object(25%,56px,"");
+        @include font(15px,500,rgb(80, 80, 80));
+        border:1px solid #ccc;
+        border-right:0;
+        line-height: 56px;
+        text-align: center;
+        background-color:#eee;
+        cursor: pointer;
+        &:hover{             
+            @include font(15px,bold,black);
+            background-color:#fff;
+            border-bottom:1px solid #fff;
+        }
+        &:last-child{
+            border-right:1px solid #ccc;
+        }
+
+        &.tab{
+            @include font(15px,bold,black);
+            background-color:#fff;
+            border-bottom:1px solid #fff;
+        }
+    }
+}  
+.mn2{ margin-top: -17px; }
+.mn3{ margin-top: 10px; }
+.pd_review{
+    @include object(100%,auto,"");
+    &>.review_btn{
+        @include object(100%,80px,flex);
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        &>button{
+            @include object(150px,30px,block);
+            margin-left: 10px;
+            background-color: dimgrey;
+            border-radius: 5px;
+            border: 0;
+            color: white;
+            &:hover{
+                background-color: gray;
+                box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.45); 
+                font-weight: bold;
+            }
+        }
+    }
+    &>div{
+        @include object(100%,250px,flex);
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: gray;
+    }
+}
+.pd_detail{
+    @include object(100%,auto,"");
+    // border: 1px solid red;
+    &>div{
+        @include object(100%,300px,block);
+        // border: 1px solid red;
+    }
+} 
+.pd_infoview {
+    @include object(1145px,auto,"");
+    margin: 0 auto;
+    &>p{
+        &>img{
+            width: 1145px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+.pd_delivery{
+    @include object(1145px,auto,"");
+    clear: both;
+    margin: 0 auto;
+    // border:1px solid blue;
+    & table{
+        @include object(1145px,auto,"");
+        border-spacing: 0; 
+        border-collapse: collapse; 
+        margin-top: 10px;
+        & tr{
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            &:nth-of-type(1){ border-top: 1px solid #ccc; }
+            & td{
+                &:nth-of-type(1){
+                    width: 25%;
+                    text-align: center;
+                    font-weight: bold;
+                    background-color: #eee;
+                }
+                &:nth-of-type(2){
+                    width: 70%;
+                    padding: 15px 15px 15px 40px;
+                    color: rgb(80, 80, 80);
+                    font-size: 14px;
+                    &>ul{
+                        list-style: disc;
+                    }
+                }
+            }
+        }
+    }
+}

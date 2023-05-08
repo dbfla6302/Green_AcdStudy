@@ -1,0 +1,87 @@
+.section_agree {
+  width: 100%;
+  height: auto;
+}
+
+.agree_view {
+  width: 1200px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.agree_view > p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0 80px 0;
+  font-size: 25px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+.agree_view > .agree_text {
+  width: 100%;
+  height: auto;
+  font-size: 13px;
+}
+.agree_view > .agree_text > li {
+  width: 100%;
+  height: 50px;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 0 0 0;
+}
+.agree_view > .agree_text > li:nth-of-type(1) {
+  font-weight: bold;
+  justify-content: flex-start;
+  border-bottom: 2px solid #aaa;
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+}
+.agree_view > .agree_text > li:nth-of-type(1) > label:nth-of-type(2) {
+  position: absolute;
+  right: 0;
+}
+.agree_view > .agree_text > li > label {
+  cursor: pointer;
+}
+.agree_view > .agree_text > li > label > b {
+  color: black;
+}
+.agree_view > .agree_text > li:nth-of-type(2) {
+  width: 100%;
+  height: 250px;
+}
+.agree_view > .agree_text > li:nth-of-type(2) > .text_box {
+  width: 100%;
+  height: 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+}
+.agree_view > .agree_text > li:nth-of-type(3) {
+  align-items: flex-start;
+}
+
+.agree_btn {
+  width: 170px;
+  height: 50px;
+  background-color: rgb(100, 99, 99);
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  margin: 25px 0 0 0;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.agree_btn:hover {
+  background-color: salmon;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}/*# sourceMappingURL=agree.css.map */

@@ -1,0 +1,65 @@
+<?php
+   $data =date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한우사랑</title>
+    <link rel="stylesheet" type="text/css" href="./index15.css?v=<?=$date?>">
+</head>
+<body>
+    <form id="join_form" name="join_form">
+        <input type="hidden" name="mlevel" value="1">
+        <input type="hidden" name="mcerti" value="Y">
+        <input type="hidden" name="magree1" value="Y">
+        <input type="hidden" name="magree2" value="Y">
+    <section class="joinMember">
+        <ul>
+            <li>MEMBERSHIP</li>
+            <li><input type="text" name="mid" placeholder="아이디를 입력하세요"></li>
+            <li><input type="password" name="mpass" id="mpass" placeholder="패스워드를 입력하세요"  readonly></li>
+            <li class="padbox">
+                <table class="keypad">
+                    <tr>
+                        <td class="num">1</td>
+                        <td class="num">2</td>
+                        <td class="num">3</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td class="num">5</td>
+                        <td class="num">6</td>
+                    </tr>
+                    <tr>
+                        <td class="num">7</td>
+                        <td class="num">8</td>
+                        <td class="num">9</td>
+                    </tr>
+                    <tr>
+                        <td class="num">0</td>
+                        <td class="num">!</td>
+                        <td class="num">*</td>
+                    </tr>
+                    <tr>
+                        <td class="num">_</td>
+                        <td class="num">-</td>
+                        <td class="num">.</td>
+                    </tr>
+                </table>
+            </li>
+            <li><input type="text" name="mname"  placeholder="고객명를 입력하세요"></li>
+            <li><input type="email" name="memail"  placeholder="이메일를 입력하세요"></li>
+            <li><input type="tel" name="mhp"  placeholder="연락처를 입력하세요" maxlength="13"></li>
+            <li><input type="text" name="mnick"  placeholder="닉네임을 입력하세요"></li>
+            <li><input type="button" value="완료" id="to_Join"></li>
+        </ul>
+    </section>
+</form>
+</body>
+<script defer type="module">
+    import {join_member} from "./m_member.js?v=2";
+</script>
+</html>

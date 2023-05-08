@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@mixin object2($w,$h){
+    width:$w;
+    height:$h;
+}
+@mixin obmargin {
+    margin:0 auto;
+}
+@mixin margins($top,$right,$bottom,$left){
+    margin:$top $right $bottom $left;
+}
+.section_agree{
+    @include object2(100%,auto);
+}
+.agree_view {
+    @include object2(1200px,auto);
+    position: relative;
+    @include obmargin;
+    margin-bottom: 50px;
+    & > p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        @include margins(40px,0,80px,0);
+        font-size: 25px;
+        @include object2(100%,60px);
+        line-height: 60px;
+
+    }
+    & > .agree_text {
+        @include object2(100%,auto);
+        font-size: 13px;
+        & > li {
+            @include object2(100%,50px);
+            padding-left: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include margins(10px,0,0,0);
+            &:nth-of-type(1){
+                font-weight: bold;
+                justify-content: flex-start;
+                border-bottom: 2px solid #aaa;
+                font-size: 14px;
+                color: rgb(80, 80, 80);
+                &>label:nth-of-type(2){
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            & > label {
+                cursor: pointer;
+                &>b{ color: black; }
+            }
+            &:nth-of-type(2){
+                @include object2(100%,250px);
+                &>.text_box{
+                    @include object2(100%,200px);
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 15px;
+                    padding: 10px;
+                }
+            }
+            &:nth-of-type(3){ align-items: flex-start; }
+        }
+    }
+}
+.agree_btn { 
+    @include object2(170px,50px);
+    background-color: rgb(100,99,99);
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    @include obmargin;
+    @include margins(25px,0,0,0);
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    &:hover{ 
+        background-color: salmon;
+        box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); 
+    }
+}

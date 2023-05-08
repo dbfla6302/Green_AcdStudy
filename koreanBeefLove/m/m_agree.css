@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: "";
+  height: auto;
+  display: block;
+  position: relative;
+  min-width: 340px;
+  max-width: 480px;
+}
+
+form {
+  text-align: center;
+}
+form > .member_box {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid gray;
+}
+form > .member_box > .member {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+form > .member_box > .member > p {
+  text-align: left;
+}
+form > .member_box > .member > .mb_text {
+  width: 100%;
+  height: 100px;
+  display: block;
+  border: 1px solid dimgray;
+  margin: 0 auto;
+}
+form > .member_box > .member > .mb_agree {
+  width: 100%;
+  height: 50px;
+  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+form > .member_box > .member > .mb_agree > span {
+  width: 80px;
+  height: 30px;
+  display: block;
+  background-color: dimgray;
+  border-radius: 15px;
+  position: relative;
+}
+form > .member_box > .member > .mb_agree > span > label {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  right: 4px;
+  cursor: pointer;
+}
+form > .member_box > .member > .agree_btn {
+  width: 30%;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  background-color: salmon;
+  border: 0;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=m_agree.css.map */

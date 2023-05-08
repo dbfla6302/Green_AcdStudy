@@ -1,0 +1,152 @@
+.login_box {
+  width: 1200px;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "'Noto Sans KR', sans-serif";
+  font-weight: 400;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.login_box > .login_title {
+  width: 100%;
+  height: 30px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "'Noto Sans KR', sans-serif";
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 22px;
+}
+.login_box > .nomember {
+  color: dimgrey;
+  font-weight: bold;
+}
+.login_box > span {
+  width: 550px;
+  height: 45px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  line-height: 45px;
+  clear: both;
+  color: gray;
+  font-size: 12px;
+}
+.login_box > .login_btn2 {
+  width: 550px;
+  height: 90px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.login_box > .login_btn2 > ul {
+  width: inherit;
+  height: inherit;
+  display: block;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login_box > .login_btn2 > ul > li {
+  width: 175px;
+  height: 40px;
+  display: block;
+  box-sizing: border-box;
+}
+.login_box > .login_btn2 > ul > li > input {
+  width: 175px;
+  height: 40px;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid gainsboro;
+  background-color: gainsboro;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+}
+.login_box > .login_btn2 > ul > li > input:hover {
+  background-color: rgb(90, 90, 90);
+  color: white;
+  box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.45);
+}
+.login_box > .login_btn2 > ul > li:nth-of-type(1) > input:hover {
+  background-color: #c12028;
+  color: white;
+  box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.45);
+}
+.login_box > form .login_btn1 {
+  width: 550px;
+  height: 140px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.login_box > form .login_btn1 .label_box {
+  color: gray;
+  font-size: 12px;
+}
+.login_box > form .login_btn1 > span {
+  float: left;
+  margin-left: 48px;
+}
+.login_box > form .login_btn1 > span > ol > li {
+  height: 50px;
+}
+.login_box > form .login_btn1 > span > ol > li > .span_box1 {
+  width: 300px;
+  height: 40px;
+  display: block;
+  box-sizing: border-box;
+  text-indent: 5px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.login_box > form .login_btn1 > span > .span_box2 {
+  width: 200px;
+  height: 90px;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid dimgrey;
+  background-color: dimgrey;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+}
+.login_box > form .login_btn1 > span > .span_box2:hover {
+  background-color: #c12028;
+  border: 1px solid #c12028;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+.login_box > form .login_btn1 > span:nth-of-type(1) {
+  margin-left: 0;
+}
+.login_box > form .btn3 {
+  width: 550px;
+  height: 140px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.login_box > form .btn3 > span {
+  float: left;
+  margin-left: 48px;
+}
+.login_box > form .btn3 > span:nth-of-type(1) {
+  margin-left: 0;
+}
+.login_box > form .btn3 > span:nth-of-type(3) {
+  clear: both;
+  margin-top: 5px;
+  margin-left: 0;
+  color: gray;
+  font-size: 12px;
+}/*# sourceMappingURL=login.css.map */

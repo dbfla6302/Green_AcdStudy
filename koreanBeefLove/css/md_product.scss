@@ -1,0 +1,79 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+
+.mdpick{
+    @include object(100%,auto,block);
+    .part1{
+        @include object(1174px,76px,block);
+        position: relative;
+        margin: 0 auto;
+    }
+    // 인기 & MD
+    .part2{
+        @include object(1174px,400px,block);
+        position: relative;
+        margin: 0 auto;
+        // border: 1px solid red;
+        
+        //버튼
+        &>span{
+            position: absolute;
+            top: 35%;
+            
+            &:nth-of-type(1){
+                left: -1%;
+            }
+            &:nth-of-type(2){
+                right: -1%;
+            }
+        }
+        &>.mdpick_view{
+            @include object(1155px,inherit,block);
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            // border: 1px solid blueviolet;
+
+
+            // product
+            &>label{
+                @include object(auto,inherit,flex);
+                position: absolute;
+                &>ul{
+                    @include object(auto,auto,flex);
+                    flex-flow: wrap column;
+                    justify-content: center;
+                    margin-right: 20px;
+                    & li {
+                        @include object(215px,auto,block); 
+                        &>img{
+                            @include object(215px,215px,block); 
+                            object-fit: cover;
+                            border-radius: 100%; 
+                            cursor: pointer;
+                        }
+                        &>span {
+                            @include object(215px,20px,block);
+                            text-align: center;
+                            &:nth-of-type(1){ height: 35px; line-height: 35px; font-weight: 500; }
+                            &:nth-of-type(2){ color: gray; font-size: 13px; }
+                            &:nth-of-type(3){ color: crimson; font-size: 14px; font-weight: 500; }
+                        }
+                    }
+                }
+            
+            }
+        }
+    }
+}

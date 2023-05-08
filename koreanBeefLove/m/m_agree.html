@@ -1,0 +1,61 @@
+<?php
+   $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한우사랑</title>
+    <link rel="stylesheet" type="text/css" href="./index15.css?v=<?=$v?>">
+</head>
+<body>
+<form id="frm" name="frm">
+<input type="hidden" name="agree" value="N">
+<input type="hidden" name="email" value="N">
+<input type="hidden" name="personal" value="N">
+<section class="member_box">
+    <h2>MEMBER SHIP</h2>
+    <!-- 이용약관 -->
+    <article class="member">
+        <p>이용약관</p>
+        <div class="mb_text"></div>
+        <div class="mb_agree">
+            <span id="ag_bk1">
+                <label class="ag" id="ag1"></label>
+            </span>
+        </div>
+    </article>
+
+    <!-- 이메일 수신 약관 -->
+    <article class="member">
+        <p>이메일 수신 약관</p>
+        <div class="mb_text"></div>
+        <div class="mb_agree">
+            <span id="ag_bk2"> 
+                <label class="ag" id="ag2"></label>
+            </span>
+        </div>
+    </article>
+
+    <!-- 개인정보처리방침 -->
+    <article class="member">
+        <p>개인정보처리방침</p>
+        <div class="mb_text"></div>
+        <div class="mb_agree">
+            <span id="ag_bk3">
+                <label class="ag" id="ag3"></label>
+            </span>
+        </div>
+    </article>
+    <article class="member">
+        <button type="button" class="agree_btn" id="agree_btn">동의완료</button>
+    </article>
+</section>
+</form>
+</body>
+<script type="module">
+    import {agree,agreeck} from "./m_agree.js?v=<?=$v?>";
+</script>
+</html>

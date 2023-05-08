@@ -1,0 +1,167 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+@mixin base{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+ul,ol{ @include base; list-style: none; }
+
+.top{
+    @include base;
+    @include object(100%,auto,flex);
+    position: relative;
+    flex-flow: wrap column;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 12px;
+
+    &>.top_bk{ 
+        height: 80px; background-color: #fee63c; 
+        position: relative; 
+        margin-bottom: -82px; 
+    }
+    // top_banner
+    &>.top_part1{
+        @include object(1174px,auto,block);
+        position: relative;
+        margin: 0 auto;
+        &>img { cursor: pointer; }
+    }
+    
+    // top_menu
+    &>.top_part2{
+        @include object(100%,40px,block);
+        border-bottom: 1px solid #ddd;
+        // margin-top: -3px;
+        position: relative;
+        line-height: 40px;
+        font-size: 13px;
+        &>.t_menu{
+            @include object(1174px,40px,block);
+            margin: 0 auto;
+            &> div{
+                float: left;
+                &> span{
+                    border: 1px solid #ddd;
+                    border-bottom: 0;
+                    text-align: center;
+                    float: left;
+                    cursor: pointer;
+                    &:nth-of-type(1){
+                        @include object(90px,inherit,block);
+                        border-right: 0;
+                    }
+                    &:nth-of-type(2){ @include object(160px,inherit,block);}
+                    &>img{ @include object(15px,15px,""); margin-right: 5px; }
+                }
+            }
+            &> ul{
+                @include object("",auto,flex);
+                justify-content: flex-end;
+                position: relative;
+                // border: 1px solid red;
+                &> li{
+                    display: inline-block;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    &:after{
+                        content: "　|";
+                        margin-right: 10px;
+                    }
+                    &:last-of-type::after{content: "";}
+                }
+                // point
+                &>.top_point{
+                        position: relative;
+                        & > div {
+                          @include object(60px, 20px,"");
+                          background-color: #303947;
+                          font-size: 12px;
+                          color: white;
+                          border-radius: 10px;
+                          position: absolute;
+                          text-align: center;
+                          line-height: 20px;
+                          top: 100%;
+                          left: 50%;
+                          margin-left: -45px;
+                          cursor: pointer;
+                          &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+                            & > span {
+                                @include object(11px, 5px, "");
+                                position: absolute;
+                                bottom: 100%;
+                                left: 50%;
+                                margin-left: -5.5px;
+                                background-image: url("../image/joinpoin_bg.png");
+                                background-repeat: no-repeat;
+                                background-size: inherit;
+                            }
+                        }
+                }
+            }
+        }
+    }
+
+
+    // top_logo
+    &>.top_part3{
+        @include object(1174px,140px,flex);
+        position: relative;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+
+        &>div{
+            @include object(295px,auto,"");
+            &>img{ cursor: pointer; }
+            & form> span:first-of-type{
+                @include object(100%,35px,flex);
+                align-items: center;
+                flex-flow: wrap row;
+                & >.s_input{
+                    @include object(235px,35px,"");
+                    box-sizing: border-box;
+                    float: left;
+                    border: 1px solid #bbb;
+                    text-indent: 5px;
+                }
+                & >img{
+                    @include object(35px,35px,"");
+                    background:black url("../image/btn_top_search.png") center top no-repeat;
+                    cursor: pointer;
+                }
+            }
+            &>span:last-of-type{
+                @include object(273px,25px,block);
+                position: relative;
+                overflow: hidden;
+                & > ul {
+                    @include object(235px,25px,"");
+                    position: absolute;
+                    &>li{ 
+                        @include object(235px,25px,""); 
+                        line-height: 25px;
+                        text-indent: 10px; 
+                        cursor: pointer;
+                    }
+                }
+                &>label{
+                    position: absolute;
+                    right: 0;
+                    bottom: 3px;
+                    &>img{ float: left; object-fit: contain; cursor: pointer; }
+                }
+            }
+        }
+    }
+}
+a{ color: black; }

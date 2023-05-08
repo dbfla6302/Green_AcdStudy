@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+
+body,html,div,span,label,section,aside,footer,header,nav,video,table,tr,td,th {
+    margin: 0; padding: 0; font-family: $noto;
+}
+a { background-color: transparent; text-decoration: none;}
+a:active, a:hover { outline: 0;}
+a:visited{text-decoration: none;}
+input,textarea { outline: 0; }
+input:focus,textarea:focus { outline: 0; }
+
+legend{border: 0; padding: 0;}
+textarea { overflow: auto;}
+table { border-collapse:collapse; border-spacing: 0;}
+// img{ object-fit: cover; width: 100%; }
+ul,ol { margin: 0; padding: 0; list-style: none; }
+.clear { clear: both; }
+address,caption,cite,code,dfn,em,var {  font-style: normal; }
+
+@mixin size($w,$h) {width: $w; height: $h;}
+.popup{
+    @include size(350px,auto);
+    position: absolute; z-index: 100;
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    top: 80px; left: 80px;
+    &>ul{
+        &>li{
+            &:nth-of-type(1){
+                @include size(inherit,50px);
+                background-color: rgba(#835d5d,0.7);
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+                padding-top: 5px;
+                box-sizing: border-box;
+            }
+            &:nth-of-type(2){
+                &>img{
+                    @include size(350px,auto);
+                    object-fit: contain;
+                }
+            }
+            &:last-of-type{
+                @include size(inherit,25px);
+                margin-top: -6px;
+                color: white;
+                &>label{
+                    @include size(inherit,25px);
+                    line-height: 25px;
+                    display: inline-block;
+                    font-size: 13px;
+                    &>input{ background-color: gray; }
+                    &:nth-child(1){ 
+                        width: 80%; 
+                        height: auto;
+                        background-color: #aaa;
+                        margin-right: -4px;
+                    }
+                    &:last-of-type{ 
+                        width: 20%;
+                        text-align: center; 
+                        background-color: gray;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

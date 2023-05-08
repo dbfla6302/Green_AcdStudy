@@ -1,0 +1,124 @@
+.welcome {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+.welcome > p {
+  width: 800px;
+  height: 80px;
+  display: block;
+  line-height: 80px;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0 auto;
+}
+.welcome > aside {
+  width: 800px;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+.welcome > aside > div:nth-of-type(1) {
+  width: inherit;
+  height: auto;
+  display: block;
+  font-size: 13px;
+  text-align: center;
+}
+.welcome > aside > div:nth-of-type(1) > ul {
+  width: 600px;
+  height: inherit;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+.welcome > aside > div:nth-of-type(1) > ul > li:nth-of-type(1) {
+  height: 150px;
+  font-size: 18px;
+  line-height: 180px;
+  color: crimson;
+}
+.welcome > aside > div:nth-of-type(1) > ul > li:nth-of-type(2) {
+  font-size: 20px;
+  height: 50px;
+}
+.welcome > aside > div:nth-of-type(1) > ul > li:nth-of-type(2) > b {
+  font-size: 22px;
+  color: crimson;
+}
+.welcome > aside > div:nth-of-type(1) > ul > li:nth-of-type(3) {
+  height: 25px;
+  line-height: 30px;
+}
+.welcome > aside > div:nth-of-type(1) > ul > li:nth-of-type(4) {
+  height: 70px;
+}
+.welcome > aside > div:nth-of-type(2) {
+  width: inherit;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome > aside > div:nth-of-type(2) > ul {
+  width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.welcome > aside > div:nth-of-type(2) > ul > li:nth-of-type(1) {
+  font-size: 15px;
+}
+.welcome > aside > div:nth-of-type(2) > ul > li:nth-of-type(1) > b {
+  color: crimson;
+}
+.welcome > aside > div:nth-of-type(2) > ul > li:nth-of-type(2) {
+  height: 50px;
+  font-size: 13px;
+  color: dimgrey;
+}
+.welcome > aside > div:nth-of-type(2) > ul > li:nth-of-type(3) {
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+.welcome > aside > div:nth-of-type(2) > ul > li:nth-of-type(3) > input {
+  width: 250px;
+  height: 25px;
+  display: flex;
+  font-size: 13px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid #bbb;
+  cursor: pointer;
+}
+.welcome > aside > div:nth-of-type(2) > ul > li:nth-of-type(3) > input:hover {
+  box-shadow: 0 2px 5px 0 rgba(100, 100, 100, 0.25);
+}
+.welcome > aside > div:nth-of-type(3) {
+  width: inherit;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.welcome > aside > div:nth-of-type(3) > input {
+  width: 100px;
+  height: 40px;
+  display: block;
+  border-radius: 5px;
+  border: 0;
+  background-color: dimgrey;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.welcome > aside > div:nth-of-type(3) > input:hover {
+  background-color: salmon;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}/*# sourceMappingURL=member_welcome.css.map */

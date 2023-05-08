@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+@mixin font($size,$weight,$color) {
+    font-size: $size; 
+    font-weight: $weight;
+    color: $color;
+}
+*{ box-sizing: border-box; }
+input[type="text"]{ text-indent: 5px; @include font(13px,"",rgb(65, 65, 65)); }
+input[type="button"]{
+    cursor: pointer;
+    &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.45); }
+}
+input,select{ box-sizing: border-box; }
+.pd_buy{
+    @include object(1170px,auto,block);
+    clear: both;
+    margin: 0 auto;
+    &>.buy_title{
+        @include object(inherit,80px,block);
+        @include font(22px,bold,"");
+        text-align: center;
+        line-height: 100px;
+        margin-bottom: 0;
+    }
+    &>aside{ 
+        margin-bottom: 100px;
+        &>div{
+            @include object(inherit,60px,block);
+            @include font("",bold,rgb(80, 80, 80));
+            padding-left: 10px;
+            line-height: 70px;
+            &:nth-of-type(2){ 
+                font-size: 15px; 
+                line-height: 80px;
+                &>span{ position: absolute; height: 60px; line-height: 70px; }
+            }
+        }
+    }
+    &>.buy_order{
+        @include object(inherit,auto,block);
+        &> table{
+            @include object(inherit,auto,block);
+            border-spacing: 0; 
+            border-collapse: collapse; 
+            &>thead{
+                @include object(inherit,40px,block);
+                @include font("",normal,dimgrey);
+                border-top: 2px solid #aaa;
+                background-color: rgb(240, 240, 240);
+            }
+            &>tbody{ 
+                @include font(14px,normal,rgb(85, 85, 85));
+                & td:nth-of-type(3){ @include font("",bold,dimgrey); }
+                & td:nth-of-type(5){ @include font("",bold,dimgrey); }
+            }
+            & tr{
+                height: 40px;
+                & td{      
+                    text-align: center;
+                    border-bottom: 1px solid #ccc;
+                    
+                    &:nth-of-type(1){ 
+                        width: 390px;
+                        &> ul{
+                            @include object(390px,100px,block);
+                            line-height: 100px;
+                            
+                            &>li{
+                                float: left;
+                                &:nth-of-type(1){
+                                    @include object(100px,100px,block);
+                                    line-height: 100px;
+                                    &>img{ width: 90%; margin-top: 5px; object-fit: cover; }
+                                    
+                                }
+                                &:nth-of-type(2){ 
+                                    width: 240px; 
+                                    &>div{
+                                        @include object(100%,50px,block);
+                                        text-align: left;
+                                        text-indent: 20px;
+                                        &:nth-of-type(1){ 
+                                            @include font(15px,bold,"");
+                                            line-height: 70px; 
+                                        }
+                                        &:nth-of-type(2){ 
+                                            @include font(14px,400,dimgrey);
+                                            line-height: 20px; 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){ width: 70px; }
+                    &:nth-of-type(3){ width: 200px; }
+                    &:nth-of-type(4){ width: 170px; }
+                    &:nth-of-type(5){ width: 170px; }
+                    &:nth-of-type(6){ width: 170px; }
+                }
+            }
+        }
+        &>ol{
+            @include object(100%,100px,block); 
+            border: 1px solid #ccc; 
+            &>li{
+                // border: 1px solid red;
+                height: 40px;
+                text-align: right;
+                padding-right: 10px;
+                &:nth-of-type(1){
+                    height: 60px;
+                    line-height: 60px;
+                    &>ul{ 
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-size: 14px;
+                        &>li{
+                            margin-left: 25px;
+                            &:nth-of-type(even){
+                                font-weight: bold;
+                            }
+                            &:nth-of-type(odd){
+                                color: dimgrey;
+                            }
+                            &:nth-of-type(4){
+                                &>span{ font-size: 18px; }
+                            }
+                            &>span{ 
+                                margin-left: 20px; 
+                            }
+                            &>img{ position: relative; top: 5px; }
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    font-size: 14px;
+                    color:salmon;
+                }
+            }
+        }
+    }
+}
+// 주문자 정보
+.buy_info{
+    @include object(inherit,auto,block);
+    & table{
+        @include object(inherit,auto,block);
+        border-spacing: 0; 
+        border-collapse: collapse; 
+        & tr{
+            @include object(100%,40px,"");
+            @include font(15px,"",dimgrey);
+            border-bottom: 1px solid #ccc;
+            line-height: 40px;
+            &:nth-of-type(1){ border-top: 1px solid #ccc; }
+            &:nth-of-type(2){
+                &>td>input{
+                    margin-right: 10px;
+                    &:nth-of-type(1){ width: 120px; }
+                }
+            }
+            &>td{
+                padding-left: 10px;
+                &>input[type="text"]{
+                    @include object(300px,30px,"");
+                    position: relative;
+                    top: -2px;
+                    border: 1px solid #ccc;
+                }
+                &>select{ 
+                    @include object(150px,30px,"");
+                    position: relative;
+                    top: -2px;
+                    margin-left: 8px;
+                    color: dimgrey; 
+                    border: 1px solid #ccc;
+                }
+                &:nth-of-type(1){
+                    @include object(250px,inherit,block);
+                    background-color: rgb(240, 240, 240);
+                }
+                &:nth-of-type(2){
+                    @include object(920px,inherit,"");
+                }
+            }
+        }
+    }
+}
+
+// 배송정보
+.delivery{
+    @include object(inherit,auto,block);
+    & table{
+        @include object(inherit,auto,block);
+        border-spacing: 0; 
+        border-collapse: collapse; 
+        & tr{
+            @include object(100%,40px,"");
+            @include font(15px,"",dimgrey);
+            border-bottom: 1px solid #ccc;
+            line-height: 40px;
+
+            &:nth-of-type(1){ 
+                border-top: 1px solid #ccc; 
+                &>td{
+                    &>label{ margin-right: 10px; }
+                    &>input[type="button"]{
+                        @include object(100px,30px,""); 
+                        background-color: #ddd;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        font-weight: 600; 
+                    }
+                }
+            }
+
+            &.receiver_post{ 
+                height: 100px; 
+                &>td{
+                    &>ul{
+                        @include object(100%,100px,"");
+                        &>li{
+                            &:nth-of-type(1){
+                                &>input[type="text"]{ 
+                                    @include object(150px,30px,""); 
+                                    margin-right: 10px;
+                                    border: 1px solid #ccc;
+                                }
+                                &>input[type="button"]{ 
+                                    @include object(120px,30px,"");
+                                    font-weight: 600; 
+                                    background-color: #ddd;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    position: relative;
+                                    top: 2px;
+                                }
+                            }
+                            &:nth-of-type(2){
+                                &>input{ 
+                                    @include object(350px,30px,""); 
+                                    border: 1px solid #ccc;
+                                }
+                                &>input:nth-of-type(2){ margin-left: 10px; }
+                            }
+                            &:nth-of-type(3){
+                                line-height: 20px;
+                                &>label{ 
+                                    font-size: 13px;
+                                    color: royalblue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            // &:nth-of-type(3){ height: 100px; }
+            &:nth-of-type(6)>td>input{ width: 800px; }
+            &>td{
+                padding-left: 10px;
+                &>.telinpt{ width: 250px; }
+                &>label{ 
+                    @include font(14px,"",dimgrey);
+                    &>font{ @include font(13px,"",#aaa); } 
+                }
+                &>input[type="text"]{
+                    position: relative;
+                    top: -2px;
+                    height: 30px;
+                    border: 1px solid #ccc;
+                }
+                &:nth-of-type(1){
+                    @include object(250px,inherit,block);
+                    background-color: rgb(240, 240, 240);
+                }
+                &:nth-of-type(2){
+                    @include object(920px,inherit,"");
+                }
+            }
+        }
+    }
+}
+
+// 결제수단 선택/결제
+.buy_pay{
+    @include object(inherit,auto,block);
+    &>span{
+        &:nth-of-type(1){
+            @include object(inherit,40px,block);
+            @include font(15px,bold,dimgrey);
+            border-top: 2px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            background-color: rgb(240, 240, 240);
+            line-height: 40px;
+            padding-left: 5px;
+            &>label{ margin-right: 10px; }
+        }
+        &:nth-of-type(2){
+            @include object(inherit,100px,block);
+            @include font(14px,bold,dimgrey);
+            border: 1px solid #ccc;
+            line-height: 100px;
+            text-align: right;
+            padding-right: 30px;
+            margin-top: 15px;
+            &>b{ 
+                @include font(18px,800,#ec101b);
+                margin-left: 20px; 
+            }
+        }
+    }
+    &>ul{
+        display: none;
+        &>li{
+            padding-left: 5px;
+            &:nth-of-type(1){
+                @include object(inherit,60px,block);
+                @include font(14px,"",dimgrey);
+                margin-top: 10px;
+                border-bottom: 1px solid #ccc;
+                &>div{ margin-top: 5px; }
+            }
+            &:nth-of-type(2){
+                @include object(inherit,50px,block);
+                @include font(14px,bold,dimgrey);
+                border-bottom: 1px solid #ccc;
+                line-height: 50px;
+                &>span{ 
+                    @include object(400px,inherit,inline-block);
+                    &>input,&>select{
+                        @include object(150px,25px,inline-block);
+                        border: 1px solid #bbb;   
+                        margin-left: 10px;
+                    }
+                    &>select{ width: 200px; color: dimgrey; }
+                }
+            }
+            &:nth-of-type(3){
+                @include object(inherit,40px,block);
+                @include font(15px,bold,rgb(80, 80, 80));
+                line-height: 40px;
+                border-bottom: 1px solid #ccc;
+                background-color: rgb(240, 240, 240);
+                &>label{
+                    margin-left: 10px;
+                    @include font(15px,normal,dimgrey);
+                }
+            }
+        }
+    }
+}
+
+.buy_paybtn{
+    @include object(inherit,auto,block);
+    &>ul{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        &>li{
+            @include object(inherit,50px,block);
+            @include font(14px,bold,dimgrey);
+            &>label{
+                &>b{ color: red; }
+            }
+            &>input[type="button"]{
+                @include object(200px,50px,block);
+                @include font(15px,bold,white);
+                border: 0;
+                background-color: #c24047;
+                border: 1px solid #c24047;
+                &:hover{ 
+                    background-color: #c12028;
+                    border: 1px solid #c12028;
+                    box-shadow: 0 3px 5px 0 rgba(90, 90, 90, 0.55); 
+                }
+            }
+        }
+    }
+}
+.important{ @include font("",bold,rgb(110, 110, 110)) }

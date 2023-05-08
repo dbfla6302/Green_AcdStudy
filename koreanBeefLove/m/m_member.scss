@@ -1,0 +1,145 @@
+@charset "UTF-8";
+%base{
+    margin: 0;
+    padding: 0;
+}
+%none{
+    text-decoration: none;
+    color: black;
+}
+%clear{
+    clear: both;
+}
+%pointer{
+    cursor: pointer;
+}
+@mixin font($family,$weight,$size,$color) {
+    @if($family=="noto"){
+        //100;300;400;500;700;900
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    @else if($family=="nanum"){
+        //400;700;800
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    @else if($family=="sans"){
+        //0,400;0,700;1,400;1,700
+        font-family: 'Noto Sans', sans-serif;
+    }
+    @else if($family=="jua"){
+        font-family: 'Jua', sans-serif;
+    }
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+@mixin flex($justify,$direction,$wrap,$items,$part,$content) {
+    display: flex;
+    justify-content: $justify;
+    flex-flow: $direction $wrap;
+    align-items: $items;
+    @if($part==2){
+        align-content: $content;
+    }
+    
+}
+@mixin object ($width,$height,$display){
+     width: $width;
+    height: $height;
+    display: $display;
+
+
+}
+@mixin mobject ($max,$min,$height,$display){
+    max-width: $max;
+    min-width: $min;
+   height: $height;
+   display: $display;
+
+
+}
+@mixin bg($ap,$bgcolor,$bgurl) {
+    @if($ap==0){
+        background-color: $bgcolor;
+    }
+    @else if($ap==1){
+        background-color: "#"+$bgcolor;
+
+    }
+    @else if($ap==2){
+        background-image: url($bgurl);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+}
+*,body{
+    @extend %base;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 100%;
+}
+a:link, a:visited ,a:hover ,a:active{
+    @extend %none;
+}
+section,label,span,footer,main,aside,header,nav{
+    display: block;
+}
+ul,ol{
+    @extend %base;
+    list-style: none;
+}
+.joinMember{
+    @include mobject(480px,360px,auto,"");
+    background-color: whitesmoke;
+    margin: 0 auto;
+    &>ul{
+        @include object(100%,auto,"");
+        @include flex(center,column,wrap,"",2,center);
+        &>li{
+            text-align: center;
+            @include object(100%,40px,"");
+            @include flex(center,row,nowrap,center,1,"");
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            &:nth-of-type(1){
+                height: 60px;
+                font-size: 16px;
+                font-weight: bold
+            }
+            &:nth-of-type(4){
+                height: auto;
+                display: none;
+            }
+            &:nth-of-type(9){
+                height: 50px;
+            }
+            &>input{
+                @include object(80%,35px,"");
+                border: 1px solid cadetblue;
+                border-radius: 5px;
+                text-indent: 5px
+            }
+            &>input[type=button]{
+                @include object(30%,30px,"");
+                background-color: cadetblue;
+                border: 0;
+                font-weight: bold;
+                color: whitesmoke;
+                text-indent: 0;
+            }
+        }
+    }
+}
+.keypad{
+    @include object(85%,auto,"");
+    margin: 0 auto;
+    text-align: center;
+    background-color: cadetblue;
+    color: whitesmoke;
+    
+}
+.num{
+    border: 1px solid whitesmoke;
+}
