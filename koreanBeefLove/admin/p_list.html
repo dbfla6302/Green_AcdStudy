@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+
+<article class="adm_main">
+    <span>상품 관리</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<article class="adm_banner">
+    <aside class="pd_title">
+        <div>상품 관리 리스트</div>
+    </aside>
+    <form id="sfrm" name="sfrm" method="GET" action="admin_product.html" enctype="application/x-www-form-urlencoded" @submit.prevent="sendsearch">
+        <aside class="pd_sbox">
+            <input type="text" name="pnm" class="pd_search" v-model="word" placeholder="검색할 상품명을 입력하세요.">
+            <input type="submit" value="상품검색" class="search_btn">
+            <input type="button" value="전체목록" class="search_btn" @click="all_list">
+        </aside>
+    </form>
+        <!-- 상품 테이블 -->
+        <table class="pd_table">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>상품가격</th>
+                    <th>할인가격</th>
+                    <th>대표이미지</th>
+                    <th>출력 유/무</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            {{lists}}
+            <!-- 상품 리스트 -->
+            <tbody class="pd_list" v-if="part==1">
+                <tr v-for="(pd,index) in arrays">
+                    <td>{{ea-index}}</td>
+                    <td><a @click="view_product(pd.pidx)">{{pd.goodsno}}</a></td>
+                    <td><a @click="view_product(pd.pidx)">{{pd.productnm}}</a></td>
+                    <td>{{pd.product_money.toLocaleString()}} 원</td>
+                    <td v-if="pd.product_sales==''"> - </td>
+                    <td v-else="pd.product_sales!=''">{{pd.product_sales.toLocaleString()}} 원</td>
+                    <td><img :src="pd.product_img" class="pdimg"  @click="popup_img(pd.product_img);"></td>
+                    <td>{{pd.product_use}}</td>
+                    <td><button type="button" @click="product_del(pd.pidx)" class="sub_admin">삭제</button></td>
+                </tr>
+            </tbody>
+            <!-- 가입 회원 없음 -->
+            <tbody class="pd_tableNone " id="pd_tableNone" v-else-if="part==2">
+                <tr>
+                    <td colspan="15" class="empthy_result">등록된 상품이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="product_page">
+            <ul>
+                <li v-for="p in pageing" @click="gopage(p)">{{p}}</li>
+            </ul>
+        </div>
+        <div><input type="button" value="상품등록" id="pd_btn" @click="pwrite"></div>
+</article>

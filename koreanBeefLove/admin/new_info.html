@@ -1,0 +1,114 @@
+<meta charset="UTF-8">
+<article class="adm_main">
+    <span>관리자 메인</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+<aside class="adm_table">
+    <h2>신규가입회원 <span id="new_member">0</span>건 목록</h2>
+    <label>총 회원수 <span id="total_member">0</span>명 중 휴면: <span id="reset_member">0</span>명, 탈퇴: <span id="leave_member">0</span>명</label>
+    <table class="adm_tb">
+        <thead class="tb_th">
+            <tr>
+                <td width="190px">회원아이디</td>
+                <td>이름</td>
+                <td>닉네임</td>
+                <td width="70px">권한</td>
+                <td width="150px">포인트</td>
+                <td width="70px">수신</td>
+                <td width="70px">공개</td>
+                <td width="70px">인증</td>
+                <td width="70px">휴면</td>
+                <td width="130px">그룹</td>
+            </tr>
+        </thead>
+        <tbody id="tb_tbody">
+            <tr id="tb_tr0">
+                <td>hongg</td>
+                <td>홍길동</td>
+                <td>길동</td>
+                <td>2</td>
+                <td>1000</td>
+                <td>Y</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>N</td>
+                <td>노멀그룹</td>
+            </tr>
+        </tbody>
+        <tr id="tb_none" style="display: none;">
+            <td colspan="10">등록 된 회원이 없습니다.</td>
+        </tr>   
+    </table>
+    <label><input type="button" value="회원 전체보기" id="adm_ubtn" onclick="adm_page(1);"></label>
+</aside>
+<!-- Q & A -->
+<aside class="adm_table">
+    <h2>Q & A 신규 질문 <span>0</span>건</h2>
+    <label>질문 대기 <span>0</span>건수, 완료 <span>0</span>건수</label>
+    <table class="adm_tb">
+        <thead class="tb_th">
+            <tr>
+                <td width="130px">아이디</td>
+                <td>질문사항</td>
+                <td width="120px">첨부파일</td>
+                <td width="120px">질문일자</td>
+                <td width="120px">답변일자</td>
+                <td width="80px">답변현황</td>
+            </tr>
+        </thead>
+        <tbody id="qtb_tbody">
+
+        </tbody>
+        <tr id="qtb_none">
+            <td colspan="6">문의 내용이 없습니다.</td>
+        </tr>
+    </table>
+</aside>
+<!-- 포인트 -->
+<aside class="adm_table">
+    <h2>최근 포인트 발생 내역</h2>
+    <label>전체 <span>0</span>건</label>
+    <table class="adm_tb">
+        <thead class="tb_th">
+            <tr>
+                <td>아이디</td>
+                <td>이름</td>
+                <td>닉네임</td>
+                <td width="120px">일시</td>
+                <td width="480px">포인트 내용</td>
+                <td width="100px">포인트</td>
+                <td width="100px">포인트 합계</td>
+            </tr>
+        </thead>
+        <tbody id="ptb_tbody" style="display: none;">
+            <tr id="ptb_tr0">
+                <td>hongg</td>
+                <td>홍길동</td>
+                <td>길동</td>
+                <td>2021-08-05</td>
+                <td id="point0">첫 가입고객 포인트 제공</td>
+                <td>1,000</td>
+                <td>1,000</td>
+            </tr>
+        </tbody>
+        <tr id="ptb_none">
+            <td colspan="10">발생한 포인트 내역이 없습니다.</td>
+        </tr>   
+    </table>
+    <label><input type="button" value="포인트 전체보기" id="adm_ubtn" onclick="adm_page(2);"></label>
+</aside>
+<script>
+function adm_page(nm) {
+    if(nm==1){
+        location.href= "./admin_member.html";
+    }
+    else{
+        alert("서비스 준비 중입니다.");
+    }
+}
+</script>
+<script src="./new_info.js?v=<?=$v?>"></script>

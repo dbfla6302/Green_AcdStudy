@@ -1,0 +1,225 @@
+.adm_notice {
+  position: relative;
+}
+.adm_notice > .nt_title {
+  width: 100%;
+  background-color: #ccc;
+}
+.adm_notice > .nt_title > div {
+  width: 1200px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  line-height: 40px;
+  font-weight: bold;
+}
+.adm_notice > #nfrm {
+  width: 1200px;
+  height: 80px;
+  display: "";
+  margin: 0 auto;
+  top: 0;
+}
+.adm_notice > #nfrm > .nt_sbox {
+  width: 1200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.adm_notice > #nfrm > .nt_sbox > .nt_search {
+  width: 200px;
+  height: 30px;
+  display: "";
+  text-indent: 10px;
+}
+.adm_notice > #nfrm > .nt_sbox > .search_btn {
+  width: 80px;
+  height: 30px;
+  display: "";
+  background-color: salmon;
+  border: 1px solid salmon;
+  border-radius: 5px;
+  color: white;
+  margin-left: 5px;
+}
+.adm_notice > #nfrm > .nt_sbox > .search_btn:hover {
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+.adm_notice > form > .nt_table {
+  width: 1200px;
+  height: auto;
+  display: "";
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.adm_notice > form > .nt_table thead th {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  height: 40px;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(1) {
+  width: 50px;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(2) {
+  width: 70px;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(3) {
+  width: 680px;
+  text-align: left;
+  text-indent: 15px;
+  cursor: pointer;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(3):hover {
+  font-weight: bold;
+  color: black;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(4) {
+  width: 150px;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(5) {
+  width: 150px;
+}
+.adm_notice > form > .nt_table > .nt_list td:nth-of-type(6) {
+  width: 100px;
+}
+.adm_notice > form > .nt_table tr {
+  height: 40px;
+}
+.adm_notice > form > .nt_table tr:nth-of-type(1) > td:nth-of-type(2) {
+  cursor: pointer;
+}
+.adm_notice > form > .nt_table tr:nth-of-type(1) > td:nth-of-type(2):hover {
+  font-weight: bold;
+}
+.adm_notice > form > .nt_table tr td {
+  background-color: rgb(250, 250, 250);
+  border: 1px solid #ccc;
+}
+.adm_notice > form .notice_page {
+  width: 1200px;
+  height: 30px;
+  display: "";
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.adm_notice > form .notice_page > ul {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+}
+.adm_notice > form .notice_page > ul > li {
+  width: 30px;
+  height: 30px;
+  display: "";
+  background-color: lightsalmon;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.adm_notice > form > .nbtn {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+.adm_notice > form > .nbtn input[type=button] {
+  width: 100px;
+  height: 35px;
+  display: "";
+  background-color: salmon;
+  border: 1px solid salmon;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+}
+.adm_notice > form > .nbtn input[type=button]:hover {
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+
+.adm_noticeadd form {
+  position: relative;
+  top: 20px;
+}
+.adm_noticeadd form > .ntadd_table {
+  width: 1200px;
+  height: auto;
+  display: "";
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.adm_noticeadd form > .ntadd_table > .nt_add tr td:first-of-type {
+  width: 200px;
+  height: 45px;
+  display: "";
+  background-color: #ccc;
+  border: 1px solid #eee;
+  padding-left: 10px;
+}
+.adm_noticeadd form > .ntadd_table > .nt_add tr td:last-of-type {
+  background-color: rgb(250, 250, 250);
+  border: 1px solid #ccc;
+  padding-left: 10px;
+}
+.adm_noticeadd form > .ntadd_table > .nt_add tr td:last-of-type > input[type=text], .adm_noticeadd form > .ntadd_table > .nt_add tr td:last-of-type #notice_pw {
+  width: 250px;
+  height: 30px;
+  display: "";
+  border: 1px solid #bbb;
+}
+.adm_noticeadd form > .ntadd_table > .nt_add tr td:last-of-type > span {
+  color: cadetblue;
+  margin-left: 20px;
+}
+.adm_noticeadd form > .ntadd_table > .nt_add tr:nth-of-type(1) > td:last-of-type > input {
+  width: 500px;
+  height: 30px;
+  display: "";
+  border: 1px solid #bbb;
+}
+.adm_noticeadd form > .ntadd_table > .nt_add tr:nth-of-type(6) > td:last-of-type > label {
+  margin-right: 10px;
+  color: black;
+}
+.adm_noticeadd form > .new_nbtn {
+  width: 1200px;
+  height: auto;
+  display: "";
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.adm_noticeadd form > .new_nbtn input {
+  width: 100px;
+  height: 35px;
+  display: "";
+  background-color: #aaa;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  color: white;
+}
+.adm_noticeadd form > .new_nbtn input:nth-child(2) {
+  background-color: salmon;
+  border: 1px solid salmon;
+  margin-right: 5px;
+}
+.adm_noticeadd form > .new_nbtn input:hover {
+  background-color: lightsalmon;
+  border: 1px solid lightsalmon;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+
+input[type=text], input[type=password] {
+  text-indent: 10px;
+}/*# sourceMappingURL=notice.css.map */

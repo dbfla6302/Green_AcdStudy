@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<article class="adm_main">
+    <span>공지사항 관리</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<article class="adm_notice">
+    <aside class="nt_title">
+        <div>공지사항 리스트</div>
+    </aside>
+    <form id="nfrm" name="nfrm" method="GET" action="admin_notice.html" enctype="application/x-www-form-urlencoded" @submit.prevent="ntsearch">
+        <aside class="nt_sbox">
+            <input type="text" name="notice" class="nt_search" v-model="word" placeholder="공지사항 제목을 입력하세요.">
+            <input type="submit" value="검색" class="search_btn">
+            <input type="button" value="전체목록" class="search_btn" @click="all_list">
+        </aside>
+    </form>
+    {{lists}}
+    <form name="frm" action="./notice_del.php" enctype="application/x-www-form-urlencoded" method="POST">
+        <!-- 상품 테이블 -->
+        <table class="nt_table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="notice_fidx[]" @click="all_ck" id="allck"></th>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>날짜</th>
+                    <th>조회</th>
+
+                </tr>
+            </thead>
+            <!-- 상품 리스트 -->
+            <tbody class="nt_list" v-if="part==1" id="notice_tb">
+                <tr v-for="(nt,index) in arrays">
+                    <td><input type="checkbox" name="notice_fidx[]" :value="nt.sidx" @click="ch_ck" class="cks"></td>
+                    <td>{{ea-index}}</td>
+                    <td @click="modify(nt.sidx)">{{nt.subject}}</td>
+                    <td>{{nt.name}}</td>
+                    <td>{{nt.windate.substr(0,10)}}</td>
+                    <td>{{nt.wcount}}</td>
+                </tr>
+            </tbody>
+            <!-- 가입 회원 없음 -->
+            <tbody class="nt_tableNone " id="nt_tableNone" v-else-if="part==2">
+                <tr>
+                    <td colspan="15" class="empthy_result">등록된 게시물이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="notice_page">
+            <ul>
+                <li v-for="p in pageing" @click="gopage(p)">{{p}}</li>
+            </ul>
+        </div>
+        <div class="nbtn">
+            <input type="button" value="게시물 등록" id="nt_btn" @click="nt_add">
+            <input type="button" value="게시물 삭제" id="nt_btn" @click="nt_del" class="sub_admin">
+        </div>
+    </form>
+</article>

@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+
+<article class="adm_main">
+    <span>공지사항 신규등록</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<article class="adm_noticeadd">
+
+    <!-- notice 신규등록 -->
+    <form name="frm" id="frm" method="POST" enctype="application/x-www-form-urlencoded">
+    <input type="hidden" name="notice_key" value="notice_write">
+    <table class="ntadd_table">
+        <!-- notice 등록 -->
+        <tbody class="nt_add">
+            <tr>
+                <td>제목</td>
+                <td><input type="text" name="notice_subject" id="notice_subject"></td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="notice_id" id="notice_id" value="<?php echo $aid?>" readonly></td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="notice_name" id="notice_name" value="<?php echo $aname?>" readonly></td>
+            </tr>
+            <tr>
+                <td>패스워드</td>
+                <td>
+                    <input type="password" name="notice_pw" id="notice_pw">
+                    <span>※ 최고관리자 일 경우 패스워드 없이 삭제가 가능합니다.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>
+                    <textarea name="notice_text" id="notice_text"></textarea>
+                    <script>
+                        CKEDITOR.replace("notice_text",{height:"250px"});
+                        </script>
+                </td>
+            </tr>
+            <tr>
+                <td>공지출력 유 / 무</td>
+                <td>
+                    <label><input type="radio" name="notice_hide" value="Y" checked> Y</label>
+                    <label><input type="radio" name="notice_hide" value="N"> N</label>
+                    <span>※ 공지출력 N 일 경우 쇼핑몰에 공지내용이 출력되지 않습니다.</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="new_nbtn">
+        <input type="hidden" id="nt_modify" disabled>
+        <input type="button" value="게시물 등록" id="nt_add">
+        <input type="button" value="전체목록" id="all_list">
+    </div>
+    </form>
+</article>

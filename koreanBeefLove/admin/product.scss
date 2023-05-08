@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@mixin object($w,$h,$display){
+    width: $w;
+    height: $h;
+    display: $display;
+}
+img{ cursor: pointer; }
+
+.adm_banner{
+    // 상단 텍스트
+    &>.pd_title{
+        width: 100%;
+        background-color: #ccc;
+        &>div{         
+            @include object(1200px,40px,block);
+            margin: 0 auto; 
+            line-height: 40px;
+            font-weight: bold;
+        }
+    }
+
+    // 상품검색
+    &> #sfrm{ 
+        @include object(1200px,80px,"");
+        margin: 0 auto;
+        top: 0;
+        &>.pd_sbox{
+            @include object(1200px,80px,flex);
+            align-items: center;
+            &>.pd_search{
+                @include object(200px,30px,"");
+                text-indent: 10px;
+            }
+            &>.search_btn{
+                @include object(80px,30px,"");
+                background-color: salmon;
+                border: 1px solid salmon;
+                border-radius: 5px;
+                color: white;
+                margin-left: 5px;
+                &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+            }
+        }
+    }
+
+    // 상품 등록 table
+    &>.pd_table{
+        @include object(1200px,auto,"");
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10px;
+        border-spacing: 0; 
+        border-collapse: collapse; 
+
+        & thead{
+            & th{
+                background-color: #ddd;
+                border: 1px solid #ccc;
+                height: 35px;
+            }
+        }
+        //상품 list 출력
+        &>.pd_list{
+            & a{ 
+                color: black; 
+                cursor: pointer; 
+                &:hover{
+                    font-weight: bold;
+                    color: black;
+                }
+                &:active{
+                    color: black;
+                }
+            }
+            & td:nth-of-type(1){ width: 50px; }
+            & td:nth-of-type(2){ width: 140px; }
+            & td:nth-of-type(3){ 
+                width: 340px; 
+                text-align: left;
+                text-indent: 10px;
+            }
+            & td:nth-of-type(4){ width: 130px; }
+            & td:nth-of-type(5){ width: 130px; }
+            & td:nth-of-type(6){ 
+                width: 230px; 
+                & img{ width: 100%; object-fit: contain; height: 70px; }
+            }
+            & td:nth-of-type(7){ width: 100px; }
+            & td:nth-of-type(8){ 
+                width: 100px;
+                & button{
+                    @include object(50px,30px,block);
+                    background-color: cadetblue;
+                    border: 0;
+                    color: white;
+                    margin: 0 auto;
+                    &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+                }
+            }
+        }
+        & tr{
+            height: 35px;
+            & td{      
+                background-color: rgb(250, 250, 250);
+                border: 1px solid #ccc;
+            }
+        }
+    }
+
+    // 상품페이지 번호
+    .product_page{
+        @include object(1200px,30px,"");
+        margin: 0 auto;
+        margin-top: 15px;
+        & > ul { 
+            @include object(100%,inherit,flex);
+            flex-flow: wrap row;
+            justify-content: center;
+            & > li {
+                @include object(30px,30px,"");
+                background-color: lightsalmon;
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    // 상품등록버튼
+    &>div{
+        @include object(1200px,60px,"");
+        position: relative;
+        margin: 0 auto;
+        &>#pd_btn{
+            @include object(100px,35px,"");
+            position: absolute;
+            background-color: salmon;
+            border: 1px solid salmon;
+            border-radius: 5px;
+            color: white;
+            right: 0;
+            top: 10px;
+            &:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+        }
+    }
+
+    // ****상품등록 페이지****
+    & form{
+        position: relative;
+        top: 20px;
+        &>.newbn_table{
+            @include object(1200px,auto,"");
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-spacing: 0; 
+            border-collapse: collapse; 
+            & tbody{
+                & tr{
+                    height: 40px;
+                    & td:first-of-type{
+                        width: 200px;
+                        background-color: #ccc;
+                        border: 1px solid #eee;
+                        padding-left: 10px;
+                        &>span{ font-weight: bold; }
+                    }
+                    & td:last-of-type{      
+                        background-color: rgb(250, 250, 250);
+                        border: 1px solid #ccc;
+                        padding-left: 10px;
+                        &> span {
+                            color:cadetblue;
+                            font-weight: 500;
+                            font-size: 12px;
+                            margin-left: 5px;
+                        }
+                        &> label >.mn { text-align: right; padding-right: 10px; }
+                        &>.mn{ text-align: right; padding-right: 10px; }
+                        &>.pd_input{
+                            @include object(150px,30px,""); border-radius: 5px; border: 1px solid #bbb;
+                            &.tr1{ color: tomato; font-weight: bold; text-indent: 0; text-align: center; }
+                        }
+                        &>.option{
+                            @include object(150px,30px,""); border-radius: 5px; border: 1px solid #bbb; 
+                            margin-right: 10px;
+                        }
+                        &>#product_url{
+                            @include object(700px,30px,""); border-radius: 5px; border: 1px solid #bbb; 
+                        }
+                    }
+                    &:nth-of-type(2)> td:last-of-type > input{ 
+                        @include object(250px,30px,""); border-radius: 5px; border: 1px solid #bbb; 
+                    }
+                    &:nth-of-type(3)> td:last-of-type > input{ 
+                        @include object(700px,30px,""); border-radius: 5px; border: 1px solid #bbb; 
+                    }
+                    &:nth-of-type(5)> td:last-of-type > label{ margin-right: 10px; }
+                    &:nth-of-type(6)> td:last-of-type >label {
+                        margin-right: 10px;
+                        &> input[type="text"]{ 
+                            @include object(130px,30px,""); border-radius: 5px; border: 1px solid #bbb; 
+                        }
+                    }
+                    &.tr11{
+                        height: 120px;
+                        & td:last-of-type> div {
+                            display: flex;
+                            align-items: center;
+
+                            &> span{
+                                height: 40px;
+                                line-height: 40px;
+                                &:first-of-type{
+                                    display: flex;
+                                    align-items: center;
+                                    &>.pd_img{ 
+                                        @include object(200px,40px,flex); 
+                                        align-items: center;
+                                        flex-flow: row nowrap; 
+                                        & > img {
+                                            @include object(80%,35px,"");
+                                            object-fit: cover;
+                                            margin-right: 10px;
+                                        }
+                                        & > input {
+                                            @include object(50px,25px,"");
+                                            margin-right: 25px;
+                                        }
+                                    
+                                    }
+                                }
+                                &:last-of-type{
+                                    color:cadetblue;
+                                    font-weight: 500;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        height: 120px;
+                        & textarea{
+                            @include object(980px,120px,"");
+                            text-indent: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &> .newbn_btn{
+            @include object(1200px,auto,""); 
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center;
+            & input{
+                @include object(100px,35px,"");
+                background-color: #aaa;
+                border: 1px solid #aaa;
+                border-radius: 5px;
+                color: white;
+                &:first-of-type{ 
+                    background-color: salmon; 
+                    border: 1px solid salmon;
+                    margin-right: 5px; 
+                }
+                &:hover{ 
+                    background-color: lightsalmon;
+                    border: 1px solid lightsalmon;
+                    box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);  
+                }
+            }
+        }
+    }
+}
+.tr8{
+    display: flex;
+    align-items: center;
+    &>span>#product_img{
+        color: black;
+    }
+}
+.img_sp{ line-height: 50px }
+.p_img{ 
+    @include object(200px,50px,flex); 
+    align-items: center;
+    flex-flow: row nowrap;
+    & > img {
+        @include object(80%,50px,"");
+        object-fit: cover;
+        margin-right: 10px;
+    }
+    & > input {
+        @include object(80px,30px,"");
+        margin-right: 30px;
+    }
+ }
+input[type="text"]{ text-indent: 10px; }

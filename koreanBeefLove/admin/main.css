@@ -1,0 +1,88 @@
+@charset "UTF-8";
+.header { height: 150px; background-color: rgb(75, 75, 75); position: relative; }
+.section { height: auto; font-size: 14px; margin-bottom: 40px; }
+.footer { height: 100px; border-top: 1px solid rgb(70, 70, 70); }
+
+/* 폰트 크기 조정 부분 */
+.font_view2 { font-size: 16px; }
+.font_view3 { font-size: 18px; }
+
+/* admin_top */
+.adm_top {
+    height: 110px; line-height: 110px;
+    position: relative; color: wheat;
+    /* border: 1px solid red; */
+}
+.adm_top > span { 
+    position: absolute; display: inline; 
+    font-size: 15px; 
+}
+.slogo{ width: 150px; height: 40px; display: block;  }
+.adm_top > span:last-child { font-size: 14px; z-index: 1; top: 0; right: 30px; }
+.adm_top > span:last-child >a { color: wheat; }
+.adm_top > span:last-child >a:hover{ color: lightsalmon; }
+.adm_top > span:first-child {
+    width: 200px; height: inherit;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600; 
+    font-size: 28px;
+    color:white;  
+}
+.adm_top > span:first-child > a { 
+    position: absolute;
+    height: inherit;
+    line-height: 50px;
+}
+.adm_top > span:first-child > a:first-child{
+    height: 50px;
+}
+.adm_top > span:last-child{ height: 50px; line-height: 60px;  }
+.adm_top > span:last-child > a > img { width: 25px; object-fit: cover; cursor: pointer; margin-right: 10px; }
+.adm_menubox {
+    width: 100%; height: 35px; position: absolute; bottom: 1px;
+    background-color: rgb(90, 90, 90);
+}
+.adm_menus { 
+    max-width: 100%; min-width: 800px; 
+    height: inherit; font-size: 13px; 
+    border-top: 1px solid rgb(120, 120, 120);
+}
+.adm_menus > li { 
+    height: inherit; width: 10%;
+    min-width: 100px; max-width: 150px;
+    /* border-right: 1px solid rgb(120, 120, 120);  */
+    color: white; float: left; 
+    text-align: center; line-height: 35px;
+    cursor: pointer; font-size: 14px;
+}
+.adm_menus > li:hover { background-color: rgb(75, 75, 75); color: wheat;}
+
+/* new_info */
+.adm_main { 
+    width: 100%; height: 40px; 
+    border-bottom: 1px solid rgb(70, 70, 70); 
+    line-height: 40px;
+}
+.adm_main > span { position: absolute; left: 15px; }
+.adm_main > ol { position: absolute; right: 5px; margin-top: 5px; display: inline-block; }
+.adm_main > ol > li { position: relative; display: inline-block; margin-left: 2px; cursor: pointer; }
+/* 회원리스트 */
+.adm_table { width: 1200px; margin: 0 auto; margin-bottom: 70px; }
+.adm_tb { 
+    width: inherit; height: auto; 
+    text-align: center; margin-bottom: 10px; 
+    margin-top: 10px; border-spacing: 0; 
+    border-collapse: collapse; 
+}
+.adm_tb td { height: 35px; border: 1px solid #aaa; }
+h2 { margin-top: 20px; margin-bottom: 5px; }
+.tb_th { font-weight: bold; background-color: gainsboro; }
+#tb_tbody > tr > td:nth-child(5), #qtb_tbody > tr > td:nth-child(2) { text-align: left; text-indent: 20px; }
+#adm_ubtn { float: right; width: 120px; height: 30px; background-color: salmon; color: white; 
+    border: 1px solid salmon; border-radius: 5px; }
+#adm_ubtn:hover{ box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35); }
+/* #tb_tbody, #qtb_tbody, #ptb_tbody { display: none; } */

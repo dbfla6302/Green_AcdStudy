@@ -1,0 +1,126 @@
+<meta charset="UTF-8" />
+
+<article class="adm_main">
+    <span>회원관리</span>
+    <ol>
+        <li onclick="fontclass('1');"><img src="../image/ts01.gif" alt="../image/ts01.gif" title="보통"></li>
+        <li onclick="fontclass('2');"><img src="../image/ts02.gif" alt="../image/ts02.gif" title="크게"></li>
+        <li onclick="fontclass('3');"><img src="../image/ts03.gif" alt="../image/ts03.gif" title="더 크게"></li>
+    </ol>
+</article>
+
+<!-- 전체목록 및 회원 수 -->
+<article class="member__admin">
+  <div class="member__listNo">
+    <label>
+      <span class="member__listTotal">전체목록</span><span>|</span>
+      총 회원수 <span>235</span>명 중,
+      차단 <span>170</span>명,
+      탈퇴 <span>0</span>명
+    </label>
+  </div>
+
+  <!-- 회원아이디 검색  -->
+<form id="sform" name="sform" method="GET" action="admin_member.html" enctype="application/x-www-form-urlencoded" onsubmit="return search();">
+  <div class="member__idSearch">
+    <select name="search_part" id="search_part">
+      <option value="sid" selected>아이디</option>
+      <option value="sname">이름</option>
+      <option value="stel">전화번호</option>
+    </select>
+    <input type="text" name="stext" id="stext" placeholder="검색할 단어를 입력하세요">
+    <button type="submit" class="member__idSearchBtn">검색</button>
+  </div>
+</form>
+  <!-- 메모 -->
+  <div class="member__memo">
+    회원자료 삭제시 다른 회원이 기존 회원 아이디를 사용하지 못하도록 회원 아이디, 이름, 닉네임은 삭제하지 않고 영구 보관합니다.
+  </div>
+
+  <!-- 회원 추가버튼  -->
+  <span class="member__addMemberBtn">
+    <button type="button" id="add_member">회원 추가</button>
+  </span>
+<form name="mfrm" method="POST" enctype="application/x-www-form-urlencoded">
+  <table class="member__table">
+    <!-- 회원 리스트 테이블 제목 -->
+    <thead>
+      <tr>
+        <th rowspan="2">
+          <input type="checkbox" name="allck" onclick="all_ck();">
+        </th>
+        <th rowspan="2">아이디</th>
+        <th>이름</th>
+        <th colspan="6">본인확인</th>
+        <th>휴대폰</th>
+        <th>상태/권한</th>
+        <th>최종접속</th>
+        <th rowspan="2">접근그룹</th>
+        <th rowspan="2">관리</th>
+      </tr>
+      <tr>
+        <th>닉네임</th>
+        <th>
+          메일<br>
+          인증
+        </th>
+        <th>
+          정보<br>
+          공개
+        </th>
+        <th>
+          메일<br>
+          수신
+        </th>
+        <th>
+          SMS<br>
+          수신
+        </th>
+        <th>
+          성인<br>
+          인증
+        </th>
+        <th>
+          접근<br>
+          차단
+        </th>
+        <th>전화번호</th>
+        <th>포인트</th>
+        <th>가입일</th>
+      </tr>
+    </thead>
+
+    <!-- 회원 리스트 -->
+    <tbody class="member__tableList" id="member_tableList" style="display: block;">
+
+    </tbody>
+
+    <!-- 가입 회원 없음 -->
+    <tfoot class="member__tableNone" id="member_tableNone" style="display: none;">
+      <tr>
+        <td colspan="15">가입된 회원이 없습니다.</td>
+      </tr>
+    </tfoot>
+  </table>
+</form>
+  <!-- 테이블 하단 버튼 -->
+  <span class="member__tableBtns">
+    <button type="button" onclick="modify(1)">선택수정</button>
+    <button type="button" onclick="modify(2)" class="sub_admin">선택삭제</button>
+    <button type="button" onclick="modify(3)" class="sub_admin">완전삭제</button>
+  </span>
+
+  <!-- 페이지 번호 -->
+  <span class="pageing">
+    <label class="page_btn" id="front_page">맨앞</label>
+    <label class="page_btn" id="prev_page">이전</label>
+    <label>
+    <ul class="member__page">
+      <li>1</li>
+    </ul>
+    </label>
+    <label class="page_btn" id="next_page">다음</label>
+    <label class="page_btn" id="back_page">맨끝</label>
+  </span>
+</article>
+<script>filters();</script>

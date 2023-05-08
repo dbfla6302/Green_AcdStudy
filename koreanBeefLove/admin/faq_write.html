@@ -1,0 +1,38 @@
+<?php
+    $v = date("YmdHis");
+    include "check.php";
+?>
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>쇼핑몰 관리자</title>
+<script src="../../js/jquery.js"></script>
+<script src="./ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" type="text/css" href="admin.css?v=<?=$v?>">
+<link rel="stylesheet" type="text/css" href="main.css?v=<?=$v?>">
+<link rel="stylesheet" type="text/css" href="faq.css?v=<?=$v?>">
+<script>
+    let days = new Date();
+    var nos = days.getMonth() +''+ days.getDay()+''+('0' + days.getHours()).slice(-2)+''+('0' + days.getMinutes()).slice(-2)+''+('0'+days.getSeconds()).slice(-2);
+</script>
+</head>
+<body>
+<header class="header">
+    <?php include "admin_top.html"; ?>
+</header>
+<section class="section" id="pd">
+    <?php include "faq_insert.html"; ?>
+</section>
+<footer class="footer">
+    <?php include "admin_bottom.html"; ?>
+</footer>
+</body>
+<script src="./banner.js?v=<?=$v?>"></script>
+<script type="module">
+    import { faqinck } from "./faq_write.js?v=<?=$v?>";
+</script>
+<script src="./product.js?v=<?=$v?>"></script>
+</html>
