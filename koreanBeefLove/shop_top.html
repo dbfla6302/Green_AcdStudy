@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+<article class="top">
+    <aside class="top_bk"></aside>
+    <!-- top_banner -->
+    <aside class="top_part1">
+        <img src="./banner/top_event_banner.jpg" title="Event_banner">
+    </aside>
+
+    <!-- top_menu -->
+    <aside class="top_part2">
+        <div class="t_menu">
+            <div>
+                <span title="즐겨찾기">
+                    <img src="./image/book_icon.png"> 즐겨찾기
+                </span>
+                <span title="고객센터 02-0123-4567">고객센터 02-0123-4567</span>
+            </div>
+            <ul>
+                <li title="로그인" id="login_off"><a href="./shop_login.html">로그인</a></li>
+                <li title="로그아웃" id="login_on"><a href="./log_out.php">로그아웃</a></li>
+                <li title="회원가입" id="member_on" class="top_point">
+                    <a href="./member_ship.html">회원가입</a>
+                    <div title="point">2000P<span></span></div>
+                </li>
+                <li title="마이페이지">마이페이지</li>
+                <li title="장바구니">장바구니(<span>0</span>)</li>
+                <li title="고객센터">고객센터</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- top_logo -->
+    
+    <aside class="top_part3">
+        <div><img src="./image/gift_banner.jpg" title="Gift_banner"></div>
+        <div><a href="./index.html"><img src="./ico/logo.png" title="한우사랑"></a></div>
+        <div>
+            <form id="f_search" name="f_search" onsubmit="return false">
+            <span>
+                <input type="text" name="searchwd" class="s_input" id="search_text" title="search" placeholder="검색어를 입력하세요" onkeypress="wsearch(1)">
+                <img src="./image/btn_top_search.png" title="search_button" id="search_button" onclick="wsearch(2);">
+            </span>
+            </form>
+            <span>
+                <ul class="top_notice" id="top_notice">
+
+                </ul> 
+                <label id="nbtn">
+                    <img src="./image/btn_top_notice_next.png" title="next_button" id="n_down">
+                    <img src="./image/btn_top_notice_prev.png" title="prev_button" id="n_up">
+                </label> 
+            </span>
+        </div>
+    </aside>
+</article>

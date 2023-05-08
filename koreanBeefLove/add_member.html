@@ -1,0 +1,151 @@
+<meta charset="UTF-8">
+
+<script src="../js/jquery.js"></script>
+<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<script src="./js/add_member.js?v=<?=$data?>"></script>
+<link rel="stylesheet" type="text/css" href="./add_member.css?v=<?php echo $v?>">
+
+<script>
+    $(function(){
+        $("#addsearch").postcodifyPopUp();
+    });
+</script>
+<form id="frm" name="frm" method="POST" action="add_memberok.php" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="terms" value="<?php echo $agree1?>">
+<input type="hidden" name="mail_terms" value="<?php echo $agree2?>">
+<input type="hidden" name="M_group" value="N">  <!-- N:nomal, S:silver, G:gold, V:vip -->
+<input type="hidden" name="M_level" value="3">  <!-- 1:간편회원가입, 2:직접회원가입, 3:관리자등록-->
+
+<article class="article">
+<aside class="at_site">
+    <div class="s_title">
+        <img src="./image/star_black_48dp.svg">
+        <span>사이트 이용정보 입력</span>
+    </div>
+    <table class="table">
+        <tr></tr>
+        <tr>
+            <td>아이디</td>
+            <td colspan="2"><input type="text" name="M_id" id="M_id" class="t_input"></td>
+        </tr>
+        <tr class="tr_ct">
+            <td></td>
+            <td colspan="2">영문자, 숫자, _만 입력 가능, 최소 3자 이상 입력하세요.</td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="M_pass" id="M_pass" class="t_input"></td>
+            <td>
+                <span>비밀번호 확인</span><input type="password" id="M_pass2" class="t_input">
+            </td>
+        </tr>
+        <tr></tr>
+    </table>
+</aside>
+<aside class="at_info">
+    <div class="s_title">
+        <img src="./image/person_black_48dp.svg">
+        <span>개인정보 입력</span>
+    </div>
+    <table class="table">
+        <tr></tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" name="M_name" id="M_name" class="t_input"></td>
+        </tr>
+        <tr>
+            <td>닉네임</td>
+            <td><input type="text" name="M_nick" id="M_nick" class="t_input"></td>
+        </tr>
+        <tr class="tr_ct">
+            <td></td>
+            <td>공백없이 한글, 영문, 숫자만 입력 가능(한글 2자, 영문 4자 이상). 닉네임을 바꾸시면 앞으로 60일 이내에는 다시 변경할 수 없습니다.</td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input type="text" name="M_email" id="M_email" class="e_input"></td>
+        </tr>
+        <tr>
+            <td>전화번호</td>
+            <td><input type="tel" name="M_tel2" id="M_tel2" class="t_input"></td>
+        </tr>
+        <tr>
+            <td>휴대폰번호</td>
+            <td><input type="tel" name="M_tel" id="M_tel" class="t_input"></td>
+        </tr>
+        <tr class="tr_ar">
+            <td>주소</td>
+            <td>
+                <input type="text" name="M_post" id="M_post" class="a_input1 postcodify_postcode5" maxlength="5" readonly>
+                <input type="button" value="주소 검색" class="a_btn" id="addsearch">
+            </td>
+        </tr>
+        <tr class="tr_ar">
+            <td></td>
+            <td><input type="text" name="M_road" id="M_road" class="a_input2 postcodify_address" placeholder="기본주소" readonly></td>
+        </tr>
+        <tr class="tr_ar">
+            <td></td>
+            <td><input type="text" name="M_addr" id="M_addr" class="a_input2" placeholder="상세주소"></td>
+        </tr>
+        <tr class="tr_ar">
+            <td></td>
+            <td><input type="text" class="a_input2 a_last" placeholder="참고항목"></td>
+        </tr>
+        <tr></tr>
+    </table>
+</aside>
+<aside class="at_etc">
+    <div class="s_title">
+        <img src="./image/settings_black_48dp.svg">
+        <span>기타 개인설정</span>
+    </div>
+    <table class="table">
+        <tr></tr>
+        <tr>
+            <td>메일링 서비스</td>
+            <td><label class="c_input"><input type="checkbox" name="M_agree1" id="M_agree1" value="Y">정보 메일을 받겠습니다.</label></td>
+        </tr>
+        <tr>
+            <td>SMS 수신여부</td>
+            <td><label class="c_input"><input type="checkbox" name="M_agree2" id="M_agree2" value="Y">휴대폰 문자메세지를 받겠습니다.</label></td>
+        </tr>
+        <tr>
+            <td>정보 공개</td>
+            <td><label class="c_input"><input type="checkbox" name="M_open" id="M_open" value="Y">다른분들이 나의 정보를 볼 수 있도록 합니다. </label></td>
+        </tr>
+        <tr class="tr_ct">
+            <td></td>
+            <td>정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 불가능합니다.</td>
+        </tr>
+        <tr class="tr_sc">
+            <td>자동등록 방지</td>
+            <td>
+                <span class="sc"><img src="./code.php" id="codes"></span>
+                <span>                
+                    <img src="./image/volume_up_black_48dp.svg" onclick="">
+                    <img src="./image/autorenew_black_48dp.svg" onclick="refresh_btn();">
+                </span>
+                <span><input type="text" name="M_security" id="security" class="sc_input" maxlength="6"></span>
+            </td>
+        </tr>
+        <tr class="tr_ct">
+            <td></td>
+            <td>자동등록 방지 숫자를 순서대로 입력하세요.</td>
+        </tr>
+        <tr></tr>
+    </table>
+</aside>
+</article> 
+<article class="st_join">
+    <button type="button" class="join_btn" id="join_btn">회원가입</button>
+</article>
+</form>
+
+<script>
+let r=0;
+function refresh_btn(){ //보안코드
+    r++;
+    document.getElementById("codes").setAttribute("src","./code.php?v="+r);
+}
+</script>

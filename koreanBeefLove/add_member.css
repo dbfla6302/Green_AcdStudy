@@ -1,0 +1,217 @@
+@import url("../css/font.css");
+.article {
+  width: 100%;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.article > aside {
+  width: 1000px;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.article > aside > .s_title {
+  width: 998px;
+  height: 50px;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #eee;
+  padding-left: 10px;
+  line-height: 50px;
+  font-weight: 700;
+}
+.article > aside > .s_title > img {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  top: 11px;
+  margin-right: 5px;
+}
+
+.st_join {
+  width: 1000px;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.st_join > .join_btn {
+  width: 130px;
+  height: 50px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: salmon;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.st_join > .join_btn:hover {
+  background-color: lightsalmon;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+
+table {
+  width: inherit;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table tr {
+  height: 50px;
+}
+table tr.tr_ct {
+  height: 25px;
+  position: relative;
+  vertical-align: top;
+  font-size: 12px;
+  top: -8px;
+  color: dimgray;
+}
+table tr.tr_sc {
+  height: 80px;
+}
+table tr.tr_sc td:first-of-type {
+  position: relative;
+  top: -20px;
+}
+table tr.tr_sc td:nth-of-type(2) > span {
+  float: left;
+}
+table tr.tr_sc td:nth-of-type(2) > span.sc {
+  width: 200px;
+  height: 60px;
+  border: 1px solid #ccc;
+  display: block;
+  overflow: hidden;
+}
+table tr.tr_sc td:nth-of-type(2) > span.sc > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+table tr.tr_sc td:nth-of-type(2) > span:nth-of-type(2) {
+  width: 25px;
+  height: 60px;
+  position: block;
+  box-sizing: border-box;
+  margin-left: 3px;
+}
+table tr.tr_sc td:nth-of-type(2) > span:nth-of-type(2) > img {
+  width: 28.5px;
+  height: 28.5px;
+  position: block;
+  box-sizing: border-box;
+  background-color: burlywood;
+  cursor: pointer;
+}
+table tr.tr_sc td:nth-of-type(2) > span:nth-of-type(2) > img:nth-of-type(1) {
+  margin-bottom: 3px;
+}
+table tr.tr_sc td:nth-of-type(2) > span:nth-of-type(3) {
+  margin-left: 10px;
+}
+table tr.tr_sc td:nth-of-type(2) > span:nth-of-type(3) > .sc_input {
+  width: 100px;
+  height: 60px;
+  position: block;
+  box-sizing: border-box;
+  text-indent: 10px;
+  font-size: 18px;
+}
+table tr.tr_ar {
+  height: 38px;
+}
+table tr:first-of-type {
+  height: 10px;
+}
+table tr:last-of-type {
+  height: 30px;
+}
+table tr td:nth-of-type(1) {
+  width: 200px;
+  height: inherit;
+  position: relative;
+  box-sizing: border-box;
+  text-align: right;
+  right: 25px;
+  font-size: 15px;
+  font-weight: 500;
+}
+table tr td:nth-of-type(3) {
+  width: 450px;
+  font-size: 15px;
+  font-weight: 500;
+}
+table tr td:nth-of-type(3) > span {
+  display: inline-block;
+  margin-right: 25px;
+}
+table tr td > .t_input {
+  width: 250px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+table tr td > .e_input {
+  width: 430px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+table tr td > .a_input1 {
+  width: 100px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+table tr td > .a_input2 {
+  width: 600px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+table tr td > .a_last {
+  background-color: #eee;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+table tr td > .a_btn {
+  width: 80px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 10px;
+  background-color: salmon;
+  border-radius: 3px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+table tr td > .a_btn:hover {
+  background-color: lightsalmon;
+  box-shadow: 0 3px 5px 0 rgba(100, 100, 100, 0.35);
+}
+table tr td > .c_input {
+  display: inline-block;
+  font-size: 14px;
+}/*# sourceMappingURL=add_member.css.map */

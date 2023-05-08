@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<article class="login_box">
+    <p class="login_title">MEMBER LOGIN</p>
+<form name="frm" id="frm" enctype="application/x-www-form-urlencoded" onsubmit="return shop_logins();">    
+    <aside class="login_btn1 btn1">
+        <span>
+            <ol>
+                <li><input type="text" placeholder="아이디를 입력해주세요" class="span_box1" name="shop_id"><br></li>
+                <li><input type="password" placeholder="패스워드를 입력해주세요" class="span_box1" name="shop_pw"><br></li>
+            </ol>
+        <label class="label_box"><input type="checkbox">아이디 저장</label>
+        </span>
+        <span><input type="submit" value="LOGIN" class="span_box2"></span>
+    </aside>
+</form>
+    <aside class="login_btn2">
+        <ul>
+            <li><input type="button" value="회원가입" onclick="member_btn(1);"></li>
+            <li><input type="button" value="아이디 찾기" onclick="member_btn(2);"></li>
+            <li><input type="button" value="비밀번호 찾기" onclick="member_btn(3);"></li>
+        </ul>
+    </aside>        
+    <span class="nomember">비회원 주문조회</span>
+<form name="nofrm" id="nofrm" enctype="application/x-www-form-urlencoded" onsubmit="return no_logins();">
+    <input type="hidden" name="nomember_security" value="noinfo">
+    <aside class="login_btn1 btn3">
+        <span>
+            <ol>
+                <li><input type="text" placeholder="주문자명을 입력해 주세요" class="span_box1" name="nomember_id"><br></li>
+                <li><input type="text" placeholder="주문번호 8자리를 입력해 주세요" maxlength="8" class="span_box1" name="nomember_no"><br></li>      
+            </ol>
+        </span>
+        <span><input type="submit" value="주문조회" class="span_box2"></span>
+        <span>주문자명과 주문번호를 잊으신 경우, 고객센터로 문의하여 주시기 바랍니다.</span>
+    </aside>
+</form>
+</article>

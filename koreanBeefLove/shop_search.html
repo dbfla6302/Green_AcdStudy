@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<style>
+    .search{ width: 100%; height: 500px; }
+    .search>aside{ width: 1170px; height: inherit;  margin: 0 auto; text-align: center; padding-top: 80px; box-sizing: border-box; }
+    .search_icon{ width: 200px; height: auto; object-fit: contain; }
+    .search>aside>div>span { font-weight: bold; }
+    .search>aside>div:nth-child(3){ color: dimgrey;}
+    .hbtn{ margin-top: 30px; }
+    .hbtn>input{ width: 180px; height: 35px; background-color:teal; border-radius: 5px; border: 0; 
+        color: white; font-weight: bold; cursor: pointer; }
+    .hbtn>input:hover{ background-color: tomato; box-shadow: 0 3px 5px 2px rgba(100, 100, 100, 0.5);}
+</style>
+<article class="search">
+    <aside>
+        <img src="./ico/search_icon.png" class="search_icon">
+        <div>' <span id="swd"></span> '에 대한 검색결과가 없습니다.</div>
+        <div>다른 검색어를 입력하시거나 철자와 띄어쓰기를 확인해 보세요.</div>
+        <div class="hbtn"><input type="button" value="홈페이지로 돌아가기" onclick="gohome()"></div>
+    </aside>
+</article>
