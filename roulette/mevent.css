@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url("../css/font.css");
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; max-width: 450px; max-height: 650px; }
+ul,ol,dl { list-style: none; margin: 0; padding: 0; }
+span,label,main { display: block; }
+a { text-decoration: none; color: black; }
+img { width: 100%; object-fit: cover; }
+button { cursor: pointer; }
+select { margin: 0; }
+p { margin: 0; padding: 0; word-break: break-all; text-align: center; }
+
+/* 340~560 */
+/* @media screen and (min-width:340px) and (max-width:560px) { */
+    /* 타이틀 부분 */
+    .title { height: 50px; position: relative; }
+    .title > p { 
+        width: inherit; 
+        line-height: 50px; 
+        height: inherit;
+        font-size: 22px; font-weight: 500;text-align: center;
+    }
+    .container { height: 650px; position: relative; }
+    .game_bg { 
+        width: 100%; height: inherit; 
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-image: url("./images/event_bk.png");
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: top;
+    }
+    .game_pan { 
+        position: absolute;
+        max-width: 350px;
+        max-height: 350px;
+        transition-duration: 5s;
+        transition-property: all;
+        top: 30%;
+    }
+    .game_marker { 
+        position:absolute; 
+        max-width: 25px;
+        top: 47%;
+        z-index: 5;
+    }
+    .game_btn {
+        position:absolute;
+        max-width: 105px;
+        max-height: 105px;
+        left: 50%;
+        top: 35%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    .msg { 
+        width: 280px; height: 50px; 
+        background-color: rgba(0, 0, 0, 0.7); color: white;
+        border: 3px dashed mediumseagreen ; 
+        border-radius: 5px; box-shadow: 0 3px 10px mediumseagreen;
+        text-align: center; line-height: 50px;
+        position: absolute; top: 190px;
+        left: 50%; margin-left: -140px;
+        display: none; z-index: 10;
+    }
+/* } */
