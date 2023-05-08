@@ -1,0 +1,99 @@
+<?php
+    $data = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./picture.css?v=<?=$data?>">
+<title>틀린그림찾기</title>
+<script src="../js/jquery.js"></script>
+<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<script src="./picture.js?v=<?=$data?>"></script>
+</head>
+<body>
+<aside class="event">
+    <p>2021 Sale Coupon Event</p>
+    <div class="e_box">
+        <label class="e_img">
+            <span class="dark" id="dark">
+                <div class="start" id="start">Start!</div>
+                <div class="end" id="end">다음 기회에!</div>
+            </span>
+            <span><img src="./game/game_poto2.png"></span>
+            <span>
+                <label class="aw"><img src=""></label>
+                <label class="aw"><img src=""></label>
+                <label class="aw"><img src=""></label>
+                <label class="aw"><img src=""></label>
+                <label class="aw"><img src=""></label>
+                <img src="./game/game_poto1.png" id="ca_aw">
+            </span>
+        </label>
+        <label class="h_img">
+            <img src="./game/no_5.png">
+        </label>
+        <ul>
+            <li>※ 2021년 8월 1일 ~ 31일까지 이벤트가 진행 됩니다.</li>
+            <li>※ 숨은그림찾기 게임은 하루에 한번만 진행을 할 수 있습니다. 단, 회원에 한해서만 참여할 수 있습니다.</li>
+            <li>※ 총 5번의 기회가 있으며, 틀린 부분은 총 5곳 입니다. </li>
+            <li>※ 5번 모두 틀릴 경우 게임은 종료 됩니다.</li>
+            <li>※ 틀린그림 총 5곳을 모두 찾으신 고객님은 자동으로 입력 사항이 나오며, 해당 정보 입력시 소정의 상품을 발송 합니다.</li>
+        </ul>
+    </div>
+    <!-- 이벤트 경품 발송 -->
+    <form name="fm" id="fm" action="../shop/eventok.php" method="POST" enctype="application/x-www-form-urlencoded">
+    <input type="hidden" name="e_id" value="hong"><!-- 임의 아이디 -->
+    <input type="hidden" name="e_tel" id="e_tel" value=""><!--최대 11자리-->
+    <div class="ag_box">
+        <span class="ag_sp">이벤트 경품 발송을 위해 개인정보 수집 방침에 동의 해주세요</span>
+        <textarea class="ag_txt" id="ag_txt"></textarea>
+        <label class="ag_ckb">
+            개인정보 수집 및 이용 약관에 모두 동의합니다.<input type="checkbox" name="e_agree" value="Y">
+        </label>
+        <table class="table">
+            <tr>
+                <td>고객명</td>
+                <td><input type="text" name="e_name" id="e_name"></td>
+                <td>
+                    휴대폰 번호 <input type="tel" id="t1" maxlength="3"> -<input type="tel" id="t2" maxlength="4"> -<input type="tel" id="t3" maxlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>배송지 주소</td>
+                <td colspan="2">
+                    <input type="text" name="e_addr" id="e_addr" class="postcodify_postcode5" readonly>
+                    <input type="button" value="주소찾기" id="addr_btn">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="text" name="e_road" id="e_road" class="add_dtc postcodify_address" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="text" name="e_dtc" id="e_dtc"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="button" value="이벤트 참여" onclick="event_ck();"></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</aside>
+</body>
+<script>
+    let agree = new XMLHttpRequest();
+    agree.open("GET","./event_agree.txt",true);
+    agree.onreadystatechange = function(){
+        if(agree.readyState == XMLHttpRequest.DONE && agree.status == 200){
+            const agree_txt = agree.responseText;
+            document.getElementById("ag_txt").innerHTML = agree_txt;
+        }
+    }
+    agree.send();
+</script>
+</html>

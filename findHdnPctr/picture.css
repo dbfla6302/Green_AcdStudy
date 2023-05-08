@@ -1,0 +1,310 @@
+@import url("../css/font.css");
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 100%;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event > .e_box > .e_img > .dark > .end, .event > .e_box > .e_img > .dark > .start {
+  cursor: pointer;
+}
+
+section, label, span, footer, main, aside, nav, header {
+  display: block;
+}
+
+@keyframes texts {
+  from {
+    word-spacing: -50px;
+  }
+  to {
+    word-spacing: 0px;
+  }
+}
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  background-color: #ccc;
+}
+
+input[type=text], input[type=tel] {
+  text-indent: 5px;
+}
+
+.event {
+  width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+.event > p {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  color: white;
+  text-shadow: 3px 3px 1px rgb(39, 197, 163);
+  margin: 0 auto;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: crimson;
+  animation: texts 3s 2 linear;
+  animation-direction: alternate;
+  animation-duration: 4s;
+}
+.event > .e_box {
+  width: inherit;
+  height: auto;
+  display: block;
+  position: relative;
+  background-color: seashell;
+  padding: 45px;
+  box-sizing: border-box;
+}
+.event > .e_box > .e_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.event > .e_box > .e_img > span {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.event > .e_box > .e_img > span > img {
+  width: 550px;
+}
+.event > .e_box > .e_img > span > .aw {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+}
+.event > .e_box > .e_img > span > .aw:nth-of-type(1) {
+  top: 180px;
+  right: 163px;
+}
+.event > .e_box > .e_img > span > .aw:nth-of-type(2) {
+  top: 260px;
+  right: 235px;
+}
+.event > .e_box > .e_img > span > .aw:nth-of-type(3) {
+  top: 250px;
+  right: 535px;
+}
+.event > .e_box > .e_img > span > .aw:nth-of-type(4) {
+  top: 315px;
+  right: 500px;
+}
+.event > .e_box > .e_img > span > .aw:nth-of-type(5) {
+  top: 635px;
+  right: 200px;
+}
+.event > .e_box > .e_img > .dark {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 780px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 10;
+}
+.event > .e_box > .e_img > .dark > .start {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  color: white;
+  width: 300px;
+  height: 100px;
+  display: block;
+  border: 5px solid yellowgreen;
+  background-color: olivedrab;
+  text-shadow: 5px 4px 1px yellowgreen;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -150px;
+  box-shadow: 3px 4px 3.8px 0.8px cornsilk;
+}
+.event > .e_box > .e_img > .dark > .start:hover {
+  color: crimson;
+  border: 4px solid crimson;
+  text-shadow: 5px 4px 1px lightseagreen;
+  background-color: lavenderblush;
+  box-shadow: 3px 4px 3.8px 0.8px rgb(219, 47, 81);
+}
+.event > .e_box > .e_img > .dark > .end {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  color: crimson;
+  width: 300px;
+  height: 100px;
+  display: block;
+  border: 5px solid crimson;
+  background-color: lavenderblush;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -150px;
+  display: none;
+}
+.event > .e_box > .h_img {
+  width: 95px;
+  height: 95px;
+  display: block;
+  border-radius: 100px;
+  border: 3px solid white;
+  background-color: mediumseagreen;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+.event > .e_box > .h_img > img {
+  position: absolute;
+  width: 100%;
+}
+.event > .e_box > ul {
+  text-align: right;
+  font-size: 14px;
+}
+.event > .e_box > ul > li {
+  height: 25px;
+  line-height: 50px;
+}
+.event > .e_box > ul > li:nth-of-type(3), .event > .e_box > ul > li:nth-of-type(5) {
+  color: crimson;
+  font-weight: bold;
+}
+.event > form {
+  width: 1200px;
+  height: auto;
+  display: block;
+  background-color: white;
+  border: 3px solid crimson;
+}
+.event > form > .ag_box {
+  width: inherit;
+  height: auto;
+  display: block;
+}
+.event > form > .ag_box > .ag_sp {
+  width: 1194px;
+  height: 50px;
+  display: block;
+  background-color: crimson;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  margin-bottom: 15px;
+}
+.event > form > .ag_box > .ag_txt {
+  width: 1000px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  font-size: 13px;
+}
+.event > form > .ag_box > .ag_ckb {
+  width: 1000px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.event > form > .ag_box > .ag_ckb > input {
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+table {
+  width: 1200px;
+  height: auto;
+  display: block;
+  border-collapse: 0;
+  border-spacing: 0;
+  margin: 0 auto;
+  font-size: 15px;
+  padding: 20px 100px 0 100px;
+}
+
+tr {
+  height: 35px;
+}
+tr > td:nth-of-type(1) {
+  width: 150px;
+}
+tr > td:nth-of-type(2) {
+  width: 400px;
+}
+tr > td:nth-of-type(3) {
+  width: 450px;
+  position: relative;
+  text-align: right;
+}
+tr > td:nth-of-type(3) > input {
+  width: 80px;
+  margin-left: 5px;
+}
+tr:nth-of-type(2) > td:nth-of-type(2) > input {
+  width: 100px;
+}
+tr:nth-of-type(2) > td:nth-of-type(2) > #addr_btn {
+  background-color: mediumseagreen;
+  border: 1px solid mediumseagreen;
+  margin-left: 5px;
+  color: white;
+  cursor: pointer;
+}
+tr:nth-of-type(3) > td:nth-of-type(2) > input, tr:nth-of-type(4) > td:nth-of-type(2) > input {
+  width: 890px;
+}
+tr:nth-of-type(5) {
+  height: 80px;
+  text-align: center;
+}
+tr:nth-of-type(5) > td > input {
+  width: 150px;
+  height: 40px;
+  background-color: mediumseagreen;
+  border: 1px solid mediumseagreen;
+  color: white;
+  cursor: pointer;
+}
+
+#fm {
+  display: none;
+}/*# sourceMappingURL=picture.css.map */
