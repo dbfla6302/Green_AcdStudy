@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("../css/font.css");  
-@import "./basic.scss"; //scss에서는 url("");을 절대 쓰면안됨 css에서 적용안됨
+@import "./basic.scss"; 
 
 @keyframes texts{
     from{
