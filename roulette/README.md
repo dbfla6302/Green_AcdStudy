@@ -4,5 +4,5 @@
 </br></br>
 룰렛 PC, Mobile 이벤트 웹 페이지 입니다.</br>
 PC : http://dbfla6302.dothome.co.kr/portfolio/event/index.html
-</br></br>
+</br>
 MO : http://dbfla6302.dothome.co.kr/portfolio/event/mindex.html
