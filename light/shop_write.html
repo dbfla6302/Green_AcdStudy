@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+<article id="qa_write_box" class="qa_write_box">
+    <p>Q&A 상품문의</p>
+    <form name="qa_write_frm">
+        <input type="hidden" name="qa_key" value="qa_today">
+        <table class="qa_write_tb" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td>문의 제목</td>
+                    <td><input type="text" name="qa_subject" class="qa_input_1" placeholder="문의 제목을 입력해주세요."></td>
+                </tr>
+                <tr>
+                    <td>문의 카테고리</td>
+                    <td>
+                        <select class="qa_write_sel qa_input_2" name="qa_cate">
+                            <option value="">문의카테고리를 선택하세요</option>
+                            <option value="회원정보">회원정보</option>
+                            <option value="주문">주문</option>
+                            <option value="결제">결제</option>
+                            <option value="배송">배송</option>
+                            <option value="취소/환불">취소/환불</option>
+                            <option value="반품/교환">반품/교환</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>문의 작성자</td>
+                    <td><input type="text" name="qa_name" class="qa_input_2" placeholder="고객명을 입력해주세요."></td>
+                </tr>
+                <tr>
+                    <td>문의 비밀번호</td>
+                    <td><input type="password" name="qa_pass" class="qa_input_2" placeholder="비밀번호를 입력해주세요."></td>
+                </tr>
+                <tr>
+                    <td>문의 첨부파일</td>
+                    <td><input type="file" name="qa_file" accept=""></td>
+                </tr>
+                <tr>
+                    <td>문의 내용</td>
+                    <td><textarea style="resize: none;" name="qa_text" placeholder="문의 내용을 입력해주세요"
+                            class="qa_tarea"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <aside class="qa_write_btnbox">
+        <input type="button" value="상품문의" onclick="qa_write_sub();"><input type="button" value="문의리스트"
+            onclick="qa_go_list();">
+    </aside>
+</article>

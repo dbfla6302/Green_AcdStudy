@@ -1,0 +1,103 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+
+@mixin object($w,$h){
+    width: $w;
+    height: $h;
+}
+
+.top_banner{
+    @include object(100%,auto);
+    clear: both;
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+
+    &>.bn_menu{
+        @include object(186px,auto);
+        font-size: 14px;
+        &>li{
+            // border: 1px solid red;
+            height: 45px;
+            line-height: 45px;
+            text-indent: 10px;
+            color: white;
+            background-color: #5e5e5e;
+            border-bottom: 1px solid white;
+            cursor: pointer;
+            position: relative;
+            &:last-of-type{ border: 0; }
+            &:hover{ background-color: #595834; }
+        }
+    }
+    & > .top_bn { 
+        @include object(760px,450px);
+        position: relative;
+        overflow: hidden;  
+        &>.ol_banners {
+           @include object(2280px,500px);
+           position: absolute; 
+           & > li { 
+               @include object(760px,450px); 
+               float: left; 
+            }
+       }
+    }
+    &>.bn_side{
+        width: auto;
+        height: 450px;
+        position: absolute;
+        right: 0;
+
+        &>.side_bn{
+            margin-bottom: 15px;
+            @include object(224px,234px);
+            overflow: hidden;
+            display: flex;
+            &>img{
+                position: relative;
+            }
+        }
+        &>.nt_box{
+            @include object(225px,auto);
+            border: 1px solid black;
+            padding: 5px 5px 5px 5px;
+            position: relative;
+          
+            &>span{  margin-bottom: 15px;}
+            &>#bn_notice{
+                font-size: 13px;
+                &>li{
+                    margin-bottom: 14px;
+
+                }
+            }
+            &>.more{
+                @include object(80px,23px);
+                background-color: #e6e6e6;
+                border-radius: 15px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 12px;
+                line-height: 23px;
+                font-weight: 600;
+                margin-bottom: 0;
+                position: relative;
+                left: 130px;
+            }
+        }
+    }
+}
+.bn_btm{
+    @include object(100%,147px);
+    position: relative;
+    margin-bottom: 30px;
+
+    &>div{
+        display: flex;
+        justify-content: space-between;
+        &>img{
+            @include object(286px,147px);
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@mixin base {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+@mixin ulol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin sections($width, $height, $bg) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+}
+@mixin flexs($direc, $justify, $align) {
+  display: flex;
+  flex-direction: $direc;
+  justify-content: $justify;
+  align-content: $align;
+}
+@mixin font_sans($h, $c, $a, $w, $s) {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: $h;
+  color: $c;
+  text-align: $a;
+  font-weight: $w;
+  font-size: $s;
+}
+.foot_box{
+    @include sections(1200px, auto, none);
+    &>aside{
+        @include sections(1200px, auto, none);
+        &:nth-child(1){
+            @include flexs(row, center, space-evenly);
+            border-bottom: 1px solid black;
+            &>div{
+                height: 60px;
+                padding: 0 10px;
+                line-height: 60px;
+                position: relative;
+                &:after{
+                    content: "|";
+                    position: absolute;
+                    right: 0;
+                }
+                &:last-child:after{
+                    content: "";
+                }
+            }
+        }
+        &:nth-child(2){
+            @include flexs(row, center, space-evenly);
+            margin: 30px 0;
+            &>ul{
+                @include ulol;
+                height: 100px;
+                font-size: 12px;
+                padding-left: 30px;
+                border-right: 1px solid black;
+                &>li:nth-child(1){
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                &:nth-child(1){
+                    width: 250px;
+                    &>li:nth-child(2){
+                        font-size: 25px;
+                    }
+                }
+                &:nth-child(2){
+                    width: 350px;
+                    &>li:nth-child(1){
+                        margin-bottom: 20px;
+                    }
+                }
+                &:nth-child(3){
+                    width: 600px;
+                    @include flexs(row, center, space-evenly);
+                    border: none;
+                    &>li:nth-child(2){
+                        @include flexs(row, center, flex-start);
+                        margin: 0 30px;
+                        &>img{
+                            @include sections(94px, 94px, none);
+                            object-fit: contain; 
+                            &:nth-child(1){
+                                width: 67px;
+                            }
+                            &:nth-child(4){ cursor: pointer; }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            font-size: 12px;
+            text-align: center;
+           &>div>a{
+               color: black;
+               background-color: #ccc;
+               border-radius: 5px;
+           } 
+        }
+    }
+}

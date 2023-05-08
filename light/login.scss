@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@mixin ob_box($w_box,$h_box,$p_box,$p_back,$p_board){
+    width: $w_box;
+    height: $h_box;
+    @if($p_box!=""){
+    position: $p_box;
+    }
+    background-color: $p_back;
+    border: $p_board;
+}
+input[type="text"],input[type="password"]{ text-indent: 5px; }
+.login_box { 
+    @include ob_box(500px,400px,"",none,1px solid #ccc);
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    & > p {
+        margin-top: 0;
+        font-size: 20px;
+    }
+}
+.login_div { 
+    @include ob_box(500px,400px,"",none,0);
+    text-align: center; font-size: 16px;
+    & > label { margin-right: 20px; display: inline-block;
+             height:20px;
+             & > span { 
+                 display: inline;
+                 vertical-align: 1px;
+             }
+        }
+    }
+.login_in { 
+    @include ob_box(410px,80px,"",none,0);
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    & > em {
+        font-style: normal;
+        height: 80px;
+        float: left;
+        &:nth-of-type(1){
+            width: 270px;
+        }
+        &:nth-of-type(2){
+            width: 40px;
+        }
+        &:nth-of-type(3){
+            width: 100px;
+        }
+        & > .login_ul > li { 
+            height: auto;
+            &:nth-of-type(2){
+                height: 20px;
+            }
+        }
+    }
+}
+
+.login_in_corp{
+    @include ob_box(410px,130px,"",none,0);
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    & > em {
+        font-style: normal;
+        height: 80px;
+        float: left;
+        &:nth-of-type(1){
+            width: 270px;
+        }
+        &:nth-of-type(2){
+            width: 40px;
+        }
+        &:nth-of-type(3){
+            width: 100px;
+        }
+        & > .login_ul > li { 
+            height: auto;
+            &:nth-of-type(even){
+                height: 20px;
+            }
+        }
+    }
+}
+
+.login_btn { 
+    @include ob_box(100px,80px,"",#404040,0);
+    color: #FFF;
+    font-size: 14px;
+}
+.btn_cp {
+    height: 130px;
+}
+.login_txt { 
+    @include ob_box(270px,30px,"","",1px solid #ccc);
+}
+
+.login_in1 { 
+    @include ob_box(410px,60px,"",none,0);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  & > .member_btn1{
+    @include ob_box(120px,60px,"",#5e5e5e,0);
+    color: #FFF;
+    font-size: 14px;
+    }
+  & > .member_btn2{
+    @include ob_box(120px,60px,"",#FFF,1px solid #5e5e5e);
+    font-size: 14px;
+    }
+}
+
+.login_in2 { 
+    @include ob_box(410px,20px,"",none,0);
+    margin-left: 20px;
+    font-size: 14px;
+}

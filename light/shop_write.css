@@ -1,0 +1,80 @@
+.qa_write_box {
+  width: 1000px;
+  height: 620px;
+  background-color: none;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid #5e5e5e;
+  border-radius: 5px;
+}
+.qa_write_box > p {
+  font-size: 20px;
+}
+.qa_write_box > form > .qa_write_tb {
+  width: 100%;
+  height: auto;
+  background-color: none;
+  border-top: 2px solid #5e5e5e;
+  margin: 20px 0 20px 0;
+  font-size: 12px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr > td {
+  border-bottom: 2px solid #5e5e5e;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr > td > .qa_tarea {
+  width: 790px;
+  height: 180px;
+  background-color: none;
+  font-size: 14px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr > td > .qa_input_1 {
+  width: 500px;
+  height: 30px;
+  background-color: none;
+  font-size: 14px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr > td > .qa_input_2 {
+  width: 200px;
+  height: 30px;
+  background-color: none;
+  font-size: 14px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr > td:nth-of-type(odd) {
+  width: 160px;
+  height: 50px;
+  background-color: #e0e0e0;
+  text-indent: 10px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr > td:nth-of-type(even) {
+  width: 800px;
+  height: 50px;
+  background-color: none;
+  padding-left: 10px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr:nth-child(6) > td {
+  height: 180px;
+}
+.qa_write_box > form > .qa_write_tb > tbody > tr:nth-child(6) > td:nth-child(2) {
+  padding: 10px;
+}
+.qa_write_box > .qa_write_btnbox {
+  width: 100%;
+  height: auto;
+  background-color: none;
+  text-align: center;
+}
+.qa_write_box > .qa_write_btnbox > input {
+  width: 120px;
+  height: 40px;
+  background-color: none;
+  font-size: 14px;
+}
+.qa_write_box > .qa_write_btnbox > input:nth-child(1) {
+  background-color: #5e5e5e;
+  border: none;
+  color: white;
+}
+.qa_write_box > .qa_write_btnbox > input:nth-child(2) {
+  border: 1px solid #5e5e5e;
+  margin-left: 20px;
+}/*# sourceMappingURL=shop_write.css.map */

@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<aside class="login_box">
+<p>회원 로그인</p>
+<div class="login_div">
+    <label id="log_data1"><input type="radio" name="log_data" id="log_data1" v-model="member" value="p" v-on:click="ops(1)" checked><span>개인회원</span></label>
+    <label id="log_data2"><input type="radio" name="log_data" id="log_data2" v-model="member" value="c" v-on:click="ops(2)"><span>사업자 회원</span></label>
+    <form name="mfrm" method="POST" action="./sign_ok.php" enctype="application/x-www-form-urlencoded" @submit.prevent="gologin">
+        <input type="hidden" name="login_part" value="person">
+        <span class="login_in" v-if="views">
+        <em>
+        <ul class="login_ul">
+            <li><input type="text" name="person_id" class="login_txt" placeholder="아이디를 입력하세요" v-model="p_id" ref="po_id"></li>
+            <li></li>
+            <li><input type="password" name="person_pw" class="login_txt" placeholder="패스워드를 입력하세요" v-model="p_pw" ref="po_pw"></li>
+        </ul>
+        </em>
+        <em></em>
+        <em><button type="submit" class="login_btn">로그인</button></em>
+        </span>
+        <span class="login_in_corp" v-if="views2">
+            <em>
+            <ul class="login_ul">
+                <li><input type="text" name="person_id" class="login_txt" placeholder="아이디를 입력하세요"></li>
+                <li></li>
+                <li><input type="text" name="corp_no" class="login_txt" placeholder="사업자 번호를 입력하세요" maxlength="10"></li>
+                <li></li>
+                <li><input type="password" name="person_pw" class="login_txt" placeholder="패스워드를 입력하세요"></li>
+            </ul>
+            </em>
+            <em></em>
+            <em><button type="submit" class="login_btn btn_cp">사업자<br>로그인</button></em>
+        </span>
+
+
+        <span class="login_in1">
+        <button type="button" class="member_btn1" @click="member_btn1(1)">회원가입</button>
+        <button type="button" class="member_btn2" @click="member_btn1(2)">아이디 찾기</button>
+        <button type="button" class="member_btn2" @click="member_btn1(3)">패스워드 찾기</button>
+        </span>
+        <span class="login_in2">
+            ※ 개인회원 및 사업자 회원을 선택한 후 로그인 하시면 됩니다.
+        </span>
+</form>
+</div>
+</aside>

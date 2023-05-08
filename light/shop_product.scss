@@ -1,0 +1,130 @@
+@charset "utf-8";
+img{
+    width: 100%; object-fit: cover;
+}
+fieldset{
+    margin: 0; padding: 0; 
+}
+@mixin objectsize($width,$height,$display,$position){
+    width: $width;
+    height: $height;
+    display: $display;
+    position: $position;
+}
+
+// best item
+.pd_bestitem{
+    width: 1178px; height: 32px; border: none; margin-bottom: 20px;
+    position: relative;
+}
+.pd_bestitem legend{
+    width: inherit; height: 300px; position: relative;
+}
+#pd_bestitem_btn{
+    width: inherit; height: 50px; line-height: 270px;
+    display: flex; justify-content: space-between; align-items: center; position: absolute; z-index: 10;
+    & > li{
+        & > img{
+            cursor: pointer;
+        }
+    }
+    & > li:nth-of-type(2){
+        width: 50px; height: 50px; margin-right: 5%;
+    }
+    & > li:nth-of-type(1){
+        width: 50px; height: 50px; margin-left: 5%;
+    }
+}
+#pd_bestitem_list{
+    width: 1100px; height: auto; margin: 0 auto;
+    position: relative; 
+    overflow: hidden;
+   
+    & > li{
+        width: 210px; height: 210px;  margin-top: 15px;
+        
+    }
+}
+#pd_bestitem_list_view{
+    width: 1110px; height: 210px; display: flex; margin: 0 auto;
+     justify-content: space-between; align-items: center; 
+    position: absolute;
+    & > li{
+        width: 210px; height: 100%; margin-right: 15px; 
+        & > img{
+            width: 210px; height: 210px;
+        }
+    }
+}
+////////////////////////////////////////////////////////// weekly best
+#pd_weekly_title{
+    width: 1178px; height: 32px; border: none; margin-bottom: 20px;
+    margin-top: 450px;
+}
+.pd_span{
+    width: 100%; height: auto; display: flex; justify-content: center; align-items: center;
+    flex-wrap: wrap;
+}
+#pd_weekly{
+    width: 100%; height: auto; padding-top: 20px; margin-bottom: 20px;
+    display: flex; justify-content: center; flex-flow: wrap; align-items: center; position: relative;
+    margin-top: 250px;
+}
+.pd_ulcss{
+    width: 360px; height: 500px; text-align: center;
+    margin-bottom: 40px;
+    & > li:nth-of-type(1){
+        width: 360px; height: 360px; 
+        & > img{
+            width: inherit; height: 360px;
+        }
+    }
+    & > li:nth-of-type(2){
+        width: 360px; height: 30px; 
+        & > img{
+            width: 48px; height: 16px;
+        }
+    }
+    & > li:nth-of-type(3){
+        width: 360px; height: 40px; font-size: 16px; color: #040404;
+    }
+    & > li:nth-of-type(4){
+        width: 360px; height: 65px; font-size: 12px; color: #737373;
+    }
+    & > li:nth-of-type(5){
+        width: 360px; height: 20px; font-size: 12px; color: #a6a6a6;
+    }
+    & > li:nth-of-type(6){
+        width: 360px; height: 25px; font-size: 16px; color: #000000;
+    }
+}
+///////////////////////////////////////////////////////////instagram
+
+#instagram_title{
+    &>img{
+    width: 1178px; height: 32px; border: none; margin-bottom: 30px;
+    margin-top: 30px;
+}
+}
+#pd_instagram{
+    width: 1100px; height: auto; margin: 0 auto; margin-bottom: 30px;
+   
+    & > li{
+        width: 1110px; height: 160px;  margin-top: 15px;
+        position: relative;
+        overflow: hidden; 
+        
+    }
+}
+#pd_instagram_view{
+    width: 1520px; height: inherit; display: flex; margin: 0 auto;
+    justify-content: space-between; align-items: center;
+    position: absolute;
+    
+    & > li{
+        width: 160px; height: 100%; margin-right: 30px; 
+        & > img{
+            width: 160px; height: 160px;
+        }
+    }
+}

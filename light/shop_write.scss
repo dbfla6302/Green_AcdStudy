@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@mixin base {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+@mixin ulol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin sections($width, $height, $bg) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+}
+@mixin flexs($wrap, $justify, $align) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-content: $align;
+}
+@mixin font_sans($h, $c, $a, $w, $s) {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: $h;
+  color: $c;
+  text-align: $a;
+  font-weight: $w;
+  font-size: $s;
+}
+.qa_write_box{
+    @include sections(1000px, 620px, none);
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    &>p{
+        font-size: 20px;
+    }
+    &>form>.qa_write_tb{
+        @include sections(100%, auto, none);
+        border-top: 2px solid #5e5e5e;
+        margin: 20px 0 20px 0;
+        font-size: 12px;
+        &>tbody>tr{
+            &>td{
+            border-bottom: 2px solid #5e5e5e;
+                &>.qa_tarea{
+                    @include sections(790px, 180px, none);
+                    font-size: 14px
+                }
+                &>.qa_input_1{
+                    @include sections(500px, 30px, none);
+                    font-size: 14px
+                }
+                &>.qa_input_2{
+                    @include sections(200px, 30px, none);
+                    font-size: 14px
+                }
+                &:nth-of-type(odd){
+                    @include sections(160px, 50px, #e0e0e0);
+                    text-indent: 10px;
+                }
+                &:nth-of-type(even){
+                    @include sections(800px, 50px, none);
+                    padding-left: 10px;
+                }
+            }
+        }
+        &>tbody>tr:nth-child(6)>td{
+            height: 180px;
+            &:nth-child(2){
+                padding: 10px;
+            }
+        }
+    }
+    &>.qa_write_btnbox{
+        @include sections(100%, auto, none);
+        text-align: center;
+        &>input{
+            @include sections(120px, 40px, none);
+            font-size: 14px;
+            &:nth-child(1){
+                background-color: #5e5e5e;
+                border: none;
+                color: white;
+            }
+            &:nth-child(2){
+                border: 1px solid #5e5e5e;
+                margin-left: 20px;
+            }
+        }
+    }
+}

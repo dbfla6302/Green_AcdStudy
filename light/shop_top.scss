@@ -1,0 +1,130 @@
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+
+@mixin object($w,$h){
+    width: $w;
+    height: $h;
+}
+
+.top{
+    &>.top_tmenu{
+        @include object(100%,30px);
+        background-color: gray;
+        font-size: 12px;
+        color: white;
+        position: relative;
+        &>div{
+            padding-left: 10px;
+            line-height: 30px;
+            float: left;
+        }
+        &>ul{
+            width: 380px;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            right: 0;
+            &>li{
+                display: inline-block;
+                line-height: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+    &>.top_notice{
+        @include object(100%,136px);
+        &>ol{
+            &>li{
+                float: left;
+                &>#logo{ cursor: pointer; }
+                &:nth-of-type(1){ 
+                    padding: 35px 0 35px 0;
+                    width: 40%; 
+                    &>img{
+                        @include object(198px,64px);
+                    }
+                }
+                &:nth-of-type(2){ 
+                    @include object(20%,136px);
+                    padding: 0 10px 0 10px;
+                    &>img{ width: 100%; }
+                }
+                &:nth-of-type(3){ 
+                    @include object(40%,136px);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 25px;
+                    &>label{
+                        width: 130px;
+                        padding-left: 60px;
+                        text-align: center;
+                        font-size: 13.5px;
+                        font-weight: bold;
+                    }
+                    &>div{
+                        position: absolute;
+                        right: 0;
+                        display: flex;
+                        padding-right: 20px;
+                        &:first-of-type{
+                            @include object(300px,20px);
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        &>#nt_view{
+                            @include object(inherits,auto);
+                            position: absolute;
+                            font-size: 13px;
+                            &>li{ 
+                                height: 20px; line-height: 20px; 
+                            }
+                        }
+                        &>span{
+                            @include object(20px,20px);
+                            // border: 1px solid gray;
+                            text-align: center;
+                            line-height: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &>.top_menu{
+        @include object(100%,40px);
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        position: relative;
+        
+        &>div{
+            &:nth-of-type(1){
+                float: left;
+                &>span{
+                    @include object(120px,40px);
+                    font-size: 14px;
+                    text-align: center;
+                    float: left;
+                    line-height: 40px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    &:first-of-type{
+                        width: 40px;
+                        &>img{ @include object(40px,40px); }
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                position: absolute;
+                right: 40px;
+                color: #f77b04;
+                font-weight: bold;
+                line-height: 40px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

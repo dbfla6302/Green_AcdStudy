@@ -1,0 +1,56 @@
+body, ul, ol, dl {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section, label, span, footer, main, aside, nav, header {
+  display: block;
+}
+
+ul, ol, dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+button, input[type=button], input[type=submit], input[type=reset], input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+
+body {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+}
+
+.qa_list, .qa_write {
+  padding: 30px 0;
+}/*# sourceMappingURL=index.css.map */

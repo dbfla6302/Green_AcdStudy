@@ -1,0 +1,43 @@
+.qa_list_article {
+  width: 1000px;
+  height: 400px;
+  background-color: none;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid #5e5e5e;
+  border-radius: 5px;
+}
+.qa_list_article > p {
+  font-size: 20px;
+}
+.qa_list_article > .qa_list_tb {
+  width: 100%;
+  height: auto;
+  background-color: none;
+  text-align: center;
+}
+.qa_list_article > .qa_list_tb > thead > tr > td {
+  height: 40px;
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #5e5e5e;
+  border-top: 2px solid #5e5e5e;
+}
+.qa_list_article > .qa_list_tb > tbody > tr > td {
+  height: 40px;
+  border-bottom: 2px solid #5e5e5e;
+}
+.qa_list_article > .qa_list_btnbox {
+  width: 100%;
+  height: auto;
+  background-color: none;
+  text-align: right;
+  padding-top: 20px;
+}
+.qa_list_article > .qa_list_btnbox > input {
+  width: 120px;
+  height: 40px;
+  background-color: #5e5e5e;
+  border: none;
+  font-size: 14px;
+  color: white;
+}/*# sourceMappingURL=shop_list.css.map */

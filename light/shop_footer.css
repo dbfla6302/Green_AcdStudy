@@ -1,0 +1,100 @@
+.foot_box {
+  width: 1200px;
+  height: auto;
+  background-color: none;
+}
+.foot_box > aside {
+  width: 1200px;
+  height: auto;
+  background-color: none;
+}
+.foot_box > aside:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-evenly;
+  border-bottom: 1px solid black;
+}
+.foot_box > aside:nth-child(1) > div {
+  height: 60px;
+  padding: 0 10px;
+  line-height: 60px;
+  position: relative;
+}
+.foot_box > aside:nth-child(1) > div:after {
+  content: "|";
+  position: absolute;
+  right: 0;
+}
+.foot_box > aside:nth-child(1) > div:last-child:after {
+  content: "";
+}
+.foot_box > aside:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-evenly;
+  margin: 30px 0;
+}
+.foot_box > aside:nth-child(2) > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  font-size: 12px;
+  padding-left: 30px;
+  border-right: 1px solid black;
+}
+.foot_box > aside:nth-child(2) > ul > li:nth-child(1) {
+  font-size: 15px;
+  font-weight: bold;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(1) {
+  width: 250px;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(1) > li:nth-child(2) {
+  font-size: 25px;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(2) {
+  width: 350px;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(2) > li:nth-child(1) {
+  margin-bottom: 20px;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(3) {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-evenly;
+  border: none;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(3) > li:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 0 30px;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(3) > li:nth-child(2) > img {
+  width: 94px;
+  height: 94px;
+  background-color: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(3) > li:nth-child(2) > img:nth-child(1) {
+  width: 67px;
+}
+.foot_box > aside:nth-child(2) > ul:nth-child(3) > li:nth-child(2) > img:nth-child(4) {
+  cursor: pointer;
+}
+.foot_box > aside:nth-child(3) {
+  font-size: 12px;
+  text-align: center;
+}
+.foot_box > aside:nth-child(3) > div > a {
+  color: black;
+  background-color: #ccc;
+  border-radius: 5px;
+}/*# sourceMappingURL=shop_footer.css.map */

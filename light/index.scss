@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@charset "UTF-8";
+$noto:'Noto Sans KR', sans-serif;   //100;300;400;500;700;900
+
+@mixin object($w,$h){
+    width: $w;
+    height: $h;
+}
+%margin0{
+    margin: 0;
+    padding: 0;
+}
+
+* { box-sizing: border-box; }
+section,label,span,footer,main,aside,nav,header{
+    display: block;
+}
+ul,ol,dl{ @extend %margin0; list-style: none; }
+a { text-decoration: none; }
+img { width: 100%; object-fit: cover; }
+button, input[type="button"],input[type="submit"],input[type="reset"],input[type="checkbox"],input[type="radio"]{
+    cursor: pointer; }
+
+body{ @extend %margin0; @include object(1200px,auto); margin: 0 auto; font-family: $noto;  }
+
+header { @include object(100%,auto); }
+section {  @include object(100%,auto);  }
+footer { @include object(100%,auto); }
+.qa_list, .qa_write{padding: 30px 0;}

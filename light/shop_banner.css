@@ -1,0 +1,106 @@
+.top_banner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+}
+.top_banner > .bn_menu {
+  width: 186px;
+  height: auto;
+  font-size: 14px;
+}
+.top_banner > .bn_menu > li {
+  height: 45px;
+  line-height: 45px;
+  text-indent: 10px;
+  color: white;
+  background-color: #5e5e5e;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  position: relative;
+}
+.top_banner > .bn_menu > li:last-of-type {
+  border: 0;
+}
+.top_banner > .bn_menu > li:hover {
+  background-color: #595834;
+}
+.top_banner > .top_bn {
+  width: 760px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.top_banner > .top_bn > .ol_banners {
+  width: 2280px;
+  height: 500px;
+  position: absolute;
+}
+.top_banner > .top_bn > .ol_banners > li {
+  width: 760px;
+  height: 450px;
+  float: left;
+}
+.top_banner > .bn_side {
+  width: auto;
+  height: 450px;
+  position: absolute;
+  right: 0;
+}
+.top_banner > .bn_side > .side_bn {
+  margin-bottom: 15px;
+  width: 224px;
+  height: 234px;
+  overflow: hidden;
+  display: flex;
+}
+.top_banner > .bn_side > .side_bn > img {
+  position: relative;
+}
+.top_banner > .bn_side > .nt_box {
+  width: 225px;
+  height: auto;
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+  position: relative;
+}
+.top_banner > .bn_side > .nt_box > span {
+  margin-bottom: 15px;
+}
+.top_banner > .bn_side > .nt_box > #bn_notice {
+  font-size: 13px;
+}
+.top_banner > .bn_side > .nt_box > #bn_notice > li {
+  margin-bottom: 14px;
+}
+.top_banner > .bn_side > .nt_box > .more {
+  width: 80px;
+  height: 23px;
+  background-color: #e6e6e6;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 23px;
+  font-weight: 600;
+  margin-bottom: 0;
+  position: relative;
+  left: 130px;
+}
+
+.bn_btm {
+  width: 100%;
+  height: 147px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.bn_btm > div {
+  display: flex;
+  justify-content: space-between;
+}
+.bn_btm > div > img {
+  width: 286px;
+  height: 147px;
+}/*# sourceMappingURL=shop_banner.css.map */

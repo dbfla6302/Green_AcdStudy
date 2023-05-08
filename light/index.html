@@ -1,0 +1,30 @@
+<?php
+   $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="imagetoolbar" content="no">
+      <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+      <title>오늘 하루도 Todaylight 와 함께!!</title>
+      <script src="./jquery.js"></script>
+      <script src="http://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+      <link rel="stylesheet" type="text/css" href="./shop_top.css?v=<?=$v?>">   
+      <link rel="stylesheet" type="text/css" href="./shop_banner.css?v=<?=$v?>">  
+      <link rel="stylesheet" type="text/css" href="./shop_product.css?v=<?=$v?>">
+      <link rel="stylesheet" type="text/css" href="./shop_footer.css?v=<?=$v?>">
+      <link rel="stylesheet" type="text/css" href="./index.css?v=<?=$v?>">
+   </head>
+   <body>
+      <header class="header"><?php include "shop_top.html"; ?></header>
+      <section class="section"><?php include "shop_banner.html"; ?></section>
+      <section class="section"><?php include "shop_product.html"; ?></section>
+      <footer class="footer"><?php include "shop_footer.html"; ?></footer>
+   </body>
+   <script src="./shop_top.js?v=<?=$v?>"></script>
+   <script src="./shop_banner.js?v=<?=$v?>"></script>
+   <script src="./shop_product.js?v=<?=$v?>"></script>
+   <script src="./shop_footer.js?v=<?=$v?>"></script>
+</html>

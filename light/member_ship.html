@@ -1,0 +1,26 @@
+<?php
+   $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="imagetoolbar" content="no">
+   <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+   <title>메인페이지</title>
+   <script src="./jquery.js"></script>
+   <script src="http://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+   <link rel="stylesheet" type="text/css" href="./shop_top.css?v=<?=$v?>">
+   <!-- <link rel="stylesheet" type="text/css" href="./shop_list.css"> -->
+   <link rel="stylesheet" type="text/css" href="./shop_footer.css?v=<?=$v?>">
+   <link rel="stylesheet" type="text/css" href="./index.css?v=<?=$v?>">
+   <link rel="stylesheet" type="text/css" href="./login.css?v=<?=$v?>">
+   <!-- <script src="./shop_top.js?v=<?=$v?>"></script>
+   <script src="./shop_footer.js?v=<?=$v?>"></script> -->
+</head>
+<body>
+   <section class="section qa_list" id="logins">
+      <?php include "login.html"; ?>
+   </section>
+</body>
+</html>

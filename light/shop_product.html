@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<fieldset class="pd_bestitem"> <!-- best item-->
+    <legend><img src="./titles/main_tit_1.jpg" id="pd_title1">
+        <ul id="pd_bestitem_btn">
+            <li><img src="./btnico/btn_prev.png"></li>
+            <li><img src="./btnico/btn_next.png"></li>
+        </ul>
+        <ul id="pd_bestitem_list">  
+            <li>
+                <ul id="pd_bestitem_list_view">
+                    
+                </ul>
+            </li>
+        </ul>
+    </legend>
+</fieldset>
+<!-- weekly best -->
+
+<div class="pd_weekly" id="pd_weekly">
+    {{aaa}}
+    <span class="pd_weekly_title"><img src="./titles/main_tit_2.jpg"></span>
+    <span class="pd_span">
+        <ul v-for="pd_data in pd_list" class="pd_ulcss">
+            <li><img v-bind:src="pd_data.product_img" v-bind:title="pd_data.product_nms"></li>
+            <li>
+                <img src="./product/goods_new.gif">
+                <img src="./product/goods_made.gif">
+            </li>
+            <li>{{pd_data.product_nm}}</li>
+            <li>{{pd_data.product_sample}}</li>
+            <li><s>{{pd_data.product_money}}</s></li>
+            <li>{{pd_data.sale_money}}원</li>
+        
+        </ul>
+    </span>
+<!-- instagram -->
+<div id="pd_instagram_title"><img src="./titles/main_tit_3.jpg"></div>
+<ul id="pd_instagram">
+    <li class="pd_itg_view">
+        <ul id="pd_instagram_view">
+            <li><img src="./insta/insta_01.jpg"></li>
+            <li><img src="./insta/insta_02.jpg"></li>
+            <li><img src="./insta/insta_03.jpg"></li>
+            <li><img src="./insta/insta_04.jpg"></li>
+            <li><img src="./insta/insta_05.jpg"></li>
+            <li><img src="./insta/insta_06.jpg"></li>
+            <li><img src="./insta/insta_07.jpg"></li>
+            <li><img src="./insta/insta_08.jpg"></li>
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@mixin base {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+@mixin ulol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin sections($width, $height, $bg) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+}
+@mixin flexs($wrap, $justify, $align) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-content: $align;
+}
+@mixin font_sans($h, $c, $a, $w, $s) {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: $h;
+  color: $c;
+  text-align: $a;
+  font-weight: $w;
+  font-size: $s;
+}
+.qa_list_article{
+    @include sections(1000px, 400px, none);
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    &>p{
+        font-size: 20px;
+    }
+    &>.qa_list_tb{
+        @include sections(100%, auto, none);
+        text-align: center;
+        &>thead>tr>td{
+            height: 40px;
+            background-color: #e0e0e0 ;
+            border-bottom: 2px solid #5e5e5e;
+            border-top: 2px solid #5e5e5e;
+        }
+        &>tbody>tr>td{
+            height: 40px;
+            border-bottom: 2px solid #5e5e5e;
+        }
+    }
+    &>.qa_list_btnbox{
+        @include sections(100%, auto, none);
+        text-align: right;
+        padding-top: 20px;
+        &>input{
+            @include sections(120px, 40px, #5e5e5e);
+            border: none;
+            font-size: 14px;
+            color: white;
+        }
+    }
+}

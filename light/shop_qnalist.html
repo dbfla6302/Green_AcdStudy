@@ -1,0 +1,38 @@
+<?php
+   $v = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="imagetoolbar" content="no">
+   <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+   <title>오늘 하루도 Todaylight 와 함께!!</title>
+   <script src="./jquery.js"></script>
+   <script src="http://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+   <link rel="stylesheet" type="text/css" href="./shop_top.css?v=<?=$v?>">
+   <link rel="stylesheet" type="text/css" href="./shop_list.css?v=<?=$v?>">
+   <link rel="stylesheet" type="text/css" href="./shop_footer.css?v=<?=$v?>">
+   <link rel="stylesheet" type="text/css" href="./index.css?v=<?=$v?>">
+   <script src="./shop_top.js?v=<?=$v?>"></script>
+   <script src="./shop_footer.js?v=<?=$v?>"></script>
+</head>
+
+<body>
+   <header class="header">
+      <?php include "shop_top.html"; ?>
+   </header>
+   <section class="section qa_list">
+      <?php include "shop_list.html"; ?>
+   </section>
+   <footer class="footer">
+      <?php include "shop_footer.html"; ?>
+   </footer>
+</body>
+<script>
+   var nos = "<?php echo $v ?>";
+</script>
+<script src="./shop_list.js?v=<?=$v?>"></script>
+
+</html>

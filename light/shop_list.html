@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<article class="qa_list_article" id="qa_list_article">
+    {{qa_json}}
+    <p>Q&A 상품문의</p>
+    <table class="qa_list_tb" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <td style="width: 130px;">문의날짜</td>
+                <td style="width: 130px;">카테고리</td>
+                <td style="width: 500px;">제목</td>
+                <td style="width: 100px;">작성자</td>
+                <td style="width: 100px;">문의상태</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="val in qa_list_data" v-if="on=='on'">
+                <td v-text="val.date"></td>
+                <td v-text="val.tag"></td>
+                <td v-text="val.title"></td>
+                <td v-text=" val.name"></td>
+                <td v-text="val.respon"></td>
+            </tr>
+            <tr v-if="on=='off'">
+                <td colspan="5">게시글이 존재하지 않습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <aside class="qa_list_btnbox">
+        <input type="button" value="상품문의" @click="go_to_write">
+    </aside>
+</article>
