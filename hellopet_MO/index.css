@@ -1,0 +1,939 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: "";
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 360px;
+  max-width: 480px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0 auto;
+}
+
+.floor {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.floor > img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  right: 3%;
+  top: 50px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.top {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.top > .top_menu {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  z-index: 5;
+}
+.top > .top_menu > img:nth-of-type(1), .top > .top_menu > img:nth-of-type(3) {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.top > .top_menu > img:nth-of-type(2) {
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.top > .search_menu {
+  width: 100%;
+  height: 50px;
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  z-index: 3;
+}
+.top > .search_menu > .search_box {
+  display: inline-block;
+}
+.top > .search_menu > .search_box input {
+  width: 250px;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: 10px;
+  border-radius: 0 5px 5px 0;
+  border: 0;
+}
+.top > .search_menu > .search_box > span {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-right: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  float: left;
+  cursor: pointer;
+}
+.top > .search_menu > .search_box > span > img {
+  width: 70%;
+  margin-top: 5px;
+  margin-left: 5px;
+  transform: scaleX(-1);
+}
+.top > .side_menu {
+  width: 100%;
+  height: 660px;
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 100;
+}
+.top > .side_menu > .close {
+  width: inherit;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.top > .side_menu > .close > img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  top: 5px;
+  right: 0;
+  cursor: pointer;
+}
+.top > .side_menu > .side_box {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+  top: 30px;
+}
+.top > .side_menu > .side_box > .inp_box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.top > .side_menu > .side_box > .inp_box button {
+  width: 100px;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  background-color: black;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.top > .side_menu > .side_box > .ul_box {
+  width: inherit;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.top > .side_menu > .side_box > .ul_box > li {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.top > .side_menu > .side_box > .ul_box > li > img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  top: 9px;
+  left: 17px;
+}
+.top > .side_menu > .side_box > .fi_box {
+  width: inherit;
+  height: 155px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.top > .side_menu > .side_box > .fi_box > .leg {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.top > .side_menu > .side_box > .fi_box > ul {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  top: 12px;
+}
+.top > .side_menu > .side_box > .fi_box > ul > li {
+  list-style: disc;
+  margin-left: 20px;
+}
+.top > .side_menu > .side_box > .fi_box > ul > li > font {
+  color: dimgray;
+}
+.top > .side_menu > .side_box > .ac_no {
+  width: inherit;
+  height: 60px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.top > .side_menu > .side_box > .ac_no > span {
+  width: inherit;
+  height: 28px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 22px;
+  padding-left: 10px;
+}
+.top > .side_menu > .side_box > .cs_box {
+  width: inherit;
+  height: 190px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+.top > .side_menu > .side_box > .cs_box > li {
+  padding-left: 10px;
+}
+.top > .side_menu > .side_box > .cs_box > li:nth-of-type(1) {
+  width: inherit;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 35px;
+}
+.top > .side_menu > .side_box > .cs_box > li:nth-of-type(2) {
+  height: 35px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 35px;
+}
+.top > .side_menu > .side_box > .cs_box > li:nth-of-type(3) {
+  width: inherit;
+  height: 57px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.top > .side_menu > .side_box > .cs_box > li:nth-of-type(4) {
+  width: inherit;
+  height: 65px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+}
+.top > .side_menu > .side_box > .cs_box > li:nth-of-type(4) > a {
+  width: 200px;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid black;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+}
+.top > .side_menu > .side_box > .cs_box > li:nth-of-type(4) > a > img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  top: 10px;
+  left: 27px;
+}
+
+.top_nav {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  top: -70px;
+}
+.top_nav > .top_bn {
+  width: 100%;
+  height: 350px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.top_nav > .top_bn > img {
+  width: 100%;
+  height: 350px;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+.top_nav > .top_bn > img:first-of-type {
+  z-index: 1;
+}
+.top_nav > .quick {
+  width: 100%;
+  height: 80px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 5;
+}
+.top_nav > .quick > ol {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-flow: column wrap;
+  font-size: 14px;
+}
+.top_nav > .quick > ol > li {
+  width: 33.33%;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.middle {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  top: -50px;
+}
+.middle > .part1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.middle > .part1 > ul {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-flow: wrap column;
+}
+.middle > .part1 > ul > li {
+  width: 50%;
+  height: 180px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part1 > ul > li > img {
+  width: 100%;
+  height: 180px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part1 > ol {
+  width: 100%;
+  height: 360px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part1 > ol > li {
+  width: 100%;
+  height: 180px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part1 > ol > li > img {
+  width: 100%;
+  height: 180px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part2 > .np_box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.middle > .part2 > .np_box > span {
+  width: 200px;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+}
+.middle > .part2 > .np_txt {
+  width: 100%;
+  height: 22px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.middle > .part2 > .new_pet {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+}
+.middle > .part2 > .new_pet > span {
+  width: 140px;
+  height: 50px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid dimgray;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid white;
+  z-index: 15;
+  cursor: pointer;
+}
+.middle > .part2 > .new_pet > span:nth-child(1) {
+  top: 1px;
+}
+.middle > .part2 > .new_pet > span:hover {
+  background-color: #eee;
+}
+.middle > .part2 > .dog {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14px;
+  justify-content: space-around;
+  padding: 15px 5px 15px 5px;
+  border: 1px solid dimgray;
+}
+.middle > .part2 > .dog > li {
+  width: 30%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part2 > .dog > li > img {
+  width: 100%;
+}
+.middle > .part2 > .dog > li > span {
+  width: 100%;
+  height: 20px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+}
+.middle > .part2 > .cat {
+  width: 100%;
+  height: auto;
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  font-size: 14px;
+  justify-content: space-around;
+  padding: 15px 5px 15px 5px;
+  border: 1px solid dimgray;
+}
+.middle > .part2 > .cat > li {
+  width: 30%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part2 > .cat > li > img {
+  width: 100%;
+}
+.middle > .part2 > .cat > li > span {
+  width: 100%;
+  height: 20px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+}
+.middle > .part3 {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.middle > .part3 > .best {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.middle > .part3 > .best > span {
+  width: 200px;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+}
+.middle > .part3 > .bt_txt {
+  width: 100%;
+  height: 22px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.middle > .part3 > .olcss {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-flow: column wrap;
+  margin-bottom: 20px;
+}
+.middle > .part3 > .olcss > li {
+  width: 33.33%;
+  height: 50px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.middle > .part3 > .ul_box {
+  width: inherit;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.middle > .part3 > .ul_box > li {
+  width: 70px;
+  height: 70px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+.middle > .part3 > .pd_box {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part3 > .pd_box > li {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(236, 234, 234);
+  margin-bottom: 20px;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.middle > .part3 > .pd_box > li:nth-of-type(odd) > img {
+  width: 120px;
+  height: 120px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.middle > .part3 > .pd_box > li:nth-of-type(even) > img {
+  width: 120px;
+  height: 120px;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  right: 15px;
+}
+.middle > .part3 > .pd_box > li > span {
+  width: 60%;
+  height: 120px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.middle > .part3 > .pd_box > li > span > p {
+  position: relative;
+  margin-top: -10px;
+}
+.middle > .part3 > .pd_box > li > span > p:first-of-type {
+  margin-top: 1px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.middle > .part3 > .pd_box > li > span > p:nth-of-type(2) {
+  height: 15px;
+  font-size: 11px;
+}
+.middle > .part3 > .pd_box > li > span > p:last-of-type {
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+}
+
+.bottom {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  top: -50px;
+}
+.bottom > .bottom_box > .bt_img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.bottom > .bottom_box > .bt_img > a {
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.bottom > .bottom_box > .bt_img > a > img {
+  width: inherit;
+  height: inherit;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.bottom > .bottom_box > .ul_box {
+  width: inherit;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.bottom > .bottom_box > .ul_box > li {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 100%;
+}
+.bottom > .bottom_box > .r_box {
+  width: inherit;
+  height: 40px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(230, 230, 230);
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 40px;
+}
+.bottom > .bottom_box > .r_box > span {
+  width: inherit;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.bottom > .bottom_box > .r_box > span:nth-of-type(1) {
+  width: 18%;
+  text-align: center;
+}
+.bottom > .bottom_box > .r_box > span:nth-of-type(2) {
+  width: 62%;
+  overflow: hidden;
+  padding-left: 5px;
+}
+.bottom > .bottom_box > .r_box > span:nth-of-type(2) > ul {
+  width: 100%;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.bottom > .bottom_box > .r_box > span:nth-of-type(2) > ul > li {
+  width: 100%;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.bottom > .bottom_box > .r_box > span:nth-of-type(3) {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom > .bottom_box > .r_box > span:nth-of-type(3) > label {
+  width: 45px;
+  height: 20px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: rgb(127, 127, 127) url("./intro/more.svg") center top no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+}
+.bottom > .bottom_box > .bt_bbox {
+  width: inherit;
+  height: 80px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.bottom > .bottom_box > .bt_bbox > ol {
+  width: inherit;
+  height: 80px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-flow: column wrap;
+}
+.bottom > .bottom_box > .bt_bbox > ol > li {
+  width: 33.33%;
+  height: 40px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.bottom > .f_box {
+  width: 100%;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.bottom > .f_box > ul {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.bottom > .f_box > ul > li {
+  margin-left: 5px;
+}
+.bottom > .f_box > ul > li:after {
+  content: "　|";
+  margin-right: 7px;
+}
+.bottom > .f_box > ul > li:last-of-type::after {
+  content: "";
+}
+.bottom > .f_logo {
+  width: 100%;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.bottom > .f_logo > img {
+  width: auto;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.bottom > .f_tb {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 13px;
+  color: dimgray;
+  margin-bottom: 20px;
+}
+.bottom > .f_tb > span {
+  display: inline-block;
+  width: 20px;
+}
+.bottom > .f_ol {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: dimgray;
+}
+.bottom > .f_ol > li {
+  text-align: center;
+}
+.bottom > .f_ol > li:nth-child(1) {
+  width: inherit;
+  height: auto;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.bottom > .f_ol > li:nth-child(2) {
+  width: inherit;
+  height: 30px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 390px) and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+  .bt_img {
+    max-width: 90%;
+    max-height: 150px;
+    margin: 0 auto;
+  }
+  .bt_img > a > img {
+    max-width: 90%;
+    max-height: 150px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=index.css.map */

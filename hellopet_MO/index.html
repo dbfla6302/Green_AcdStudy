@@ -1,0 +1,184 @@
+<?php
+    $data = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./index.css?v=<?=$data?>">
+<title>개인 중간평가 (모바일)</title>
+<script src="./jquery.js"></script>
+<script src="./index.js?v=<?=$data?>"></script>
+</head>
+<body id="body">
+<!-- 상단 -->
+<div class="floor" id="floor">
+    <img src="./images/scrolltop.png">
+</div>
+<header class="top" id="top">
+    <!-- 탑메뉴 -->
+    <aside class="top_menu">
+        <img src="./images/category.png" id="mn_btn">
+        <img src="./logo/hellopet_logo_en.png">
+        <img src="./images/search.png" id="s_btn">
+    </aside>
+    <!-- 사이드메뉴 -->
+    <aside class="side_menu" id="side_menu">
+        <label class="close"><img src="./btn/close.svg" id="close"></label>
+        <div class="side_box">
+            <span class="inp_box">
+                <button type="button" id="btn1">로그인</button>
+                <button type="button" id="btn1">회원가입</button>
+            </span>
+            <ul class="ul_box">
+                <li><img src="./btn/mic.svg">공지</li>
+                <li><img src="./btn/help.svg">문의</li>
+                <li><img src="./btn/review.svg">후기</li>
+                <li><img src="./btn/faq.svg">FAQ</li>
+            </ul>
+            <fieldset class="fi_box">
+                <legend class="leg"> 질문내역 </legend>
+                <ul class="qanda" id="qanda">
+
+                </ul>
+            </fieldset>
+            <div class="ac_no">
+                <span>ACCOUNT NO.</span>
+                <span>예금주 :  </span>
+            </div>
+            <ol class="cs_box">
+                <li>CS CENTER</li>
+                <li>070-2021-0630</li>
+                <li>
+                    MON-FRI AM09:00 ~ PM06:00<br>
+                    LUNCH 12:00 - 13:00<br>
+                    SAT, SUN, HOLIDAY OFF
+                </li>
+                <li><a href="tel:02-0000-0101 "><img src="./btn/headset.svg">고객센터 연결</a></li>
+            </ol>
+        </div>
+    </aside>
+    <!-- 검색메뉴 -->
+    <aside class="search_menu" id="search_menu">
+        <div class="search_box" id="search_box">
+            <span><img src="./images/search.png" id="search"></span>
+            <input type="text" id="input1">
+        </div>
+    </aside>
+</header>
+
+<!-- 탑배너 -->
+<nav class="top_nav">
+    <!-- 탑배너 -->
+    <aside class="top_bn" id="top_bn">
+        <img src="./banner/mbanner_01.jpg">
+        <img src="./banner/mbanner_02.jpg">
+        <img src="./banner/mbanner_03.jpg">
+    </aside>
+    <!-- 퀵메뉴 -->
+    <aside class="quick">
+        <ol>
+            <li>강아지</li>
+            <li>고양이</li>
+            <li>장난감</li>
+            <li>펫사료</li>
+            <li>미용제품</li>
+            <li>기획전</li>
+        </ol>
+    </aside>
+</nav>
+
+<!-- 메인 -->
+<main class="middle">
+    <section class="part1">
+        <ul>
+            <li><img src="./banner/event_banner01.jpg"></li>
+            <li><img src="./banner/event_banner02.jpg"></li>
+            <li><img src="./banner/event_banner03.jpg"></li>
+            <li><img src="./banner/event_banner04.jpg"></li>
+        </ul>
+        <ol>
+            <li><img src="./banner/event_banner05.jpg"></li>
+            <li><img src="./banner/event_banner06.jpg"></li>
+        </ol>
+    </section>
+    <section class="part2">
+        <div class="np_box"><span>NEW PETS</span></div>
+        <div class="np_txt">신규분양중인 귀여운 아가펫 입니다.</div>
+        <div class="new_pet">
+            <span id="d_btn">DOG</span>
+            <span id="c_btn">CAT</span>
+        </div>
+        <ul class="cat" id="cat">
+
+        </ul>
+        <ul class="dog" id="dog">
+
+        </ul>
+    </section>
+    <section class="part3">
+        <div class="best"><span>BEST PRODUCT</span></div>
+        <div class="bt_txt">맛과 영양이 가득한 사료 입니다.</div>
+        <ol class="pd_box" id="best_pd">
+
+        </ol>
+    </section>
+</main>
+
+<!-- 하단 -->
+<footer class="bottom">
+    <aside class="bottom_box">
+        <div class="bt_img"><a href="#"><img src="./intro/intro_01.jpg"></a></div>
+        <ul class="ul_box">
+            <li><img src="./intro/intro_02.png"></li>
+            <li><img src="./intro/intro_03.png"></li>
+            <li><img src="./intro/intro_04.png"></li>
+            <li><img src="./intro/intro_05.png"></li>
+            <li><img src="./intro/intro_06.png"></li>
+        </ul>
+        <div class="r_box">
+            <span>REVIEW</span>
+            <span>
+                <ul class="review" id="review">
+
+                </ul>
+            </span>
+            <span>
+                <label></label>
+            </span>
+        </div>
+        <div class="bt_bbox">
+            <ol>
+                <li>회원가입</li>
+                <li>주문조회</li>
+                <li>쿠폰</li>
+                <li>공지사항</li>
+                <li>문의/답변</li>
+                <li>상품후기</li>
+            </ol>
+        </div>
+    </aside>
+    <div class="f_box">
+        <ul>
+            <li>이용안내</li>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>PC화면</li>
+        </ul>
+    </div>
+    <div class="f_logo"><img src="../../hello/public_html/logo/ko_logo.png"></div>
+    <div class="f_tb">(주)헬로우 펫<span>|</span>대표 : 홍길동</div>
+    <ol class="f_ol">
+        <li>
+            사업자 번호 : 123-21-12345<br>
+            통신판매업신고 : 제21호 233-11-24545<br>
+            대표번호 : 070-3301-1004
+        </li>
+        <li>copyright ⓒ hellopet.co.kr. All rights reserved.</li>
+    </ol>
+</footer>
+</body>
+</html>

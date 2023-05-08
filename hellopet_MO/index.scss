@@ -1,0 +1,669 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+$font_ns:'Noto Sans KR', sans-serif;    //100;300;400;500;700;900
+
+@mixin base{
+    margin: 0;
+    padding: 0;
+}
+@mixin objectsize($w,$h,$display,$position) {
+        width: $w;
+        height: $h;
+        display: $display;
+        position: $position;
+        box-sizing: border-box;
+}
+%none{
+    text-decoration: none;
+    color: black;
+}
+a:link, a:visited, a:hover, a:active{
+    @extend %none;
+}
+img { width: 100%; object-fit:cover; }
+ul,ol{ @include base; list-style: none; }
+body{ 
+    @include base; 
+    @include objectsize("",auto,block,relative);
+    min-width: 360px;
+    max-width: 480px;
+    font-family: $font_ns;
+    margin: 0 auto;
+}  
+
+// 플로어버튼
+.floor{ 
+    @include objectsize(100%,auto,block,relative); 
+    & > img{
+        @include objectsize(30px,30px,block,absolute); 
+        right: 3%; 
+        top: 50px; 
+        z-index: 10; 
+        cursor: pointer;
+    }
+}
+// 상단
+.top{
+    @include objectsize(100%,auto,block,relative);
+    margin-bottom: 20px;
+    &>.top_menu{
+        @include objectsize(100%,50px,flex,relative);
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px 0 10px;
+        z-index: 5;
+        // border: 1px solid red;
+        &>img{
+            &:nth-of-type(1), &:nth-of-type(3){ 
+                width: 30px; height: 30px; 
+                cursor: pointer;
+            }
+            &:nth-of-type(2){ 
+                height: 35px; 
+                object-fit: contain; 
+            }
+        }
+    }
+
+    //드롭 검색파트
+    &>.search_menu{
+        @include objectsize(100%,50px,none,absolute);
+        // border: 1px solid red;
+        background-color: rgba(0,0,0,0.3);
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        z-index: 3;
+
+        &>.search_box{
+            // border: 1px solid blue;
+            display: inline-block;
+            input{
+                @include objectsize(250px,30px,block,relative);
+                text-indent: 10px;
+                border-radius: 0 5px 5px 0;
+                border: 0;
+            }
+            
+            &>span{
+                @include objectsize(30px,30px,block,relative);
+                background-color: #eee;
+                border-right: 1px solid #ccc;
+                border-radius: 5px 0 0 5px;
+                object-fit: contain;
+                float: left;
+                cursor: pointer;
+
+                &>img{
+                    width: 70%;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    transform: scaleX(-1);
+                }
+            }
+                
+        }
+
+    }
+
+    // 사이드 fadein menus
+    &>.side_menu{
+        @include objectsize(100%,660px,none,absolute);
+        background-color: white;
+        z-index: 100;
+        // border: 1px solid red;
+        
+        &>.close{
+            @include objectsize(inherit,30px,block,relative);
+            &>img{
+                @include objectsize(30px,30px,block,absolute);
+                top: 5px;
+                right: 0;
+                cursor: pointer;
+            }
+        }
+        &>.side_box{
+            @include objectsize(100%,auto,block,relative);
+            padding: 0 10px 0 10px;
+            // border: 1px solid red;
+            font-size: 14px;
+            top: 30px;
+            &>.inp_box{
+                @include objectsize(100%,auto,flex,relative);
+                justify-content: space-between;
+                margin-bottom: 20px;
+                button{
+                    @include objectsize(100px,30px,block,relative);
+                    background-color: black;
+                    border: 0;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+            &>.ul_box{
+                @include objectsize(inherit,auto,flex,relative);
+                justify-content: space-between;
+                // border: 1px solid black;
+                margin-bottom: 20px;
+                font-size: 14px;
+                &>li{
+                    @include objectsize(60px,60px,block,relative);
+                    border: 2px solid black;
+                    text-align: center;
+                    line-height: 40px;
+                    cursor: pointer;
+                    &>img{
+                        @include objectsize(20px,20px,block,relative);
+                        // border: 1px solid red;
+                        top: 9px;
+                        left: 17px;
+                    }
+                }
+            }
+            // 질문내역
+            &>.fi_box{
+                @include objectsize(inherit,155px,block,relative);
+                border: 2px solid black;
+                margin-bottom: 20px;
+                font-size: 14px;
+                
+                &>.leg{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                &>ul{
+                    @include objectsize(100%,auto,block,relative);
+                    top: 12px;
+                    // border: 1px solid red;
+                    &>li{
+                        list-style: disc;
+                        margin-left: 20px;
+                        // border: 1px solid red;
+                        &>font{ color: dimgray; }
+    
+                    }
+                }
+            }
+            &>.ac_no{
+                @include objectsize(inherit,60px,block,relative);
+                border: 2px solid black;
+                margin-bottom: 20px;
+                font-size: 16px;
+                &>span{
+                    @include objectsize(inherit,28px,block,relative);
+                    // border: 1px solid blue;
+                    line-height: 22px;
+                    padding-left: 10px;
+                }
+            }
+            &>.cs_box{
+                @include objectsize(inherit,190px,block,relative);
+                border: 2px solid black;
+                
+                &>li{
+                    // border: 1px solid blue;
+                    padding-left: 10px;
+                    &:nth-of-type(1){
+                        @include objectsize(inherit,30px,block,relative);
+                        font-size: 15px; 
+                        line-height: 35px;
+                    }
+                    &:nth-of-type(2){
+                        height: 35px;
+                        font-size: 17px;
+                        font-weight: bold;
+                        line-height: 35px;
+                    }
+                   
+                    &:nth-of-type(3){
+                        @include objectsize(inherit,57px,block,relative);
+                        font-size: 13px;
+                    }
+                    &:nth-of-type(4){
+                        @include objectsize(inherit,65px,flex,relative);
+                        justify-content: center;
+                        align-items: center;
+                        padding-left: 0;
+                        &> a{
+                            @include objectsize(200px,40px,block,relative);
+                            border: 2px solid black;
+                            font-size: 14px;
+                            text-align: center;
+                            line-height: 40px;
+                            &>img{
+                                @include objectsize(20px,20px,block,relative);
+                                float: left;
+                                top: 10px;
+                                left: 27px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// 탑네비
+.top_nav{
+    @include objectsize(100%,auto,block,relative);
+    top: -70px;
+
+    // 탑배너
+    &>.top_bn{
+        @include objectsize(100%,350px,block,relative);
+        margin-bottom: 20px;
+        &>img{
+            @include objectsize(100%,350px,block,absolute);
+            &:first-of-type{ z-index: 1; }
+        }
+    }
+
+    // 퀵메뉴
+    &>.quick{
+        @include objectsize(100%,80px,block,relative);
+        z-index: 5;
+    
+        &>ol{
+            @include objectsize(100%,80px,flex,relative);
+            flex-flow: column wrap;
+            font-size: 14px;
+            &>li{
+                @include objectsize(33.33%,40px,block,relative);
+                border: 1px solid #ccc;
+                line-height: 40px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// 메인
+.middle{
+    @include objectsize(100%,auto,block,relative);
+    top: -50px;
+    &>.part1{
+        @include objectsize(100%,auto,block,relative);
+        margin-bottom: 20px;
+        &>ul{
+            @include objectsize(100%,360px,flex,relative);
+            flex-flow: wrap column;
+            &>li{
+                @include objectsize(50%,180px,block,relative);
+                // border: 1px solid red;
+                &>img{
+                    @include objectsize(100%,180px,block,relative);
+                }
+            }
+        }
+        &>ol{
+            @include objectsize(100%,360px,block,relative);
+            &>li{
+                @include objectsize(100%,180px,block,relative);
+                // border: 1px solid red;
+                &>img{
+                    @include objectsize(100%,180px,block,relative);
+                }
+            }
+        }
+    }
+    &>.part2{
+        @include objectsize(100%,auto,block,relative);
+        // margin-bottom: 20px;
+
+        &>.np_box{
+            @include objectsize(100%,auto,flex,relative);
+            justify-content: center;
+            // border: 1px solid red;
+            &>span{
+                @include objectsize(200px,40px,block,relative);
+                border: 1px solid black;
+                font-size: 18px;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+        &>.np_txt{
+            @include objectsize(100%,22px,block,relative);
+            // border: 1px solid black;
+            font-size: 14px;
+            text-align: center;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        &>.new_pet{
+            @include objectsize(100%,auto,flex,relative);
+            text-align: center;
+            &>span{
+                @include objectsize(140px,50px,block,relative);
+                border: 1px solid dimgray;
+                line-height: 50px;
+                font-size: 14px;
+                border-bottom: 1px solid white;
+                z-index: 15;
+                cursor: pointer;
+                &:nth-child(1){
+                    top: 1px;
+                }
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+
+        // 강아지 고양이 출력파트
+        &>.dog{
+            @include objectsize(100%,auto,flex,relative);
+            font-size: 14px;
+            justify-content: space-around;
+            padding: 15px 5px 15px 5px;
+            border: 1px solid dimgray;
+            
+            &>li{
+                @include objectsize(30%,auto,block,relative);
+                // border: 1px solid red;
+                &>img{
+                    width: 100%;
+                }
+                &>span{
+                    @include objectsize(100%,20px,block,relative);
+                    // border: 1px solid red;
+                    text-align: center;
+                }
+            }
+        }
+        &>.cat{
+            @include objectsize(100%,auto,none,relative);
+            flex-wrap: wrap;
+            font-size: 14px;
+            justify-content: space-around;
+            padding: 15px 5px 15px 5px;
+            border: 1px solid dimgray;
+
+            &>li{
+                @include objectsize(30%,auto,block,relative);
+                // border: 1px solid red;
+                &>img{
+                    width: 100%;
+                }
+                &>span{
+                    @include objectsize(100%,20px,block,relative);
+                    // border: 1px solid red;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &>.part3{
+        @include objectsize(100%,auto,block,relative);
+        margin-top: 20px;
+
+        &>.best{
+            @include objectsize(100%,auto,flex,relative);
+            justify-content: center;
+            // border: 1px solid red;
+            &>span{
+                @include objectsize(200px,40px,block,relative);
+                border: 1px solid black;
+                font-size: 18px;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+        &>.bt_txt{
+            @include objectsize(100%,22px,block,relative);
+            // border: 1px solid black;
+            font-size: 14px;
+            text-align: center;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        &>.olcss{
+
+            @include objectsize(100%,100px,flex,relative);
+            flex-flow: column wrap;
+            margin-bottom: 20px;
+            &>li{
+                @include objectsize(33.33%,50px,block,relative);
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+        }
+        &>.ul_box{
+            @include objectsize(inherit,auto,flex,relative);
+            justify-content: space-around;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            &>li{
+                @include objectsize(70px,70px,block,relative);
+                border: 1px solid black;
+                border-radius: 100%;
+            }
+        }
+        
+        // 프로덕트
+        &>.pd_box{
+            @include objectsize(100%,auto,block,relative);
+            // border: 1px solid red;
+
+            &>li{
+                @include objectsize(100%,150px,flex,relative);
+                background-color:  rgb(236, 234, 234) ;
+                margin-bottom: 20px;
+                padding: 15px;
+                justify-content: space-between;
+                align-items: center;
+                // border: 1px solid red;
+                
+                &:nth-of-type(odd){
+                    &>img{
+                        @include objectsize(120px,120px,block,relative);  
+                    }           
+                }
+                &:nth-of-type(even){
+                    &>img{
+                        @include objectsize(120px,120px,block,absolute);  
+                        right: 15px;   
+                    }
+                }
+                &>span{
+                    @include objectsize(60%,120px,block,relative);  
+                    font-size: 15px;
+                    // border: 1px solid red;
+                    &>p{
+                        position: relative;
+                        margin-top: -10px;
+                        // border: 1px solid red;
+                        &:first-of-type{
+                            margin-top: 1px;
+                            height: 20px;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                        &:nth-of-type(2){
+                            height: 15px;
+                            font-size: 11px;
+                        }
+                        &:last-of-type{
+                            font-size: 14px;
+                            font-weight: bold;
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+// 하단
+.bottom{
+    @include objectsize(100%,auto,block,relative);
+    top: -50px;
+    
+    &>.bottom_box{
+        &>.bt_img{
+            @include objectsize(100%,150px,block,relative);
+            margin-bottom: 20px;
+            // border: 1px solid blue;
+            &>a{
+                @include objectsize(100%,150px,block,relative);
+                &>img{
+                    @include objectsize(inherit,inherit,block,relative);
+                }
+            }
+        }
+        &>.ul_box{
+            @include objectsize(inherit,auto,flex,relative);
+            justify-content: space-around;
+            // border: 1px solid black;
+            margin-bottom: 20px;
+            &>li{
+                @include objectsize(50px,50px,block,relative);
+                // border: 1px solid black;
+                border-radius: 100%;
+            }
+        }
+        &>.r_box{
+            @include objectsize(inherit,40px,flex,relative);
+            background-color: rgb(230, 230, 230);
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 40px;
+
+            &>span{
+                @include objectsize(inherit,40px,block,relative);
+                // border: 1px solid red;
+                &:nth-of-type(1){
+                    width: 18%;
+                    text-align: center;
+                }
+                &:nth-of-type(2){
+                    width: 62%;
+                    overflow: hidden;
+                    padding-left: 5px;
+                    &>ul{
+                        @include objectsize(100%,40px,block,relative);
+                        &>li{
+                            @include objectsize(100%,40px,block,relative);
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    width: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &>label{
+                        @include objectsize(45px,20px,block,relative);
+                        border-radius: 10px;
+                        background: rgb(127, 127, 127) url('./intro/more.svg') center top no-repeat;
+                        background-size: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        &>.bt_bbox{
+            @include objectsize(inherit,80px,block,relative);
+            font-size: 14px;
+            margin-bottom: 20px;
+            &>ol{
+                @include objectsize(inherit,80px,flex,relative);
+                flex-flow: column wrap;
+
+                &>li{
+                    @include objectsize(33.33%,40px,block,relative);
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    line-height: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &>.f_box{
+        @include objectsize(100%,30px,block,relative);
+        margin-bottom: 20px;
+        // border: 1px solid yellow;
+        &>ul{
+            @include objectsize(100%,30px,flex,relative);
+            align-items: center;
+            justify-content:center;
+            font-size: 12px;
+            // left: 50px;        
+
+            &>li{
+                margin-left: 5px;
+                &:after{
+                    content: "　|";
+                    margin-right: 7px;
+                }
+                &:last-of-type::after{content: "";}
+            }
+        }
+    }
+    &>.f_logo{
+        @include objectsize(100%,30px,block,relative);
+        // border: 1px solid yellow;
+        margin-bottom: 20px;
+        &>img{
+            @include objectsize(auto,30px,block,relative);
+            margin: 0 auto;
+        }
+    }
+    &>.f_tb{
+        @include objectsize(100%,auto,block,relative);
+        // border: 1px solid yellow;
+        text-align: center;
+        font-size: 13px;
+        color: dimgray;
+        margin-bottom: 20px;
+        &>span{
+            display: inline-block;
+            width: 20px;
+            // border: 1px solid red;
+        }
+    }
+    &>.f_ol{
+        @include objectsize(100%,auto,block,relative);
+        // border: 1px solid yellow;
+        font-size: 13px;
+        color: dimgray;
+      
+        &>li{
+            // border: 1px solid yellow;
+            text-align: center;
+            &:nth-child(1){
+                @include objectsize(inherit,auto,flex,relative);
+                align-items: center;
+                justify-content: center;
+            }
+            &:nth-child(2){
+                @include objectsize(inherit,30px,block,relative);
+                line-height: 30px;
+                // border: 1px solid red;
+            }
+        }
+    }
+}
+@media screen and (min-width:390px) and (max-width:480px) {
+    body{ width: 100%; }
+    .bt_img{
+        max-width: 90%;
+        max-height: 150px;
+        margin: 0 auto;
+        &>a>img{
+            max-width: 90%;
+            max-height: 150px;
+            margin: 0 auto;
+        }
+    }
+}
