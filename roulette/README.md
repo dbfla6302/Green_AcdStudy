@@ -1,5 +1,5 @@
 # Roulette Event
 룰렛 PC, Mobile 이벤트 웹 페이지 입니다.
-<img src="https://img.shields.io/badge/html5-green?style=flat&logo=Sass&logoColor=E34F26"/>
-<img src="https://img.shields.io/badge/css3-green?style=flat&logo=Sass&logoColor=1572B6"/>
-<img src="https://img.shields.io/badge/jquery-green?style=flat&logo=Sass&logoColor=0769AD"/>
+<img src="https://img.shields.io/badge/HTML5-e34f26?style=flat&logo=html5&logoColor=E34F26"/>
+<img src="https://img.shields.io/badge/CSS3-green?style=flat&logo=css3&logoColor=1572B6"/>
+<img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=0769AD"/>
